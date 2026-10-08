@@ -11,10 +11,10 @@ Controlltower bygger mot den. En ny chatt läser mappen — inget mer behövs.
 
 ## DEL 1 — MAPPEN
 
-**Mappnamn:** `projekt/<datum>-<slug>/`
+**Mappnamn:** `projekt/{{DATUM}}-{{SLUG}}/`
 
-- `<datum>` = `YYYYMMDD`
-- `<slug>` = projektets namn: gemener, `å ä ö` → `a a o`, mellanslag och skiljetecken → `-`
+- `{{DATUM}}` = `YYYYMMDD`
+- `{{SLUG}}` = projektets namn: gemener, `å ä ö` → `a a o`, mellanslag och skiljetecken → `-`
 - Exempel: `20261008-minnesapp`
 
 **Dubblett:** om mappen redan finns läggs suffix till: `-2`, `-3`, och så vidare.
@@ -26,66 +26,78 @@ Appen skriver aldrig över en befintlig mapp.
 
 ## DEL 2 — FÄLTEN I FLIKEN "NYTT PROJEKT"
 
+Platshållare har formen {{NAMN}}. Koden ersätter dem med fältets värde.
+
 Allt VÅ fyller i vid skapandet. Elva fält, i denna ordning.
 
 | # | Fält | Typ | Hamnar i |
 |---|---|---|---|
-| 1 | Namn | en rad | `projekt.md` rubrik + `<slug>.md` rubrik |
+| 1 | Namn | en rad | `projekt.md` rubrik + `{{SLUG}}.md` rubrik |
 | 2 | Vad | en rad | `projekt.md` → `**Vad:**` |
 | 3 | Syfte | en rad | `projekt.md` → `**Syfte:**` |
 | 4 | Personal | en rad | `projekt.md` → `**Personal:**` |
-| 5 | Systemets mål (DEL 1) | flerradig | `<slug>.md` → DEL 1 |
-| 6 | Kärnbegrepp (DEL 3) | flerradig | `<slug>.md` → DEL 3 |
-| 7 | Invarianter (DEL 5) | flerradig | `<slug>.md` → DEL 5 |
-| 8 | Datamodell (DEL 6) | flerradig | `<slug>.md` → DEL 6 |
+| 5 | Systemets mål (DEL 1) | flerradig | `{{SLUG}}.md` → DEL 1 |
+| 6 | Kärnbegrepp (DEL 3) | flerradig | `{{SLUG}}.md` → DEL 3 |
+| 7 | Invarianter (DEL 5) | flerradig | `{{SLUG}}.md` → DEL 5 |
+| 8 | Datamodell (DEL 6) | flerradig | `{{SLUG}}.md` → DEL 6 |
 | 9 | Saker som ska göras | flerradig → checklista | `pp.md` → checklista |
-| 10 | Öppna frågor | flerradig | `ds.md` → Öppna frågor |
+| 10 | Öppna frågor | flerradig | `ds.md` Öppna frågor och `pp.md` Öppna frågor. Samma text. |
 | 11 | Första anteckningar | flerradig | `va.md` |
 
 **Regler:**
 - Alla elva fält kan lämnas tomma. Ett tomt fält ger en tom platshållare i filen —
   aldrig borttagen rubrik.
 - Fält 2 och 3 är enradiga och korta. Långa beskrivningar hör i DEL 1
-  (`<slug>.md`).
+  (`{{SLUG}}.md`).
 - Fält 9: en rad per sak. Raderna numreras `1`, `2`, `3` i den ordning VÅ skrev dem.
+
+**Platshållare som koden räknar fram:**
+
+- `{{NASTA}}` — första raden i Saker som ska göras. Om tomt: "Fyll i Vad och Syfte".
+- `{{FAS1}}` — första raden i Saker som ska göras. Om tomt: "Ej namngiven".
+- `{{N}}` — radnummer i fält 9. 1, 2, 3 ...
+- `{{SAK}}` — radens text i fält 9.
+
+Värdena räknas fram av koden. Mallen beskriver dem.
+
 
 ---
 
 ## DEL 3 — FIL 1: `projekt.md`
 
 ```markdown
-# <Namn>
+# {{NAMN}}
 
-**Vad:** <Vad>
-**Syfte:** <Syfte>
+**Vad:** {{VAD}}
+**Syfte:** {{SYFTE}}
 
 **Läget**
 **Status:** Fas 0 — inte påbörjad.
-**Nästa:** <första raden i Saker som ska göras, annars "Fyll i Vad och Syfte">
+**Nästa:** {{NASTA}}
 
-**Personal:** <Personal>
+**Personal:** {{PERSONAL}}
 
 **Filer**
 - Startpunkt: START_HÄR.md
-- Arkitektur: <slug>.md
+- Arkitektur: {{SLUG}}.md
 - Arbetsgång: pp.md
 - Lokalt läge: ds.md
 - VÅ:s anteckningar: va.md
 
-**Skapat:** <datum>
-**Uppdaterat:** <datum>
+**Skapat:** {{DATUM}}
+**Uppdaterat:** {{DATUM}}
 ```
 
 ---
 
-## DEL 4 — FIL 2: `<slug>.md`
+## DEL 4 — FIL 2: `{{SLUG}}.md`
 
 Nio delar. DEL 0, 2, 4, 9 ärvs ordagrant från `controlltower.md` (med projektets
 namn insatt). DEL 1, 3, 5 får VÅ:s text. DEL 6, 7, 8 är tomma platshållare.
 Datamodellen (DEL 6) får ingen generisk text — den fylls i av VÅ.
 
 ```markdown
-# <NAMN> — arkitekturen
+# {{NAMN}} — arkitekturen
 
 **Version:** 0.1
 **Status:** Låst. Ändras bara vid beslut av VÅ.
@@ -95,7 +107,7 @@ Datamodellen (DEL 6) får ingen generisk text — den fylls i av VÅ.
 
 ## DEL 0 — VAD DETTA DOKUMENT ÄR
 
-Detta är arkitekturen för <Namn>.
+Detta är arkitekturen för {{NAMN}}.
 
 Det beskriver **vad systemet är** och **vad som är låst**. Inte stegen för att
 bygga det. Stegen bor i `pp.md`. Läget bor i `projekt.md`. Rollkontraktet bor i
@@ -109,7 +121,7 @@ dokument uppdateras.
 
 ## DEL 1 — SYSTEMETS MÅL
 
-<VÅ:s text>
+{{SYSTEMETS_MAL}}
 
 ---
 
@@ -131,9 +143,9 @@ Logik och lagring är orörda.
 
 **Projektets mapp:**
 
-projekt/<datum>-<slug>/
+projekt/{{DATUM}}-{{SLUG}}/
 ├── projekt.md
-├── <slug>.md
+├── {{SLUG}}.md
 ├── pp.md
 ├── ds.md
 └── va.md
@@ -144,7 +156,7 @@ projekt/<datum>-<slug>/
 
 Dessa begrepp får inte omdefinieras i senare faser.
 
-<VÅ:s text>
+{{KARNBEGREPP}}
 
 **Regler:**
 - Markdown är sanningen. Inget JSON-register. Inget dubbelt register.
@@ -174,25 +186,25 @@ Fyra relationer:
 
 Testbara påståenden. Varje invariant ska kunna köras mot koden.
 
-<VÅ:s text>
+{{INVARIANTER}}
 
 ---
 
 ## DEL 6 — DATAMODELLEN (LÅST)
 
-<tomt — fylls i av VÅ>
+{{DATAMODELL}}
 
 ---
 
 ## DEL 7 — APPENS UTSEENDE
 
-<tomt — fylls i senare>
+{{TOMT}}
 
 ---
 
 ## DEL 8 — ARKITEKTONISKA TESTFALL (LÅSTA)
 
-<tomt — fylls i senare>
+{{TOMT}}
 
 ---
 
@@ -221,7 +233,7 @@ avgränsat, inte kärnan.
 ## DEL 5 — FIL 3: `pp.md`
 
 ```markdown
-# Produktionsplan — <Namn>
+# Produktionsplan — {{NAMN}}
 
 **Detta är arbetsgången.** Vad som gjorts, vad som görs, vad som väntar.
 **Status och Nästa bor i `projekt.md`.** Här bor stegen.
@@ -234,38 +246,36 @@ avgränsat, inte kärnan.
 
 | Fas | Status |
 |---|---|
-| Fas 1 — <första raden i Saker som ska göras, annars "Ej namngiven"> | 🔄 Pågår |
+| Fas 1 — {{FAS1}} | 🔄 Pågår |
 | Fas 2 | ⏳ Inte öppnad |
 
 ---
 
-## Fas 1 — <samma som ovan>
+## Fas 1 — {{FAS1}}
 
 **Checklista — appen läser denna.** Appen visar första ockryssade steget + fem
 närmaste (`ANTAL_AKTUELLA_STEG = 6`).
 
-- [ ] 1 <sak 1>
-- [ ] 2 <sak 2>
+<!-- per sak -->
+- [ ] {{N}} {{SAK}}
+<!-- /per sak -->
 
 Nummer och titel i checklistan måste stämma med rubrikerna nedan.
 
 **Steg i detalj**
 
-### Steg 1 — <sak 1>
+<!-- per sak -->
+### Steg {{N}} — {{SAK}}
 **Vad:**
 **Test:**
 **Commit:**
-
-### Steg 2 — <sak 2>
-**Vad:**
-**Test:**
-**Commit:**
+<!-- /per sak -->
 
 ---
 
 ## Öppna frågor
 
-<tomt — fylls i av VÅ>
+{{OPPNA_FRAGOR}}
 
 ---
 
@@ -280,7 +290,7 @@ och checklistan blir tom. Ingen rad hittas på.
 ## DEL 6 — FIL 4: `ds.md`
 
 ```markdown
-# DS — lokalt läge för <Namn>
+# DS — lokalt läge för {{NAMN}}
 
 **Rollkontraktet bor i `styrdokument/ROLLKONTRAKT.md`.** Läs det först.
 **Denna fil är projektets läge.** Vad som är öppet, vad som väntar, vad DS ska
@@ -290,37 +300,37 @@ veta just nu.
 
 ## Läget
 
-- **Fas 0.** Projektet skapat <datum>. Inte påbörjat.
-- **Nästa:** <första raden i Saker som ska göras, annars "Fyll i Vad och Syfte">
+- **Fas 0.** Projektet skapat {{DATUM}}. Inte påbörjat.
+- **Nästa:** {{NASTA}}
 
 ---
 
 ## Vad DS ska veta om detta projekt
 
-- Fem filer: `projekt.md`, `<slug>.md`, `pp.md`, `ds.md`, `va.md`.
+- Fem filer: `projekt.md`, `{{SLUG}}.md`, `pp.md`, `ds.md`, `va.md`.
 - **`projekt.md` äger Status och Nästa.** Inte `pp.md`, inte `ds.md`.
 - **Markdown är sanningen.** Inget JSON-register.
-- **Arkitekturen bor i `<slug>.md`.** Det som är låst.
+- **Arkitekturen bor i `{{SLUG}}.md`.** Det som är låst.
 - **Checklistan i `pp.md` äger steg-status.** Rubrikerna är beskrivning.
 
 ---
 
 ## Öppna frågor
 
-<VÅ:s text>
+{{OPPNA_FRAGOR}}
 
 ---
 
 ## Vad DS gör härnäst
 
 1. Läser i kanonisk ordning: `START_HÄR.md` → `ROLLKONTRAKT.md` → `REGELVERK.md`
-   → `projekt.md` → `<slug>.md` → `pp.md` → `ds.md` → `va.md`.
+   → `projekt.md` → `{{SLUG}}.md` → `pp.md` → `ds.md` → `va.md`.
 2. Säger LÄST / FÖRSTÅTT / SAKNAS / FRÅGA.
 3. Väntar på VÅ:s svar innan arbete börjar.
 
 ---
 
-**Uppdaterat:** <datum>
+**Uppdaterat:** {{DATUM}}
 ```
 
 ---
@@ -329,14 +339,14 @@ veta just nu.
 
 ```markdown
 ---
-id: <datum>-001
-uppdaterad: <datum>
+id: {{DATUM}}-001
+uppdaterad: {{DATUM}}
 typ: va-anteckningar
 ---
 
 # VÅ — Anteckningar
 
-<VÅ:s text>
+{{ANTECKNINGAR}}
 ```
 
 ---
@@ -347,7 +357,7 @@ typ: va-anteckningar
 2. Alla fem filer skrivs alltid. Ingen fil hoppas över.
 3. Befintlig mapp skrivs aldrig över. Suffix `-2`, `-3`.
 4. Frontmatter finns **bara** i `va.md`.
-5. `<datum>` = dagens datum, `YYYY-MM-DD`.
+5. `{{DATUM}}` = dagens datum, `YYYY-MM-DD`.
 6. Status i `projekt.md` blir alltid `Fas 0 — inte påbörjad` vid skapandet.
    VÅ ändrar till `Fas 1` när arbetet börjar.
 
