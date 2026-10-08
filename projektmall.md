@@ -11,9 +11,9 @@ Controlltower bygger mot den. En ny chatt läser mappen — inget mer behövs.
 
 ## DEL 1 — MAPPEN
 
-**Mappnamn:** `projekt/{{DATUM}}-{{SLUG}}/`
+**Mappnamn:** `projekt/{{DATUM_KORT}}-{{SLUG}}/`
 
-- `{{DATUM}}` = `YYYYMMDD`
+- `{{DATUM_KORT}}` = `YYYYMMDD`
 - `{{SLUG}}` = projektets namn: gemener, `å ä ö` → `a a o`, mellanslag och skiljetecken → `-`
 - Exempel: `20261008-minnesapp`
 
@@ -143,7 +143,7 @@ Logik och lagring är orörda.
 
 **Projektets mapp:**
 
-projekt/{{DATUM}}-{{SLUG}}/
+projekt/{{DATUM_KORT}}-{{SLUG}}/
 ├── projekt.md
 ├── {{SLUG}}.md
 ├── pp.md
@@ -339,7 +339,7 @@ veta just nu.
 
 ```markdown
 ---
-id: {{DATUM}}-001
+id: {{DATUM_KORT}}-001
 uppdaterad: {{DATUM}}
 typ: va-anteckningar
 ---
@@ -357,8 +357,9 @@ typ: va-anteckningar
 2. Alla fem filer skrivs alltid. Ingen fil hoppas över.
 3. Befintlig mapp skrivs aldrig över. Suffix `-2`, `-3`.
 4. Frontmatter finns **bara** i `va.md`.
-5. `{{DATUM}}` = dagens datum, `YYYY-MM-DD`.
-6. Status i `projekt.md` blir alltid `Fas 0 — inte påbörjad` vid skapandet.
+5. `{{DATUM}}` — dagens datum, `YYYY-MM-DD`.
+6. `{{DATUM_KORT}}` — dagens datum, `YYYYMMDD`. Används i mappnamn och id.
+7. Status i `projekt.md` blir alltid `Fas 0 — inte påbörjad` vid skapandet.
    VÅ ändrar till `Fas 1` när arbetet börjar.
 
 ---
