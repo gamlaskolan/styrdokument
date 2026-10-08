@@ -63,9 +63,7 @@ sektioner, i denna ordning:
 5. **Öppna frågor** — tabell: frågan, var den står, ägare, vad den blockerar.
 6. **Bedömning** — högst fem punkter, rangordnade, med skäl.
 
-Korthetsregeln i `ROLLKONTRAKT.md` gäller byggrapporter. En granskning
-täcker hela repot och får vara längre. Sex sektioner, kortast möjliga
-per sektion.
+Korthetsregeln och dess undantag står i `ROLLKONTRAKT.md`.
 
 Ingen ändring, ingen commit, om inte uppdraget säger annat.
 

@@ -93,6 +93,8 @@ Skriv utan att fråga. Fråga bara om du är osäker på vilken fil.
 
 DS svarar kort och i punktform. Löptext undviks. Skäl: bevara chattarnas längd. Varje svar ska vara så kort att det kan läsas på en skärm. Om ett svar kräver mer — dela upp i flera svar.
 
+Undantag: Korthetsregeln gäller byggrapporter. En granskning täcker hela repot och får vara längre. Sex sektioner, kortast möjliga per sektion.
+
 ---
 
 ## JEV-status

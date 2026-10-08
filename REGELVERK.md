@@ -1,6 +1,6 @@
 # REGELVERK FÖR SAMARBETET
-**Version 1.5 — gäller från 2026-10-08**
-Ändring: Kontrollregeln i DEL 7 — en regel, en fil, en ägare.
+**Version 1.6 — gäller från 2026-10-08**
+Ändring: Rundgångsregeln i DEL 7 — regel och undantag på samma ställe.
 
 ---
 
@@ -167,6 +167,10 @@ Detta regelverk är inte hugget i sten. När vi upptäcker att något saknas ell
 **Regel för uppdatering:** Föreslå ändring. Motivera varför. Beslut tillsammans. Skriv in i dokumentet.
 
 **Kontrollregel (SKA):** En regel ska bara finnas i en fil. Alla andra ställen är en pekare. Varje regel ska ha en ägare. Ägaren står i `ROLLKONTRAKT.md`.
+
+**Rundgångsregeln (SKA):** En regel och dess undantag ska stå på samma ställe. Ägaren till regeln äger undantaget. Andra filer ska peka — de ska inte citera, och de ska inte upprepa.
+
+Om två filer säger samma sak med olika ordalydelse är det ett fel. Det ska rättas genom att en av dem pekar på den andra, inte genom att formuleringarna förs närmare varandra.
 
 ---
 
