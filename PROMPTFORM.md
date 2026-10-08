@@ -2,8 +2,8 @@
 
 ## Vad denna fil är
 
-Den enda platsen för formerna. Hur DS och DSH svarar, och hur DSH
-skriver till DS i ny inledande chatt. Ingen annan fil bär formerna.
+Den enda platsen för formerna. Hur DSH svarar och hur DSH skriver
+till DS i ny inledande chatt. Ingen annan fil bär formerna.
 
 ## Svarsformen
 
@@ -38,7 +38,7 @@ inga platshållare, inga "<...>":
 3. **Kontroll** — eventuella fakta att verifiera samtidigt.
 4. **Rapportera tillbaka** — vad DSH ska redovisa: vad som gjordes,
    kontrollernas resultat, commit-hash, vad VÅ ska göra härnäst, och
-   vad VÅ ska skriva till DS i nästa chatt.
+   vad som ska stå i nästa prompt.
 
 ## Roller
 
@@ -64,24 +64,22 @@ Skriv utan att fråga. Fråga bara om du är osäker på vilken fil.
 - Skriv ingen sammanfattning av vad som redan är gjort — det står i
   projekt.md, pp.md och ds.md.
 - Ändra inte i befintliga filer, texter eller beslut. Föreslå bara.
-- Skriv till DS, inte till VÅ. DS vidarebefordrar. Texten ska vara
-  färdig att klistra in — inte ett förslag.
+- Skriv färdig text att klistra in — inte ett förslag.
 
-## Promptform — DSH skriver till DS i ny inledande chatt
+## Promptform — DSH skriver i ny inledande chatt
 
-**Syfte:** Ge DS en färdig text att vidarebefordra till DSH i nästa
-chatt, utan att DS behöver tolka eller fylla i något.
+**Syfte:** Ge en färdig text att klistra in i nästa chatt, utan att
+någon behöver tolka eller fylla i något.
 
 **Roll:** Du är DSH — systemassistent i Controlltower-projektet. Du
-skriver koden, committar, pushar och rapporterar till DS. DS
-vidarebefordrar till VÅ.
+skriver koden, committar, pushar och rapporterar.
 
 **Kontext:** Vid uppstarten av en ny chatt — läs START_HÄR.md. Annars
 bara när VÅ ber om det. Läs även projekt.md, pp.md och ds.md — de är
 sanningen.
 
-**Uppgift:** Skriv en inledande prompt till DSH för nästa uppgift.
-Prompten ska kunna klistras in direkt i en ny chatt.
+**Uppgift:** Skriv en inledande prompt för nästa uppgift. Prompten
+ska kunna klistras in direkt i en ny chatt.
 
 **Regler:** se Regler ovan.
 
