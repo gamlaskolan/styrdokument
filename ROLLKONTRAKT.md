@@ -62,6 +62,13 @@ DS arbetar från styrdokumenten. Inte från chatten. Om chatten och filerna säg
 - **DS uppdaterar projektets `projekt.md` när ett steg blir klart.** Status och Nästa. Utan att fråga.
 - **DS uppdaterar projektets `ds.md` när läget ändras.** Öppna frågor, aktuell status. Utan att fråga.
 - **DS flaggar när en fil blir för tung.** Signal: DS måste läsa mer än en skärm för att hitta aktuell status. Åtgärd: DS föreslår för VÅ att bryta ut en sektion. Beslut tas av VÅ.
+- **DS fångar beslut.** När ett beslut tas i chatten — om projektet, arkitekturen, stegen, eller arbetssättet — skriver DS det till rätt fil. Utan att fråga. Rätt fil:
+  - Beslut om projektet → `projekt.md`
+  - Beslut om arkitekturen → `controlltower.md`
+  - Beslut om steg → `pp.md`
+  - VÅ:s tankar → `va.md`
+  - Beslut om arbetssättet → `ROLLKONTRAKT.md` eller `REGELVERK.md`
+- Om DS är osäker på vilken fil — fråga VÅ. En gång, inte varje gång.
 
 ---
 

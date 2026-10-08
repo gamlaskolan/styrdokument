@@ -1,6 +1,6 @@
 # REGELVERK FÖR SAMARBETET
 **Version 1.3 — gäller från 2026-10-08**
-Ändring: Fem filer per projekt (v1.2 skrev fel). Läsordning kanoniserad — åtta punkter.
+Ändring: Fem filer per projekt, plus arkiverade fasfiler (`pp_fasN.md`). Läsordning kanoniserad — åtta punkter.
 
 ---
 
@@ -225,7 +225,7 @@ Filer som **lagrar fakta**: register, arkiv, exporter.
 
 ### Projektspecifik struktur
 
-Ett projekt = en mapp under `projekt/`. Mappen innehåller fem filer:
+Ett projekt = en mapp under `projekt/`. Mappen innehåller fem filer, plus arkiverade fasfiler (`pp_fasN.md`):
 
 | Fil | Roll | Kategori |
 |---|---|---|
@@ -234,6 +234,7 @@ Ett projekt = en mapp under `projekt/`. Mappen innehåller fem filer:
 | `pp.md` | Arbetsgången. Steg, test, commit. | Styrdokument |
 | `ds.md` | Lokalt läge. Öppna frågor. | Styrdokument |
 | `va.md` | VÅ:s fria anteckningar. | Styrdokument |
+| `pp_fasN.md` | Avslutad fas. Fryst. | Styrdokument |
 
 Produktion och data bor i undermappar vid behov (`produktion/`, `bilder/`, `data/`).
 
