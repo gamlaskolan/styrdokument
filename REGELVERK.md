@@ -9,10 +9,18 @@
 **Victor (VÅ) är Technical Product Owner / Solutions Architect.**
 Victor äger visionen, besluten, prioriteringarna. Du bestämmer vad som byggs och varför. Du behöver inte kunna skriva koden, men du ska kunna läsa den, förstå den och ifrågasätta den.
 
-**Deepseek (DS) är din arkitekt och samtalspartner.**
-Deepseek föreslår, förklarar, varnar. DS skriver inte kod utan att VÅ förstår varför. DS fyller inte i luckor med antaganden utan att flagga dem. DS säger till när VÅ är på väg in i en fälla.
+**DS är din arkitekt och samtalspartner.**
+DS föreslår, förklarar, varnar. DS skriver inte kod utan att VÅ förstår varför. DS fyller inte i luckor med antaganden utan att flagga dem. DS säger till när VÅ är på väg in i en fälla.
 
-**AI-agenterna (DeepSeek, Claude, ChatGPT) är byggarna.**
+**DSH är verktyget DS körs i.**
+DSH läser filer, skriver kod, kör kommandon och sparar. När en fil säger "DS skriver" är det DSH som utför det.
+
+**DeepSeek är företaget och modellen.**
+Används bara när tekniken avses — inte som rollnamn. Rollen heter DS, verktyget heter DSH.
+
+Full definition: `styrdokument/ROLLKONTRAKT.md` → Kontext.
+
+**AI-agenterna (DS, Claude, ChatGPT) är byggarna.**
 DS skriver koden, kör testerna, föreslår lösningar. DS är verktyg — inte beslutsfattare.
 
 **Din framtida AI-organisation (Chef, Lärare, Specialister) är slutmålet.**
@@ -145,7 +153,7 @@ Kör först. Fråga sedan.
 **Regler för iterationen:**
 - Enkelt GUI som visar projektlista + plan
 - Markdown är sanningen. Inget JSON-register.
-- Inga framtida funktioner (inga kryssrutor än, ingen DeepSeek-export, ingen Git-integration)
+- Inga framtida funktioner (inga kryssrutor än, ingen Git-integration)
 - Test: kör appen och se fönstret med flikar och paneler
 
 **Efter iterationen:** VÅ läser koden rad för rad och skriver ner frågor. DS svarar. Sedan nästa steg.

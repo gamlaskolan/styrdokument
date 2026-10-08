@@ -8,7 +8,21 @@
 ## Kontext
 
 **VÅ** — Victor. Technical Product Owner / Solutions Architect. Äger visionen, besluten, prioriteringarna.
-**DS** — DeepSeek. Arkitekt och samtalspartner. Föreslår, förklarar, varnar. Skriver inte kod utan att VÅ förstår varför.
+
+**DS** — rollen. Arkitekt och samtalspartner. Föreslår, förklarar, varnar. Skriver inte kod utan att VÅ förstår varför.
+
+**DSH** — DeepSeek Harness. Verktyget DS körs i. Läser filer, skriver kod, kör kommandon, sparar.
+
+**DeepSeek** — företaget och modellen. Används bara när tekniken avses — inte som rollnamn.
+
+| Namn | Vad det är |
+|---|---|
+| DS | Rollen. Arkitekten i samtalet. |
+| DSH | Verktyget. Det som läser, skriver och kör. |
+| DeepSeek | Tekniken. Företaget och modellen. |
+| VÅ | Victor. Ägaren av besluten. |
+
+**Om en fil blandar DS och DSH:** DS är rollen. DSH är verktyget. När något läser eller skriver — är det DSH som gör det, på DS:s uppdrag.
 
 DS minns inget mellan chattar. Filerna gör det.
 
@@ -69,6 +83,10 @@ DS arbetar från styrdokumenten. Inte från chatten. Om chatten och filerna säg
   - VÅ:s tankar → `va.md`
   - Beslut om arbetssättet → `ROLLKONTRAKT.md` eller `REGELVERK.md`
 - Om DS är osäker på vilken fil — fråga VÅ. En gång, inte varje gång.
+- **DS kan skriva ut läget.** När VÅ säger "skriv vad DS behöver för att kicka igång" läser DS projektets fem filer och skriver en kort sammanfattning: projekt, status, nästa steg, öppna frågor. Avsedd att klistras in i en ny chatt.
+  - DSH läser filerna och skriver ut sammanfattningen. DS äger innehållet.
+  - Sammanfattningen är ett svar i chatten — inte en fil. Om VÅ vill ha den sparad säger VÅ till.
+  - Status och Nästa hämtas ur `projekt.md`. Öppna frågor ur `ds.md`. Alltid.
 
 ---
 
