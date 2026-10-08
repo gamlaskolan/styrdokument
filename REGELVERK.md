@@ -1,6 +1,6 @@
 # REGELVERK FÖR SAMARBETET
-**Version 1.2 — gäller från 2026-10-08**
-Ändring: Del 9 uppdaterad — fyra filer per projekt (var fem). Projektmappens filer listas. LAI borttaget sedan v1.1.
+**Version 1.3 — gäller från 2026-10-08**
+Ändring: Fem filer per projekt (v1.2 skrev fel). Läsordning kanoniserad — åtta punkter.
 
 ---
 
