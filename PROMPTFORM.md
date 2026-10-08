@@ -40,9 +40,30 @@ inga platshållare, inga "<...>":
 2. **Test** — hur uppgiften prövas. Kör appen, vad som ska synas,
    exit 0.
 3. **Kontroll** — eventuella fakta att verifiera samtidigt.
-4. **Rapportera tillbaka** — vad DSH ska redovisa: vad som gjordes,
+4. **Rapportera tillbaka** — fyra punkter: vad som gjordes,
    kontrollernas resultat, commit-hash, och vad som ska stå i nästa
-   prompt.
+   prompt. Samma hänvisningskrav som i `Granskningsrapporten`.
+
+## Granskningsrapporten
+
+Hänvisningskravet gäller varje rapport — byggrapporten och granskningen:
+
+- Varje påstående har fil och rad.
+- Citat när ordalydelsen avgör.
+- Fel, smaksak och oklart står i skilda kategorier — aldrig blandade.
+- Öppna frågor har ägare och vad de blockerar.
+
+När uppdraget är att granska i stället för att bygga, svarar DSH i sex
+sektioner, i denna ordning:
+
+1. **Läst** — vilka filer och vilka delar. Vad som inte granskats.
+2. **Motsägelser** — tabell: vad, fil A rad, fil B rad, skillnad.
+3. **Fel** — tabell: fil och rad, påståendet, varför det är fel.
+4. **Best practice** — tabell: princip, vad som bryter mot den.
+5. **Öppna frågor** — tabell: frågan, var den står, ägare, vad den blockerar.
+6. **Bedömning** — högst fem punkter, rangordnade, med skäl.
+
+Ingen ändring, ingen commit, om inte uppdraget säger annat.
 
 ## Roller
 
@@ -56,6 +77,7 @@ Tabellen över vad DS skriver, när, och var ligger i `ROLLKONTRAKT.md`.
   projekt.md, pp.md och ds.md.
 - Ändra inte i befintliga filer, texter eller beslut. Föreslå bara.
 - Skriv färdig text att klistra in — inte ett förslag.
+- Kontrollera nya sektioner att de inte upprepar något som redan står. En regel får bara finnas i en fil (`REGELVERK.md` DEL 7).
 
 ## Promptform — DSH skriver i ny inledande chatt
 
