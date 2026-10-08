@@ -323,8 +323,7 @@ veta just nu.
 
 ## Vad DS gör härnäst
 
-1. Läser i kanonisk ordning: `START_HÄR.md` → `ROLLKONTRAKT.md` → `REGELVERK.md`
-   → `projekt.md` → `{{SLUG}}.md` → `pp.md` → `ds.md` → `va.md`.
+1. Läser i den ordning repots `START_HÄR.md` anger.
 2. Svarar enligt svarsformen i `PROMPTFORM.md`.
 3. Väntar på VÅ:s svar innan arbete börjar.
 

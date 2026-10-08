@@ -1,6 +1,6 @@
 # REGELVERK FÖR SAMARBETET
-**Version 1.8 — gäller från 2026-10-08**
-Ändring: DEL 9 — exemplet i Produktion bytt från `auto_push.sh` till `main.py` och `filer.py`.
+**Version 1.9 — gäller från 2026-10-08**
+Ändring: Undantaget i DEL 7 — en kopia kräver annat syfte och en mekanism som håller den i synk.
 
 ---
 
@@ -172,7 +172,9 @@ Detta regelverk är inte hugget i sten. När vi upptäcker att något saknas ell
 
 Om två filer säger samma sak med olika ordalydelse är det ett fel. Det ska rättas genom att en av dem pekar på den andra, inte genom att formuleringarna förs närmare varandra.
 
-Undantag: Rundgångsregeln gäller regler. Öppna frågor och loggrader får stå i två filer när de har olika syften — `pp.md` som checklista, `ds.md` som faktalista.
+Undantag: En kopia är tillåten när den har ett annat syfte och antingen genereras eller kontrolleras av ett körbart test.
+
+Öppna frågor och loggrader får stå i två filer när de har olika syften — `pp.md` som checklista, `ds.md` som faktalista.
 
 ---
 
