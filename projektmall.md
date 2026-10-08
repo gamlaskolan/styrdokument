@@ -244,7 +244,7 @@ avgränsat, inte kärnan.
 **Detta är arbetsgången.** Vad som gjorts, vad som görs, vad som väntar.
 **Status och Nästa bor i `projekt.md`.** Här bor stegen.
 
-> När Fas 1 är klar: flytta stegen till `pp_fas1.md`. `pp.md` börjar om med Fas 2.
+> När en fas är klar: flytta stegen till `pp_fasN.md`. `pp.md` börjar om med nästa fas.
 
 ---
 
