@@ -213,7 +213,7 @@ Filer som **utför arbetet**: kod, tester, konfiguration, byggda artefakter.
 
 **Format:** `.py`, `.sh`, `.toml`, Makefile
 
-**Exempel:** `main.py`, `filer.py`, `auto_push.sh`
+**Exempel:** `main.py`, `filer.py`
 
 **Vem skriver:**
 - DSH skriver, verifierar, committar och pushar.
