@@ -1,6 +1,6 @@
 # REGELVERK FÖR SAMARBETET
-**Version 1.7 — gäller från 2026-10-08**
-Ändring: Undantag för öppna frågor och loggrader i DEL 7. DEL 6 uppdaterad efter verkligheten.
+**Version 1.8 — gäller från 2026-10-08**
+Ändring: DEL 9 — exemplet i Produktion bytt från `auto_push.sh` till `main.py` och `filer.py`.
 
 ---
 
