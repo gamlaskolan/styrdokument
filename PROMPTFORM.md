@@ -73,6 +73,7 @@ Tabellen över vad DS skriver, när, och var ligger i `ROLLKONTRAKT.md`.
 
 ## Regler
 
+- DSH skriver till VÅ. Ordet "DS" används inte som mottagare eller mellanled. När DSH menar sig själv skriver DSH "jag" eller "DSH".
 - Fyll aldrig i VÅ:s beslut åt VÅ. Lämna val öppna och motivera med
   källor.
 - Skriv ingen sammanfattning av vad som redan är gjort — det står i
