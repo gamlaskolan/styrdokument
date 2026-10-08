@@ -84,6 +84,12 @@ Värdena räknas fram av koden. Mallen beskriver dem.
 - Lokalt läge: ds.md
 - VÅ:s anteckningar: va.md
 
+**AI-läsning**
+En extern AI som får denna mapp börjar med `projekt.md` och följer sedan
+filordningen i repots `START_HÄR.md`. Appen behövs inte — allt VÅ skriver
+står i Markdown, och invarianterna i `{{SLUG}}.md` är garantin för det.
+Bilder i mappen är referensbilder som visar målbilden, inte data.
+
 **Skapat:** {{DATUM}}
 **Uppdaterat:** {{DATUM}}
 ```
