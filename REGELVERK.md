@@ -1,6 +1,6 @@
 # REGELVERK FÖR SAMARBETET
-**Version 1.4 — gäller från 2026-10-08**
-Ändring: DSH skriver all kod, verifierar, committar och pushar. VÅ granskar diffen efteråt.
+**Version 1.5 — gäller från 2026-10-08**
+Ändring: Kontrollregeln i DEL 7 — en regel, en fil, en ägare.
 
 ---
 
@@ -165,6 +165,8 @@ Kör först. Fråga sedan.
 Detta regelverk är inte hugget i sten. När vi upptäcker att något saknas eller inte fungerar, uppdaterar vi det.
 
 **Regel för uppdatering:** Föreslå ändring. Motivera varför. Beslut tillsammans. Skriv in i dokumentet.
+
+**Kontrollregel (SKA):** En regel ska bara finnas i en fil. Alla andra ställen är en pekare. Varje regel ska ha en ägare. Ägaren står i `ROLLKONTRAKT.md`.
 
 ---
 
