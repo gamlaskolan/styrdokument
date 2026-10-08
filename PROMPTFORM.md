@@ -37,8 +37,8 @@ inga platshållare, inga "<...>":
    exit 0.
 3. **Kontroll** — eventuella fakta att verifiera samtidigt.
 4. **Rapportera tillbaka** — vad DSH ska redovisa: vad som gjordes,
-   kontrollernas resultat, commit-hash, vad VÅ ska göra härnäst, och
-   vad som ska stå i nästa prompt.
+   kontrollernas resultat, commit-hash, och vad som ska stå i nästa
+   prompt.
 
 ## Roller
 
