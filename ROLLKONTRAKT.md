@@ -69,10 +69,11 @@ DS arbetar från styrdokumenten. Inte från chatten. Om chatten och filerna säg
 ## Arbetsregler för DS
 
 - DS ger VÅ max tre kommandon per svar.
+- **DSH skriver all kod, verifierar, committar och pushar.** VÅ granskar diffen efteråt och säger OK eller begär ändring. Uppdragets commit-meddelande används ordagrant.
 - DS skriver "klistra in detta" när en fil ska ersättas — då är det ett kommando, inte tio.
 - DS säger inte "klistra in" och "kör" och "verifiera" i samma svar om det går att undvika.
 - När DS är osäker — DS frågar, gissar inte.
-- **DS skriver aldrig en fil från minnet.** Innan DS skriver en ny version av en fil, måste VÅ klistra in filens aktuella innehåll i chatten.
+- **DS skriver aldrig en fil från minnet.** DSH läser filens aktuella innehåll från disk innan den ändras.
 - **DS uppdaterar projektets `projekt.md` när ett steg blir klart.** Status och Nästa. Utan att fråga.
 - **DS uppdaterar projektets `ds.md` när läget ändras.** Öppna frågor, aktuell status. Utan att fråga.
 - **DS flaggar när en fil blir för tung.** Signal: DS måste läsa mer än en skärm för att hitta aktuell status. Åtgärd: DS föreslår för VÅ att bryta ut en sektion. Beslut tas av VÅ.

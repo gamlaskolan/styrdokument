@@ -1,6 +1,6 @@
 # REGELVERK FÖR SAMARBETET
-**Version 1.3 — gäller från 2026-10-08**
-Ändring: Fem filer per projekt, plus arkiverade fasfiler (`pp_fasN.md`). Läsordning kanoniserad — åtta punkter.
+**Version 1.4 — gäller från 2026-10-08**
+Ändring: DSH skriver all kod, verifierar, committar och pushar. VÅ granskar diffen efteråt.
 
 ---
 
@@ -208,8 +208,8 @@ Filer som **utför arbetet**: kod, tester, konfiguration, byggda artefakter.
 **Exempel:** `main.py`, `filer.py`, `auto_push.sh`
 
 **Vem skriver:**
-- VÅ skriver. Alltid. Tills AI CHEF finns.
-- DS får **föreslå** ändringar.
+- DSH skriver, verifierar, committar och pushar.
+- VÅ granskar diffen efteråt och säger OK eller begär ändring.
 
 **Kännetecken:** exekveras. Kan ha bieffekter. Fel här = trasigt program.
 
