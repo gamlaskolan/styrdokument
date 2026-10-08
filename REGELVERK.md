@@ -1,6 +1,6 @@
 # REGELVERK FÖR SAMARBETET
-**Version 1.6 — gäller från 2026-10-08**
-Ändring: Rundgångsregeln i DEL 7 — regel och undantag på samma ställe.
+**Version 1.7 — gäller från 2026-10-08**
+Ändring: Undantag för öppna frågor och loggrader i DEL 7. DEL 6 uppdaterad efter verkligheten.
 
 ---
 
@@ -153,10 +153,10 @@ Kör först. Fråga sedan.
 **Regler för iterationen:**
 - Enkelt GUI som visar projektlista + plan
 - Markdown är sanningen. Inget JSON-register.
-- Inga framtida funktioner (inga kryssrutor än, ingen Git-integration)
-- Test: kör appen och se fönstret med flikar och paneler
+- Inga framtida funktioner (ingen Git-integration i appen)
+- Test: kör appen och se flikarna — projektlistan, checkrutorna och panelerna
 
-**Efter iterationen:** VÅ läser koden rad för rad och skriver ner frågor. DS svarar. Sedan nästa steg.
+**Efter iterationen:** VÅ granskar diffen i terminalen och säger OK eller begär ändring. Sedan nästa steg.
 
 ---
 
@@ -171,6 +171,8 @@ Detta regelverk är inte hugget i sten. När vi upptäcker att något saknas ell
 **Rundgångsregeln (SKA):** En regel och dess undantag ska stå på samma ställe. Ägaren till regeln äger undantaget. Andra filer ska peka — de ska inte citera, och de ska inte upprepa.
 
 Om två filer säger samma sak med olika ordalydelse är det ett fel. Det ska rättas genom att en av dem pekar på den andra, inte genom att formuleringarna förs närmare varandra.
+
+Undantag: Rundgångsregeln gäller regler. Öppna frågor och loggrader får stå i två filer när de har olika syften — `pp.md` som checklista, `ds.md` som faktalista.
 
 ---
 
