@@ -5,7 +5,7 @@
 **Gäller:** Alla projekt under `projekt/`.
 
 Denna fil är kontraktet för vad ett nytt projekt är. Fliken "Nytt projekt" i
-Controlltower bygger mot den. En ny chatt läser mappen — inget mer behövs.
+plapp bygger mot den. En ny chatt läser mappen — inget mer behövs.
 
 ---
 
@@ -78,7 +78,7 @@ Värdena räknas fram av koden. Mallen beskriver dem.
 **Personal:** {{PERSONAL}}
 
 **Filer**
-- Startpunkt: START_HÄR.md
+- Startpunkt: start_har.md
 - Arkitektur: {{SLUG}}.md
 - Arbetsgång: pp.md
 - Lokalt läge: ds.md
@@ -86,7 +86,7 @@ Värdena räknas fram av koden. Mallen beskriver dem.
 
 **AI-läsning**
 En extern AI som får denna mapp börjar med `projekt.md` och följer sedan
-filordningen i repots `START_HÄR.md`. Appen behövs inte — allt VÅ skriver
+filordningen i repots `start_har.md`. Appen behövs inte — allt VÅ skriver
 står i Markdown, och invarianterna i `{{SLUG}}.md` är garantin för det.
 Bilder i mappen är inte data.
 
@@ -98,7 +98,7 @@ Bilder i mappen är inte data.
 
 ## DEL 4 — FIL 2: `{{SLUG}}.md`
 
-Nio delar. DEL 0, 2, 4, 9 ärvs ordagrant från `controlltower.md` (med projektets
+Nio delar. DEL 0, 2, 4, 9 ärvs ordagrant från `plapp.md` (med projektets
 namn insatt). DEL 1, 3, 5 får VÅ:s text. DEL 6, 7, 8 är tomma platshållare.
 Datamodellen (DEL 6) får ingen generisk text — den fylls i av VÅ.
 
@@ -117,7 +117,7 @@ Detta är arkitekturen för {{NAMN}}.
 
 Det beskriver **vad systemet är** och **vad som är låst**. Inte stegen för att
 bygga det. Stegen bor i `pp.md`. Läget bor i `projekt.md`. Rollkontraktet bor i
-`styrdokument/ROLLKONTRAKT.md`.
+`styrdokument/rollkontrakt.md`.
 
 Om detta dokument och `pp.md` säger olika om arkitekturen — detta dokument vinner.
 Om detta dokument och verkligheten säger olika — verkligheten vinner, och detta
@@ -298,7 +298,7 @@ och checklistan blir tom. Ingen rad hittas på.
 ```markdown
 # DS — lokalt läge för {{NAMN}}
 
-**Rollkontraktet bor i `styrdokument/ROLLKONTRAKT.md`.** Läs det först.
+**Rollkontraktet bor i `styrdokument/rollkontrakt.md`.** Läs det först.
 **Denna fil är projektets läge.** Vad som är öppet, vad som väntar, vad DS ska
 veta just nu.
 
@@ -329,8 +329,8 @@ veta just nu.
 
 ## Vad DS gör härnäst
 
-1. Läser i den ordning repots `START_HÄR.md` anger.
-2. Svarar enligt svarsformen i `PROMPTFORM.md`.
+1. Läser i den ordning repots `start_har.md` anger.
+2. Svarar enligt svarsformen i `promptform.md`.
 3. Väntar på VÅ:s svar innan arbete börjar.
 
 ---

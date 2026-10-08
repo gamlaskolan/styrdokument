@@ -1,4 +1,4 @@
-# PROMPTFORM.md
+# promptform.md
 
 ## Vad denna fil är
 
@@ -29,7 +29,7 @@ Om en rad inte kan fyllas — skriv INGET eller OKLART. Inget mer i första svar
 ## Uppdragsformen
 
 Prompten börjar direkt med Nästa uppgift. Ingen inledande rad.
-Läs START_HÄR.md skrivs inte i prompten — den läses vid uppstarten
+Läs start_har.md skrivs inte i prompten — den läses vid uppstarten
 av ny chatt, och uppstarten sköter VÅ.
 
 Prompten ska ha exakt fyra delar, i denna ordning. Varje del fylld —
@@ -63,13 +63,13 @@ sektioner, i denna ordning:
 5. **Öppna frågor** — tabell: frågan, var den står, ägare, vad den blockerar.
 6. **Bedömning** — högst fem punkter, rangordnade, med skäl.
 
-Korthetsregeln och dess undantag står i `ROLLKONTRAKT.md`.
+Korthetsregeln och dess undantag står i `rollkontrakt.md`.
 
 Ingen ändring, ingen commit, om inte uppdraget säger annat.
 
 ## Roller
 
-Tabellen över vad DS skriver, när, och var ligger i `ROLLKONTRAKT.md`.
+Tabellen över vad DS skriver, när, och var ligger i `rollkontrakt.md`.
 
 ## Regler
 
@@ -80,14 +80,14 @@ Tabellen över vad DS skriver, när, och var ligger i `ROLLKONTRAKT.md`.
   projekt.md, pp.md och ds.md.
 - Ändra inte i befintliga filer, texter eller beslut. Föreslå bara.
 - Skriv färdig text att klistra in — inte ett förslag.
-- Kontrollera nya sektioner att de inte upprepar något som redan står (`REGELVERK.md` DEL 7).
+- Kontrollera nya sektioner att de inte upprepar något som redan står (`regelverk.md` DEL 7).
 
 ## Promptform — DSH skriver i ny inledande chatt
 
 **Syfte:** Ge en färdig text att klistra in i nästa chatt, utan att
 någon behöver tolka eller fylla i något.
 
-**Roll:** Du är DSH — systemassistent i Controlltower-projektet. Du
+**Roll:** Du är DSH — systemassistent i plapp-projektet. Du
 skriver koden, committar, pushar och rapporterar.
 
 **Kontext:** En mening om uppgiften — vad den hör till, vilka filer

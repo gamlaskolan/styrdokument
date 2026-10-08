@@ -18,7 +18,7 @@ DSH läser filer, skriver kod, kör kommandon och sparar. När en fil säger "DS
 **DeepSeek är företaget och modellen.**
 Används bara när tekniken avses — inte som rollnamn. Rollen heter DS, verktyget heter DSH.
 
-Full definition: `styrdokument/ROLLKONTRAKT.md` → Kontext.
+Full definition: `styrdokument/rollkontrakt.md` → Kontext.
 
 **AI-agenterna (DS, Claude, ChatGPT) är byggarna.**
 DS skriver koden, kör testerna, föreslår lösningar. DS är verktyg — inte beslutsfattare.
@@ -26,7 +26,7 @@ DS skriver koden, kör testerna, föreslår lösningar. DS är verktyg — inte 
 **Din framtida AI-organisation (Chef, Lärare, Specialister) är slutmålet.**
 Allt vi bygger nu är träning för att bygga framtida projekt.
 Vi börjar med:
-1. Controlltower (Projektplan)
+1. plapp (rotprojekt)
 2. AI CHEF
 3. Minnesapp
 4. Logistikapp
@@ -55,7 +55,7 @@ Hellre en fråga för mycket än ett antagande för mycket.
 DS skriver så kort och koncist som möjligt, i stil med:
 
 Sammanfattning av läget:
-- REGELVERK.md — klart, committat
+- regelverk.md — klart, committat
 - PP.md — klart, committat
 - main.py — Steg 6 klart, committat
 - Data/projekt/projektplan_exempel.md — ska skapas nu
@@ -146,9 +146,9 @@ Kör först. Fråga sedan.
 
 ## DEL 6 — VAD SOM GÄLLER JUST NU
 
-**Projekt:** Controlltower (verktyget) + AI CHEF (lärandeplattformen)
+**Projekt:** plapp (verktyget) + AI CHEF (lärandeplattformen)
 
-**Nästa handling:** Se `projekt/controlltower/projekt.md` → Nästa.
+**Nästa handling:** Se `projekt/plapp/projekt.md` → Nästa.
 
 **Regler för iterationen:**
 - Enkelt GUI som visar projektlista + plan
@@ -166,7 +166,7 @@ Detta regelverk är inte hugget i sten. När vi upptäcker att något saknas ell
 
 **Regel för uppdatering:** Föreslå ändring. Motivera varför. Beslut tillsammans. Skriv in i dokumentet.
 
-**Kontrollregel (SKA):** En regel ska bara finnas i en fil. Alla andra ställen är en pekare. Varje regel ska ha en ägare. Ägaren står i `ROLLKONTRAKT.md`.
+**Kontrollregel (SKA):** En regel ska bara finnas i en fil. Alla andra ställen är en pekare. Varje regel ska ha en ägare. Ägaren står i `rollkontrakt.md`.
 
 **Rundgångsregeln (SKA):** En regel och dess undantag ska stå på samma ställe. Ägaren till regeln äger undantaget. Andra filer ska peka — de ska inte citera, och de ska inte upprepa.
 
@@ -183,7 +183,7 @@ Undantag: En kopia är tillåten när den har ett annat syfte och antingen gener
 Om 1–2 år ska VÅ ha:
 
 - **AI CHEF** — ett fungerande AI-organisationssystem
-- **Controlltower** — VÅ:s Control Tower
+- **plapp** — VÅ:s Control Tower
 - **Logistikappen** — VÅ:s första riktiga produkt
 - **Minnesappen** — VÅ:s andra riktiga produkt
 - **Kunskapen** — att läsa kod, förstå arkitektur, kommunicera med utvecklare och AI
@@ -202,7 +202,7 @@ Filer som **beskriver arbetet**: vad vi gör, varför, var vi är, vad som är b
 
 **Format:** `.md`, `.docx`, `.yaml`
 
-**Exempel:** `START_HÄR.md`, `ROLLKONTRAKT.md`, `REGELVERK.md`, `projekt.md`, `controlltower.md`, `pp.md`, `ds.md`
+**Exempel:** `start_har.md`, `rollkontrakt.md`, `regelverk.md`, `projekt.md`, `plapp.md`, `pp.md`, `ds.md`
 
 **Vem skriver:**
 - DS får skriva via MCP. VÅ skriver när DS ber om det.

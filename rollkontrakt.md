@@ -30,7 +30,7 @@ DS minns inget mellan chattar. Filerna gör det.
 
 ## Läsmall — gäller vid varje ny chatt
 
-Läsmallen ligger i `PROMPTFORM.md`.
+Läsmallen ligger i `promptform.md`.
 
 ### Mekanism 1 — Referensplikt
 
@@ -79,8 +79,8 @@ DS arbetar från styrdokumenten. Inte från chatten. Om chatten och filerna säg
 | Läget ändras | Vad som gjorts, vad som väntar | `ds.md` |
 | En fråga stängs | Ta bort den ur öppna frågor | `pp.md` + `ds.md` |
 | En fråga öppnas | Lägg till den i öppna frågor | `pp.md` + `ds.md` |
-| Ett beslut tas i chatten | Skriv in det i rätt fil | Projektet → `projekt.md`. Arkitekturen → `controlltower.md`. Stegen → `pp.md`. VÅ:s tankar → `va.md`. Arbetssättet → `ROLLKONTRAKT.md` eller `REGELVERK.md`. |
-| Arkitekturen ändras | Ny version + ändringsrad | `controlltower.md` rad 3 |
+| Ett beslut tas i chatten | Skriv in det i rätt fil | Projektet → `projekt.md`. Arkitekturen → `plapp.md`. Stegen → `pp.md`. VÅ:s tankar → `va.md`. Arbetssättet → `rollkontrakt.md` eller `regelverk.md`. |
+| Arkitekturen ändras | Ny version + ändringsrad | `plapp.md` rad 3 |
 | Ett projekt skapas | Fem filer enligt mallen | `styrdokument/projektmall.md` |
 
 Skriv utan att fråga. Fråga bara om du är osäker på vilken fil.
