@@ -48,7 +48,7 @@ inga platshållare, inga "<...>":
 
 Hänvisningskravet gäller varje rapport — byggrapporten och granskningen:
 
-- Varje påstående har fil och rad.
+- Hänvisa med fil, sektion och citat. Radnummer är en hjälp, inte ett krav. Ett felaktigt radnummer är inte ett fel — ett felaktigt citat är.
 - Citat när ordalydelsen avgör.
 - Fel, smaksak och oklart står i skilda kategorier — aldrig blandade.
 - Öppna frågor har ägare och vad de blockerar.
