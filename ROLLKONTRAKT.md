@@ -30,22 +30,7 @@ DS minns inget mellan chattar. Filerna gör det.
 
 ## Läsmall — gäller vid varje ny chatt
 
-DS följer denna utan undantag.
-
-### Mekanism 1 — Tröskel
-
-Första svaret i en ny chatt innehåller inget arbete. Ingen kod. Ingen analys. Inget förslag. Bara läsning. Om DS skriver något annat i första svaret — bryter DS regeln. VÅ säger till. DS börjar om.
-
-### Mekanism 2 — Formulering
-
-Första svaret har fast form. Fyra rader, i denna ordning:
-
-- **LÄST:** vilka filer, vilka sektioner
-- **FÖRSTÅTT:** status, nästa handling enligt filerna
-- **SAKNAS:** vad DS behöver som inte finns
-- **FRÅGA:** en fråga till VÅ
-
-Om en rad inte kan fyllas — skriv INGET eller OKLART. Inget mer i första svaret.
+Läsmallen ligger i `PROMPTFORM.md`.
 
 ### Mekanism 3 — Referensplikt
 
