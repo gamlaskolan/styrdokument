@@ -1,6 +1,6 @@
 # REGELVERK FÖR SAMARBETET
-**Version 1.9 — gäller från 2026-10-08**
-Ändring: Undantaget i DEL 7 — en kopia kräver annat syfte och en mekanism som håller den i synk.
+**Version 1.10 — gäller från 2026-10-08**
+Ändring: DEL 9 — `logg.jsonl` är inte längre framtida; Steg 12 byggde den.
 
 ---
 
@@ -229,7 +229,7 @@ Filer som **lagrar fakta**: register, arkiv, exporter.
 
 **Format:** `.json`, arkiv, register, `.jsonl`
 
-**Exempel:** `arkiv/all-information.md`, `logg.jsonl` (framtida)
+**Exempel:** `arkiv/all-information.md`, `logg.jsonl`
 
 **Vem skriver:** VÅ sköter tills vidare.
 
