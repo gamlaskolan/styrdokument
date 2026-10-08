@@ -99,13 +99,11 @@ Undantag: Korthetsregeln gäller byggrapporter. En granskning täcker hela repot
 
 ## JEV-status
 
-Alla påståenden om arbetet i projektets `projekt.md`, `pp.md` och `ds.md` har JEV-status:
+`pp.md` använder `[JA]`/`[NEJ]`/`[VET EJ]` på testrader. Övriga filer gör det inte. Markören betyder "uppfyllt" och hör till påståenden som kan vara icke-uppfyllda.
 
 - `[JA]` — uppfyllt
 - `[NEJ]` — inte uppfyllt
 - `[VET EJ]` — behöver utredas
-
-`va.md` är fri — ingen JEV.
 
 ---
 
