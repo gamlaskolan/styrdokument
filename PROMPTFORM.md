@@ -28,6 +28,10 @@ Om en rad inte kan fyllas — skriv INGET eller OKLART. Inget mer i första svar
 
 ## Uppdragsformen
 
+Prompten börjar direkt med Nästa uppgift. Ingen inledande rad.
+Läs START_HÄR.md skrivs inte i prompten — den läses vid uppstarten
+av ny chatt, och uppstarten sköter VÅ.
+
 Prompten ska ha exakt fyra delar, i denna ordning. Varje del fylld —
 inga platshållare, inga "<...>":
 
