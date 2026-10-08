@@ -55,24 +55,35 @@ DS arbetar från styrdokumenten. Inte från chatten. Om chatten och filerna säg
 
 - DS ger VÅ max tre kommandon per svar.
 - **DSH skriver all kod, verifierar, committar och pushar.** VÅ granskar diffen efteråt och säger OK eller begär ändring. Uppdragets commit-meddelande används ordagrant.
-- DS skriver "klistra in detta" när en fil ska ersättas — då är det ett kommando, inte tio.
 - DS säger inte "klistra in" och "kör" och "verifiera" i samma svar om det går att undvika.
 - När DS är osäker — DS frågar, gissar inte.
 - **DS skriver aldrig en fil från minnet.** DSH läser filens aktuella innehåll från disk innan den ändras.
 - **DS uppdaterar projektets `projekt.md` när ett steg blir klart.** Status och Nästa. Utan att fråga.
 - **DS uppdaterar projektets `ds.md` när läget ändras.** Öppna frågor, aktuell status. Utan att fråga.
 - **DS flaggar när en fil blir för tung.** Signal: DS måste läsa mer än en skärm för att hitta aktuell status. Åtgärd: DS föreslår för VÅ att bryta ut en sektion. Beslut tas av VÅ.
-- **DS fångar beslut.** När ett beslut tas i chatten — om projektet, arkitekturen, stegen, eller arbetssättet — skriver DS det till rätt fil. Utan att fråga. Rätt fil:
-  - Beslut om projektet → `projekt.md`
-  - Beslut om arkitekturen → `controlltower.md`
-  - Beslut om steg → `pp.md`
-  - VÅ:s tankar → `va.md`
-  - Beslut om arbetssättet → `ROLLKONTRAKT.md` eller `REGELVERK.md`
+- **DS fångar beslut.** När ett beslut tas i chatten — om projektet, arkitekturen, stegen, eller arbetssättet — skriver DS det till rätt fil. Utan att fråga. Rätt fil: se `Vad DS skriver, när, och var`.
 - Om DS är osäker på vilken fil — fråga VÅ. En gång, inte varje gång.
 - **DS kan skriva ut läget.** När VÅ säger "skriv vad DS behöver för att kicka igång" läser DS projektets fem filer och skriver en kort sammanfattning: projekt, status, nästa steg, öppna frågor. Avsedd att klistras in i en ny chatt.
   - DSH läser filerna och skriver ut sammanfattningen. DS äger innehållet.
   - Sammanfattningen är ett svar i chatten — inte en fil. Om VÅ vill ha den sparad säger VÅ till.
   - Status och Nästa hämtas ur `projekt.md`. Öppna frågor ur `ds.md`. Alltid.
+
+---
+
+## Vad DS skriver, när, och var
+
+| När | Vad | Var |
+|---|---|---|
+| Ett steg blir klart | Bocka av `[x]` i checklistan + commit-hash | `pp.md` |
+| Ett steg blir klart | Status + Nästa uppdateras | `projekt.md` |
+| Läget ändras | Vad som gjorts, vad som väntar | `ds.md` |
+| En fråga stängs | Ta bort den ur öppna frågor | `pp.md` + `ds.md` |
+| En fråga öppnas | Lägg till den i öppna frågor | `pp.md` + `ds.md` |
+| Ett beslut tas i chatten | Skriv in det i rätt fil | Projektet → `projekt.md`. Arkitekturen → `controlltower.md`. Stegen → `pp.md`. VÅ:s tankar → `va.md`. Arbetssättet → `ROLLKONTRAKT.md` eller `REGELVERK.md`. |
+| Arkitekturen ändras | Ny version + ändringsrad | `controlltower.md` rad 3 |
+| Ett projekt skapas | Fem filer enligt mallen | `styrdokument/projektmall.md` |
+
+Skriv utan att fråga. Fråga bara om du är osäker på vilken fil.
 
 ---
 

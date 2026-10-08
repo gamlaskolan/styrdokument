@@ -2,8 +2,8 @@
 
 ## Vad denna fil är
 
-Den enda platsen för formerna. Hur DSH svarar och hur DSH skriver
-till DS i ny inledande chatt. Ingen annan fil bär formerna.
+Den enda platsen för formerna. Hur DSH svarar och vad nästa prompt
+ska innehålla. Ingen annan fil bär formerna.
 
 ## Svarsformen
 
@@ -42,20 +42,7 @@ inga platshållare, inga "<...>":
 
 ## Roller
 
-Vad DS skriver, när, och var:
-
-| När | Vad | Var |
-|---|---|---|
-| Ett steg blir klart | Bocka av `[x]` i checklistan + commit-hash | `pp.md` |
-| Ett steg blir klart | Status + Nästa uppdateras | `projekt.md` |
-| Läget ändras | Vad som gjorts, vad som väntar | `ds.md` |
-| En fråga stängs | Ta bort den ur öppna frågor | `pp.md` + `ds.md` |
-| En fråga öppnas | Lägg till den i öppna frågor | `pp.md` + `ds.md` |
-| Ett beslut tas i chatten | Skriv in det i rätt fil | Enligt `ROLLKONTRAKT.md` "DS fångar beslut" |
-| Arkitekturen ändras | Ny version + ändringsrad | `controlltower.md` rad 3 |
-| Ett projekt skapas | Fem filer enligt mallen | `styrdokument/projektmall.md` |
-
-Skriv utan att fråga. Fråga bara om du är osäker på vilken fil.
+Tabellen över vad DS skriver, när, och var ligger i `ROLLKONTRAKT.md`.
 
 ## Regler
 
