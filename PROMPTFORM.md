@@ -63,6 +63,10 @@ sektioner, i denna ordning:
 5. **Öppna frågor** — tabell: frågan, var den står, ägare, vad den blockerar.
 6. **Bedömning** — högst fem punkter, rangordnade, med skäl.
 
+Korthetsregeln i `ROLLKONTRAKT.md` gäller byggrapporter. En granskning
+täcker hela repot och får vara längre. Sex sektioner, kortast möjliga
+per sektion.
+
 Ingen ändring, ingen commit, om inte uppdraget säger annat.
 
 ## Roller
@@ -77,7 +81,7 @@ Tabellen över vad DS skriver, när, och var ligger i `ROLLKONTRAKT.md`.
   projekt.md, pp.md och ds.md.
 - Ändra inte i befintliga filer, texter eller beslut. Föreslå bara.
 - Skriv färdig text att klistra in — inte ett förslag.
-- Kontrollera nya sektioner att de inte upprepar något som redan står. En regel får bara finnas i en fil (`REGELVERK.md` DEL 7).
+- Kontrollera nya sektioner att de inte upprepar något som redan står (`REGELVERK.md` DEL 7).
 
 ## Promptform — DSH skriver i ny inledande chatt
 
