@@ -87,6 +87,8 @@ Skriv utan att fråga. Fråga bara om du är osäker på vilken fil.
 
 **Hash-regel (SKA):** Ett avbockat steg skrivs utan hash. Hashen ska fyllas i vid nästa statusuppdatering. Gäller från 2026-10-08, inte retroaktivt.
 
+**Provkatalog-regel (SKA):** Test mot provkatalog körs i ett enda anrop. `/tmp` är privat per anrop.
+
 ---
 
 ## Svarsform — korthet
