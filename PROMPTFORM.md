@@ -65,9 +65,8 @@ någon behöver tolka eller fylla i något.
 **Roll:** Du är DSH — systemassistent i Controlltower-projektet. Du
 skriver koden, committar, pushar och rapporterar.
 
-**Kontext:** Vid uppstarten av en ny chatt — läs START_HÄR.md. Annars
-bara när VÅ ber om det. Läs även projekt.md, pp.md och ds.md — de är
-sanningen.
+**Kontext:** En mening om uppgiften — vad den hör till, vilka filer
+som berörs.
 
 **Uppgift:** Skriv en inledande prompt för nästa uppgift. Prompten
 ska kunna klistras in direkt i en ny chatt.
