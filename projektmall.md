@@ -33,7 +33,7 @@ Allt VÅ fyller i vid skapandet. Elva fält, i denna ordning.
 | # | Fält | Typ | Hamnar i |
 |---|---|---|---|
 | 1 | Namn | en rad | `projekt.md` rubrik + `{{SLUG}}.md` rubrik |
-| 2 | Vad | en rad | `projekt.md` → `**Vad:**` |
+| 2 | Mål | en rad | `projekt.md` → `**Mål:**` |
 | 3 | Syfte | en rad | `projekt.md` → `**Syfte:**` |
 | 4 | Personal | en rad | `projekt.md` → `**Personal:**` |
 | 5 | Systemets mål (DEL 1) | flerradig | `{{SLUG}}.md` → DEL 1 |
@@ -53,7 +53,7 @@ Allt VÅ fyller i vid skapandet. Elva fält, i denna ordning.
 
 **Platshållare som koden räknar fram:**
 
-- `{{NASTA}}` — första raden i Saker som ska göras. Om tomt: "Fyll i Vad och Syfte".
+- `{{NASTA}}` — första raden i Saker som ska göras. Om tomt: "Fyll i Mål och Syfte".
 - `{{FAS1}}` — första raden i Saker som ska göras. Om tomt: "Ej namngiven".
 - `{{N}}` — radnummer i fält 9. 1, 2, 3 ...
 - `{{SAK}}` — radens text i fält 9.
@@ -68,7 +68,7 @@ Värdena räknas fram av koden. Mallen beskriver dem.
 ```markdown
 # {{NAMN}}
 
-**Vad:** {{VAD}}
+**Mål:** {{MAL}}
 **Syfte:** {{SYFTE}}
 
 **Läget**
