@@ -11,11 +11,12 @@ plapp bygger mot den. En ny chatt läser mappen — inget mer behövs.
 
 ## DEL 1 — MAPPEN
 
-**Mappnamn:** `projekt/{{DATUM_KORT}}-{{SLUG}}/`
+**Mappnamn:** `projekt/{{SLUG}}-<NNN>/`
 
-- `{{DATUM_KORT}}` = `YYYYMMDD`
 - `{{SLUG}}` = projektets namn: gemener, `å ä ö` → `a a o`, mellanslag och skiljetecken → `-`
-- Exempel: `20261008-minnesapp`
+- `<NNN>` = tresiffrigt nummer. VÅ skriver det i projektnamnet; är det upptaget ger appen nästa lediga i samma serie.
+- Datumet står inte i mappnamnet sedan 2026-10-09.
+- Exempel: `projekt/miniraknare-001/`
 
 **Dubblett:** om mappen redan finns läggs suffix till: `-2`, `-3`, och så vidare.
 Appen skriver aldrig över en befintlig mapp.
@@ -149,9 +150,9 @@ Logik och lagring är orörda.
 
 **Projektets mapp:**
 
-projekt/{{DATUM_KORT}}-{{SLUG}}/
+projekt/{{SLUG}}-001/
 ├── projekt.md
-├── {{SLUG}}.md
+├── {{SLUG}}-001.md
 ├── pp.md
 ├── ds.md
 └── va.md
