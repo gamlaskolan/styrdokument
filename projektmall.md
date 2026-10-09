@@ -14,7 +14,7 @@ plapp bygger mot den. En ny chatt läser mappen — inget mer behövs.
 **Mappnamn:** `projekt/{{SLUG}}-<NNN>/`
 
 - `{{SLUG}}` = projektets namn: gemener, `å ä ö` → `a a o`, mellanslag och skiljetecken → `-`
-- `<NNN>` = tresiffrigt nummer. VÅ skriver det i projektnamnet; är det upptaget ger appen nästa lediga i samma serie.
+- `<NNN>` = tresiffrigt nummer. Namn utan nummer får `-001`. Är numret upptaget ger appen nästa lediga i samma serie.
 - Datumet står inte i mappnamnet sedan 2026-10-09.
 - Exempel: `projekt/miniraknare-001/`
 
