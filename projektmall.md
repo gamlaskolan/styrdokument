@@ -49,6 +49,8 @@ Allt VÅ fyller i vid skapandet. Tio fält, i denna ordning.
 - Fält 2 och 3 är enradiga och korta. Långa beskrivningar hör i DEL 1
   (`{{SLUG}}.md`).
 - Fält 8: en rad per sak. Raderna numreras `1`, `2`, `3` i den ordning VÅ skrev dem.
+- **Färg** väljs i paletten vid Spara — 20 färger, obligatorisk. Färgen hamnar i
+  `projekt.md` → `**Färg:**`, och följer projektets knapp och projektets rad.
 
 **Platshållare som koden räknar fram:**
 
@@ -69,6 +71,7 @@ Värdena räknas fram av koden. Mallen beskriver dem.
 
 **Mål:** {{MAL}}
 **Syfte:** {{SYFTE}}
+**Färg:** {{FARG}}
 
 **Läget**
 **Status:** Fas 0 — inte påbörjad.
