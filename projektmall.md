@@ -262,8 +262,9 @@ avgränsat, inte kärnan.
 
 ## Fas 1 — {{FAS1}}
 
-**Checklista — appen läser denna.** Appen visar första ockryssade steget + fem
-närmaste (`ANTAL_AKTUELLA_STEG = 6`).
+**Checklista — appen läser denna.** Appen visar momenten grupperade efter
+markören i checklistan — `[H]` Historik, `[A]` Aktuella, `[K]` Kommande.
+Raderna nedan skrivs som `[ ]` och får sin markör när projektet skapas.
 
 <!-- per sak -->
 - [ ] {{N}} {{SAK}}
