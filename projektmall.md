@@ -28,35 +28,34 @@ Appen skriver aldrig över en befintlig mapp.
 
 Platshållare har formen {{NAMN}}. Koden ersätter dem med fältets värde.
 
-Allt VÅ fyller i vid skapandet. Elva fält, i denna ordning.
+Allt VÅ fyller i vid skapandet. Tio fält, i denna ordning.
 
 | # | Fält | Typ | Hamnar i |
 |---|---|---|---|
 | 1 | Namn | en rad | `projekt.md` rubrik + `{{SLUG}}.md` rubrik |
 | 2 | Mål | en rad | `projekt.md` → `**Mål:**` |
 | 3 | Syfte | en rad | `projekt.md` → `**Syfte:**` |
-| 4 | Personal | en rad | `projekt.md` → `**Personal:**` |
-| 5 | Systemets mål (DEL 1) | flerradig | `{{SLUG}}.md` → DEL 1 |
-| 6 | Kärnbegrepp (DEL 3) | flerradig | `{{SLUG}}.md` → DEL 3 |
-| 7 | Invarianter (DEL 5) | flerradig | `{{SLUG}}.md` → DEL 5 |
-| 8 | Datamodell (DEL 6) | flerradig | `{{SLUG}}.md` → DEL 6 |
-| 9 | Saker som ska göras | flerradig → checklista | `pp.md` → checklista |
-| 10 | Öppna frågor | flerradig | `ds.md` Öppna frågor och `pp.md` Öppna frågor. Samma text. |
-| 11 | Första anteckningar | flerradig | `va.md` |
+| 4 | Systemets mål (DEL 1) | flerradig | `{{SLUG}}.md` → DEL 1 |
+| 5 | Kärnbegrepp (DEL 3) | flerradig | `{{SLUG}}.md` → DEL 3 |
+| 6 | Invarianter (DEL 5) | flerradig | `{{SLUG}}.md` → DEL 5 |
+| 7 | Datamodell (DEL 6) | flerradig | `{{SLUG}}.md` → DEL 6 |
+| 8 | Saker som ska göras | flerradig → checklista | `pp.md` → checklista |
+| 9 | Öppna frågor | flerradig | `ds.md` Öppna frågor och `pp.md` Öppna frågor. Samma text. |
+| 10 | Första anteckningar | flerradig | `va.md` |
 
 **Regler:**
-- Alla elva fält kan lämnas tomma. Ett tomt fält ger en tom platshållare i filen —
+- Alla tio fält kan lämnas tomma. Ett tomt fält ger en tom platshållare i filen —
   aldrig borttagen rubrik.
 - Fält 2 och 3 är enradiga och korta. Långa beskrivningar hör i DEL 1
   (`{{SLUG}}.md`).
-- Fält 9: en rad per sak. Raderna numreras `1`, `2`, `3` i den ordning VÅ skrev dem.
+- Fält 8: en rad per sak. Raderna numreras `1`, `2`, `3` i den ordning VÅ skrev dem.
 
 **Platshållare som koden räknar fram:**
 
 - `{{NASTA}}` — första raden i Saker som ska göras. Om tomt: "Fyll i Mål och Syfte".
 - `{{FAS1}}` — första raden i Saker som ska göras. Om tomt: "Ej namngiven".
-- `{{N}}` — radnummer i fält 9. 1, 2, 3 ...
-- `{{SAK}}` — radens text i fält 9.
+- `{{N}}` — radnummer i fält 8. 1, 2, 3 ...
+- `{{SAK}}` — radens text i fält 8.
 
 Värdena räknas fram av koden. Mallen beskriver dem.
 
@@ -74,8 +73,6 @@ Värdena räknas fram av koden. Mallen beskriver dem.
 **Läget**
 **Status:** Fas 0 — inte påbörjad.
 **Nästa:** {{NASTA}}
-
-**Personal:** {{PERSONAL}}
 
 **Filer**
 - Startpunkt: start_har.md
