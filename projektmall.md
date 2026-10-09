@@ -20,7 +20,7 @@ plapp bygger mot den. En ny chatt läser mappen — inget mer behövs.
 **Dubblett:** om mappen redan finns läggs suffix till: `-2`, `-3`, och så vidare.
 Appen skriver aldrig över en befintlig mapp.
 
-**Undermappar** skapas vid behov, inte i förväg: `produktion/`, `bilder/`, `data/`.
+**Undermappar** skapas vid behov, inte i förväg: `produktion/`, `bilder/`, `data/`, `dokument/`.
 
 ---
 
