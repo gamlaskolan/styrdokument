@@ -29,7 +29,9 @@ Appen skriver aldrig över en befintlig mapp.
 
 Platshållare har formen {{NAMN}}. Koden ersätter dem med fältets värde.
 
-Allt VÅ fyller i vid skapandet. Tio fält, i denna ordning.
+Fälten nedan är filernas platshållare — tio stycken, i denna ordning. Vilka av
+dem appen samlar, och med vilka rubriker, står i `plapp.md` DEL 7. Detta
+dokument äger filinnehållet.
 
 | # | Fält | Typ | Hamnar i |
 |---|---|---|---|
