@@ -84,10 +84,16 @@ dokument äger filinnehållet.
 
 **Platshållare som koden räknar fram:**
 
-- `{{NASTA}}` — första raden i Saker som ska göras. Om tomt: "Fyll i leverabler och avgränsning".
-- `{{FAS1}}` — första raden i Saker som ska göras. Om tomt: "Ej namngiven".
+- `{{NASTA}}` — första raden i **Konkreta leverabler**. Om tomt: "Ej angivet".
 - `{{N}}` — radnummer i fält 12. 1, 2, 3 ...
 - `{{SAK}}` — radens text i fält 12.
+- `{{DATUM}}`, `{{DATUM_KORT}}`, `{{SLUG}}` och `{{TOMT}}` — dagens datum i två
+  former, mappnamnet, och en tom rad.
+
+`{{FAS1}}` finns inte längre. Fasens namn räknades ur fältet *Saker som ska
+göras*, som togs bort ur formuläret 2026-10-09, så rubriken blev alltid
+"Fas 1 — Ej namngiven". Raderna står nu som `| Fas 1 |` och `## Fas 1`, och
+VÅ skriver fasens namn direkt i `projektplan.md` när fasen börjar.
 
 Värdena räknas fram av koden. Mallen beskriver dem.
 
@@ -97,6 +103,11 @@ Värdena räknas fram av koden. Mallen beskriver dem.
 och `{{OPPNA_FRAGOR}}` samlar appen inte in — formuläret har inga fält för
 dem. De står kvar i de skapade filerna som en markering av vad VÅ behöver
 fylla i. Frågan om de ska bort är öppen i `projekt/plapp/ai.md`.
+
+Samma sak gäller `{{ANTECKNINGAR}}` i `va.md`: fältet Anteckningar togs bort
+2026-10-09, och `spara_nytt_projekt()` sätter en tom sträng så att
+platshållaren inte blir stående. Ett nytt projekts `va.md` har rubriken och
+inget mer.
 
 ---
 
@@ -154,13 +165,13 @@ Bilder i mappen är inte data.
 
 | Fas | Status |
 |---|---|
-| Fas 1 — {{FAS1}} | 🔄 Pågår |
+| Fas 1 | 🔄 Pågår |
 | Fas 2 | ⏳ Inte öppnad |
 
 > När en fas är klar: flytta stegen till `projektplan_fasN.md`. Checklistan börjar om
 > med nästa fas.
 
-## Fas 1 — {{FAS1}}
+## Fas 1
 
 **Checklista — appen läser denna.** Appen visar momenten grupperade efter
 markören i checklistan — `[H]` Historik, `[A]` Aktuella, `[K]` Kommande.
@@ -186,8 +197,8 @@ Nummer och titel i checklistan måste stämma med rubrikerna nedan.
 {{OPPNA_FRAGOR}}
 ```
 
-**Anmärkning:** tom `Saker som ska göras` → rubriken blir `Fas 1 — Ej namngiven`
-och checklistan blir tom. Ingen rad hittas på.
+**Anmärkning:** tom `Saker som ska göras` → checklistan blir tom. Fasen heter
+`Fas 1` tills VÅ namnger den.
 
 **Status och Nästa ägs av denna fil.** Fasfilerna (`projektplan_fasN.md`) bär de
 avslutade stegen; checklistan i denna fil bär de aktuella.
@@ -432,7 +443,8 @@ typ: va-anteckningar
 5. `{{DATUM}}` — dagens datum, `YYYY-MM-DD`.
 6. `{{DATUM_KORT}}` — dagens datum, `YYYYMMDD`. Används i mappnamn och id.
 7. Status i `projektplan.md` blir alltid `Fas 0 — inte påbörjad` vid skapandet.
-   VÅ ändrar till `Fas 1` när arbetet börjar.
+   VÅ ändrar till `Fas 1` när arbetet börjar, och skriver fasens namn i
+   rubriken `## Fas 1`.
 
 ---
 
