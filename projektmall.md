@@ -31,21 +31,20 @@ Appen skriver aldrig över en befintlig mapp.
 projekt/{{SLUG}}/
 ├── projektplan.md
 ├── {{SLUG}}.md
-├── va.md
 ├── ai.md
-├── produktion/
-│   ├── main.py
-│   ├── logik/
-│   │   └── filer.py
-│   └── ui/
-├── dokument/
-└── anteckningar/
+├── va.md
+├── data/
+│   └── logg.jsonl
+└── produktion/
+    ├── logik/
+    └── ui/
 ```
 
-**Mappar** skapas när projektet skapas — inte vid behov: `produktion/` med
-`logik/` och `ui/`, `dokument/` och `anteckningar/`. `data/` skapas av
-`loggra()` vid första loggraden, alltså när projektet skrivs. `bilder/` ströks
-2026-10-09 — ingen kod skrev dit, och mallen ska bara lista det som används.
+**Mappar** skapas när projektet skapas — inte vid behov: `data/` och
+`produktion/` med `logik/` och `ui/`. Två mappar i roten, två i produktion/.
+`logg.jsonl` skrivs med en rad per skapad fil. Fler mappar finns inte —
+`bilder/` ströks 2026-10-09 och `dokument/` + `anteckningar/` ströks
+2026-10-10, eftersom koden inte skriver något i dem.
 
 ---
 
@@ -273,12 +272,12 @@ Logik och lagring är orörda. Koden ligger därefter: `produktion/main.py` är 
 projekt/{{SLUG}}/
 ├── projektplan.md
 ├── {{SLUG}}.md
-├── va.md
 ├── ai.md
+├── va.md
+├── data/
+│   └── logg.jsonl
 └── produktion/
-    ├── main.py
     ├── logik/
-    │   └── filer.py
     └── ui/
 
 ---
