@@ -1,4 +1,4 @@
-# PROJEKTMALL — de fem filerna
+# PROJEKTMALL — de fyra filerna
 
 **Dokumenttyp:** Styrdokument. Mall.
 **Status:** Låst. Ändras bara vid beslut av VÅ.
@@ -6,6 +6,9 @@
 
 Denna fil är kontraktet för vad ett nytt projekt är. Fliken "Nytt projekt" i
 plapp bygger mot den. En ny chatt läser mappen — inget mer behövs.
+
+`projektplan.md` samlar sedan 2026-10-09 det som förut låg i två filer: mål,
+syfte, struktur, arbetsgång, checklista och status.
 
 ---
 
@@ -21,7 +24,25 @@ plapp bygger mot den. En ny chatt läser mappen — inget mer behövs.
 **Dubblett:** om mappen redan finns läggs suffix till: `-2`, `-3`, och så vidare.
 Appen skriver aldrig över en befintlig mapp.
 
-**Undermappar** skapas vid behov, inte i förväg: `produktion/`, `bilder/`, `data/`, `dokument/`.
+**Mappstruktur:**
+
+```
+projekt/{{SLUG}}-001/
+├── projektplan.md
+├── {{SLUG}}-001.md
+├── ds.md
+├── va.md
+├── produktion/
+│   ├── main.py
+│   ├── logik/
+│   │   └── filer.py
+│   └── ui/
+├── dokument/
+└── anteckningar/
+```
+
+**Undermappar** skapas vid behov, inte i förväg: `produktion/` med `logik/`
+och `ui/`, `bilder/`, `data/`, `dokument/`, `anteckningar/`.
 
 ---
 
@@ -35,29 +56,29 @@ dokument äger filinnehållet.
 
 | # | Fält | Typ | Hamnar i |
 |---|---|---|---|
-| 1 | Namn | en rad | `projekt.md` rubrik + `{{SLUG}}.md` rubrik |
-| 2 | Konkreta leverabler | flerradig | `projekt.md` → `**Konkreta leverabler**` |
-| 3 | Definition of Done (DoD) | flerradig | `projekt.md` → `**Definition of Done (DoD)**` |
-| 4 | Prioriteringsordning vid kravkrock | flerradig | `projekt.md` → `**Prioriteringsordning vid kravkrock**` |
-| 5 | Avgränsning | flerradig | `projekt.md` → `**Avgränsning**` |
-| 6 | Orsaker till regler och förbud | flerradig | `projekt.md` → `**Orsaker till regler och förbud**` |
-| 7 | Riktlinjer vid osäkerhet | flerradig | `projekt.md` → `**Riktlinjer vid osäkerhet**` |
+| 1 | Namn | en rad | `projektplan.md` rubrik + `{{SLUG}}.md` rubrik |
+| 2 | Konkreta leverabler | flerradig | `projektplan.md` → `**Konkreta leverabler**` |
+| 3 | Definition of Done (DoD) | flerradig | `projektplan.md` → `**Definition of Done (DoD)**` |
+| 4 | Prioriteringsordning vid kravkrock | flerradig | `projektplan.md` → `**Prioriteringsordning vid kravkrock**` |
+| 5 | Avgränsning | flerradig | `projektplan.md` → `**Avgränsning**` |
+| 6 | Orsaker till regler och förbud | flerradig | `projektplan.md` → `**Orsaker till regler och förbud**` |
+| 7 | Riktlinjer vid osäkerhet | flerradig | `projektplan.md` → `**Riktlinjer vid osäkerhet**` |
 | 8 | Systemets mål (DEL 1) | flerradig | `{{SLUG}}.md` → DEL 1 |
 | 9 | Kärnbegrepp (DEL 3) | flerradig | `{{SLUG}}.md` → DEL 3 |
 | 10 | Invarianter (DEL 5) | flerradig | `{{SLUG}}.md` → DEL 5 |
 | 11 | Datamodell (DEL 6) | flerradig | `{{SLUG}}.md` → DEL 6 |
-| 12 | Saker som ska göras | flerradig → checklista | `pp.md` → checklista |
-| 13 | Öppna frågor | flerradig | `ds.md` Öppna frågor och `pp.md` Öppna frågor. Samma text. |
+| 12 | Saker som ska göras | flerradig → checklista | `projektplan.md` → checklista |
+| 13 | Öppna frågor | flerradig | `ds.md` Öppna frågor och `projektplan.md` Öppna frågor. Samma text. |
 | 14 | Första anteckningar | flerradig | `va.md` |
 
 **Regler:**
 - Alla fjorton fält kan lämnas tomma. Ett tomt fält ger en tom platshållare i
   filen — aldrig borttagen rubrik.
-- Fält 1 är en rad. Långa beskrivningar hör i fält 2–7 (`projekt.md`) eller i
-  DEL 1 (`{{SLUG}}.md`).
+- Fält 1 är en rad. Långa beskrivningar hör i fält 2–7 (`projektplan.md`) eller
+  i DEL 1 (`{{SLUG}}.md`).
 - Fält 12: en rad per sak. Raderna numreras `1`, `2`, `3` i den ordning VÅ skrev dem.
 - **Färg** väljs i paletten vid Spara — 20 färger, obligatorisk. Färgen hamnar i
-  `projekt.md` → `**Färg:**`, och följer projektets knapp och projektets rad.
+  `projektplan.md` → `**Färg:**`, och följer projektets knapp och projektets rad.
 
 **Platshållare som koden räknar fram:**
 
@@ -68,10 +89,19 @@ dokument äger filinnehållet.
 
 Värdena räknas fram av koden. Mallen beskriver dem.
 
+**Platshållare som står kvar oskrivna:**
+
+`{{SYSTEMETS_MAL}}`, `{{KARNBEGREPP}}`, `{{INVARIANTER}}`, `{{DATAMODELL}}`
+och `{{OPPNA_FRAGOR}}` samlar appen inte in — formuläret har inga fält för
+dem. De står kvar i de skapade filerna som en markering av vad VÅ behöver
+fylla i. Frågan om de ska bort är öppen i `projekt/plapp/ds.md`.
 
 ---
 
-## DEL 3 — FIL 1: `projekt.md`
+## DEL 3 — FIL 1: `projektplan.md`
+
+Projektets nav. Mål och syfte överst, läget i mitten, arbetsgången och
+checklistan under. Det som förut låg i två filer ligger här.
 
 ```markdown
 # {{NAMN}}
@@ -103,19 +133,61 @@ Värdena räknas fram av koden. Mallen beskriver dem.
 **Filer**
 - Startpunkt: start_har.md
 - Arkitektur: {{SLUG}}.md
-- Arbetsgång: pp.md
 - Lokalt läge: ds.md
 - VÅ:s anteckningar: va.md
 
 **AI-läsning**
-En extern AI som får denna mapp börjar med `projekt.md` och följer sedan
+En extern AI som får denna mapp börjar med `projektplan.md` och följer sedan
 filordningen i repots `start_har.md`. Appen behövs inte — allt VÅ skriver
 står i Markdown, och invarianterna i `{{SLUG}}.md` är garantin för det.
 Bilder i mappen är inte data.
 
 **Skapat:** {{DATUM}}
 **Uppdaterat:** {{DATUM}}
+
+---
+
+## Arbetsgång
+
+| Fas | Status |
+|---|---|
+| Fas 1 — {{FAS1}} | 🔄 Pågår |
+| Fas 2 | ⏳ Inte öppnad |
+
+> När en fas är klar: flytta stegen till `pp_fasN.md`. Checklistan börjar om
+> med nästa fas.
+
+## Fas 1 — {{FAS1}}
+
+**Checklista — appen läser denna.** Appen visar momenten grupperade efter
+markören i checklistan — `[H]` Historik, `[A]` Aktuella, `[K]` Kommande.
+Raderna nedan skrivs som `[ ]` och får sin markör när projektet skapas.
+
+<!-- per sak -->
+- [ ] {{N}} {{SAK}}
+<!-- /per sak -->
+
+Nummer och titel i checklistan måste stämma med rubrikerna nedan.
+
+**Steg i detalj**
+
+<!-- per sak -->
+### Steg {{N}} — {{SAK}}
+**Vad:**
+**Test:**
+**Commit:**
+<!-- /per sak -->
+
+## Öppna frågor
+
+{{OPPNA_FRAGOR}}
 ```
+
+**Anmärkning:** tom `Saker som ska göras` → rubriken blir `Fas 1 — Ej namngiven`
+och checklistan blir tom. Ingen rad hittas på.
+
+**Status och Nästa ägs av denna fil.** Fasfilerna (`pp_fasN.md`) bär de
+avslutade stegen; checklistan i denna fil bär de aktuella.
 
 ---
 
@@ -139,12 +211,12 @@ Datamodellen (DEL 6) får ingen generisk text — den fylls i av VÅ.
 Detta är arkitekturen för {{NAMN}}.
 
 Det beskriver **vad systemet är** och **vad som är låst**. Inte stegen för att
-bygga det. Stegen bor i `pp.md`. Läget bor i `projekt.md`. Rollkontraktet bor i
+bygga det. Stegen och läget bor i `projektplan.md`. Rollkontraktet bor i
 `styrdokument/rollkontrakt.md`.
 
-Om detta dokument och `pp.md` säger olika om arkitekturen — detta dokument vinner.
-Om detta dokument och verkligheten säger olika — verkligheten vinner, och detta
-dokument uppdateras.
+Om detta dokument och `projektplan.md` säger olika om arkitekturen — detta
+dokument vinner. Om detta dokument och verkligheten säger olika — verkligheten
+vinner, och detta dokument uppdateras.
 
 ---
 
@@ -168,16 +240,21 @@ UI pratar med logiken. Logiken pratar med lagring.**
 └─────────────────────────────┘
 
 **Varför:** när VÅ vill byta från tkinter till något modernt byts bara UI-lagret.
-Logik och lagring är orörda.
+Logik och lagring är orörda. Koden ligger därefter: `produktion/main.py` är UI,
+`produktion/logik/` är logiken, `produktion/ui/` är ledigt för nya UI-delar.
 
 **Projektets mapp:**
 
 projekt/{{SLUG}}-001/
-├── projekt.md
+├── projektplan.md
 ├── {{SLUG}}-001.md
-├── pp.md
 ├── ds.md
-└── va.md
+├── va.md
+└── produktion/
+    ├── main.py
+    ├── logik/
+    │   └── filer.py
+    └── ui/
 
 ---
 
@@ -259,65 +336,7 @@ avgränsat, inte kärnan.
 
 ---
 
-## DEL 5 — FIL 3: `pp.md`
-
-```markdown
-# Produktionsplan — {{NAMN}}
-
-**Detta är arbetsgången.** Vad som gjorts, vad som görs, vad som väntar.
-**Status och Nästa bor i `projekt.md`.** Här bor stegen.
-
-> När en fas är klar: flytta stegen till `pp_fasN.md`. `pp.md` börjar om med nästa fas.
-
----
-
-## Status
-
-| Fas | Status |
-|---|---|
-| Fas 1 — {{FAS1}} | 🔄 Pågår |
-| Fas 2 | ⏳ Inte öppnad |
-
----
-
-## Fas 1 — {{FAS1}}
-
-**Checklista — appen läser denna.** Appen visar momenten grupperade efter
-markören i checklistan — `[H]` Historik, `[A]` Aktuella, `[K]` Kommande.
-Raderna nedan skrivs som `[ ]` och får sin markör när projektet skapas.
-
-<!-- per sak -->
-- [ ] {{N}} {{SAK}}
-<!-- /per sak -->
-
-Nummer och titel i checklistan måste stämma med rubrikerna nedan.
-
-**Steg i detalj**
-
-<!-- per sak -->
-### Steg {{N}} — {{SAK}}
-**Vad:**
-**Test:**
-**Commit:**
-<!-- /per sak -->
-
----
-
-## Öppna frågor
-
-{{OPPNA_FRAGOR}}
-
----
-
-**Slut på produktionsplanen.**
-```
-
-**Anmärkning:** tom `Saker som ska göras` → rubriken blir `Fas 1 — Ej namngiven`
-och checklistan blir tom. Ingen rad hittas på.
-
----
-
-## DEL 6 — FIL 4: `ds.md`
+## DEL 5 — FIL 3: `ds.md`
 
 ```markdown
 # DS — lokalt läge för {{NAMN}}
@@ -337,11 +356,11 @@ veta just nu.
 
 ## Vad DS ska veta om detta projekt
 
-- Fem filer: `projekt.md`, `{{SLUG}}.md`, `pp.md`, `ds.md`, `va.md`.
-- **`projekt.md` äger Status och Nästa.** Inte `pp.md`, inte `ds.md`.
+- Fyra filer: `projektplan.md`, `{{SLUG}}.md`, `ds.md`, `va.md`.
+- **`projektplan.md` äger Status och Nästa.** Inte `ds.md`.
 - **Markdown är sanningen.** Inget JSON-register.
 - **Arkitekturen bor i `{{SLUG}}.md`.** Det som är låst.
-- **Checklistan i `pp.md` äger steg-status.** Rubrikerna är beskrivning.
+- **Checklistan i `projektplan.md` äger steg-status.** Rubrikerna är beskrivning.
 
 ---
 
@@ -364,7 +383,7 @@ veta just nu.
 
 ---
 
-## DEL 7 — FIL 5: `va.md`
+## DEL 6 — FIL 4: `va.md`
 
 ```markdown
 ---
@@ -380,15 +399,15 @@ typ: va-anteckningar
 
 ---
 
-## DEL 8 — REGLER FÖR SKAPANDET
+## DEL 7 — REGLER FÖR SKAPANDET
 
-1. Klick Spara → mappen skapas → fem filer skrivs → klart. Projektet är igång.
-2. Alla fem filer skrivs alltid. Ingen fil hoppas över.
+1. Klick Spara → mappen skapas → fyra filer skrivs → klart. Projektet är igång.
+2. Alla fyra filer skrivs alltid. Ingen fil hoppas över.
 3. Befintlig mapp skrivs aldrig över. Suffix `-2`, `-3`.
 4. Frontmatter finns **bara** i `va.md`.
 5. `{{DATUM}}` — dagens datum, `YYYY-MM-DD`.
 6. `{{DATUM_KORT}}` — dagens datum, `YYYYMMDD`. Används i mappnamn och id.
-7. Status i `projekt.md` blir alltid `Fas 0 — inte påbörjad` vid skapandet.
+7. Status i `projektplan.md` blir alltid `Fas 0 — inte påbörjad` vid skapandet.
    VÅ ändrar till `Fas 1` när arbetet börjar.
 
 ---
