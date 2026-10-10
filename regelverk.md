@@ -255,6 +255,9 @@ Ett projekt = en mapp under `projekt/`. Mappen innehåller fyra filer, plus arki
 
 Produktion och data bor i undermappar vid behov (`produktion/`, `bilder/`, `data/`).
 
+**plapp är appen.** Mappen `projekt/plapp/` får aldrig raderas — se **INV16** i
+`projekt/plapp/plapp.md`. Tas den bort dör appen.
+
 ### Undantag
 
 - `arkiv/all-information.md` är `.md` men räknas som data/arkiv, inte styrdokument.

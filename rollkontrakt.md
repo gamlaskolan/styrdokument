@@ -53,6 +53,7 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 - Säg inte "klistra in" och "kör" och "verifiera" i samma svar om det går att undvika.
 - När något är osäkert — fråga, gissa inte.
 - **DSH skriver aldrig en fil från minnet.** DSH läser filens aktuella innehåll från disk innan den ändras.
+- **`projekt/plapp/` rörs aldrig destruktivt.** Mappen är appen och får inte raderas, flyttas eller skrivas över — se **INV16** i `projekt/plapp/plapp.md`.
 - **DSH uppdaterar projektets `projektplan.md` när ett steg blir klart.** Status och Nästa. Utan att fråga.
 - **DSH uppdaterar projektets `ai.md` när läget ändras.** Öppna frågor, aktuell status. Utan att fråga.
 - **Flagga när en fil blir för tung.** Signal: mer än en skärm måste läsas för att hitta aktuell status. Åtgärd: föreslå för VÅ att bryta ut en sektion. Beslut tas av VÅ.
