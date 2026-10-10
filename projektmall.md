@@ -27,9 +27,9 @@ Appen skriver aldrig över en befintlig mapp.
 **Mappstruktur:**
 
 ```
-projekt/{{SLUG}}-001/
+projekt/{{SLUG}}/
 ├── projektplan.md
-├── {{SLUG}}-001.md
+├── {{SLUG}}.md
 ├── va.md
 ├── ai.md
 ├── produktion/
@@ -41,8 +41,9 @@ projekt/{{SLUG}}-001/
 └── anteckningar/
 ```
 
-**Undermappar** skapas vid behov, inte i förväg: `produktion/` med `logik/`
-och `ui/`, `data/`, `dokument/`, `anteckningar/`. `bilder/` ströks
+**Mappar** skapas när projektet skapas — inte vid behov: `produktion/` med
+`logik/` och `ui/`, `dokument/` och `anteckningar/`. `data/` skapas av
+`loggra()` vid första loggraden, alltså när projektet skrivs. `bilder/` ströks
 2026-10-09 — ingen kod skrev dit, och mallen ska bara lista det som används.
 
 ---
@@ -268,9 +269,9 @@ Logik och lagring är orörda. Koden ligger därefter: `produktion/main.py` är 
 
 **Projektets mapp:**
 
-projekt/{{SLUG}}-001/
+projekt/{{SLUG}}/
 ├── projektplan.md
-├── {{SLUG}}-001.md
+├── {{SLUG}}.md
 ├── va.md
 ├── ai.md
 └── produktion/
@@ -362,7 +363,7 @@ avgränsat, inte kärnan.
 ## DEL 5 — FIL 3: `ai.md`
 
 ```markdown
-# DS — lokalt läge för {{NAMN}}
+# AI — lokalt läge för {{NAMN}}
 
 **Rollkontraktet bor i `styrdokument/rollkontrakt.md`.** Läs det först.
 **Denna fil är projektets läge.** Vad som är öppet, vad som väntar, vad DS ska
