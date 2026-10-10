@@ -29,7 +29,7 @@ Läsmallen ligger i `promptform.md`.
 
 ### Mekanism 1 — Referensplikt
 
-Varje påstående om arbetet ska kunna spåras till en fil. Om något sägs vara "nästa steg" ska det stå i projektets `projektplan.md` eller `ai.md`. Om det inte står där — är det påhittat. VÅ frågar: "var står det?" Svaret måste kunna peka på en rad.
+Varje påstående om arbetet ska kunna spåras till en fil. Om något sägs vara "nästa steg" ska det stå i projektets `projektplan.md`. Om det inte står där — är det påhittat. VÅ frågar: "var står det?" Svaret måste kunna peka på en rad.
 
 ### Mekanism 2 — Fyra svarsnivåer
 
@@ -55,14 +55,14 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 - **DSH skriver aldrig en fil från minnet.** DSH läser filens aktuella innehåll från disk innan den ändras.
 - **`projekt/plapp/` rörs aldrig destruktivt.** Mappen är appen och får inte raderas, flyttas eller skrivas över — se **INV16** i `projekt/plapp/plapp.md`.
 - **DSH uppdaterar projektets `projektplan.md` när ett steg blir klart.** Status och Nästa. Utan att fråga.
-- **DSH uppdaterar projektets `ai.md` när läget ändras.** Öppna frågor, aktuell status. Utan att fråga.
+- **DSH uppdaterar projektets `ai.md` när läget ändras.** Aktuell status. Utan att fråga. Öppna frågor bor i `projektplan.md`.
 - **Flagga när en fil blir för tung.** Signal: mer än en skärm måste läsas för att hitta aktuell status. Åtgärd: föreslå för VÅ att bryta ut en sektion. Beslut tas av VÅ.
 - **Fånga beslut.** När ett beslut tas i chatten — om projektet, arkitekturen, stegen, eller arbetssättet — skrivs det till rätt fil. Utan att fråga. Rätt fil: se `Vad som skrivs, när, och var`.
 - Är det osäkert vilken fil — fråga VÅ. En gång, inte varje gång.
 - **Läget kan skrivas ut.** När VÅ säger "skriv vad som behövs för att kicka igång" läser DSH projektets fyra filer och skriver en kort sammanfattning: projekt, status, nästa steg, öppna frågor. Avsedd att klistras in i en ny chatt.
   - DSH läser filerna och skriver ut sammanfattningen. Innehållet är DSH:s ansvar.
   - Sammanfattningen är ett svar i chatten — inte en fil. Om VÅ vill ha den sparad säger VÅ till.
-  - Status och Nästa hämtas ur `projektplan.md`. Öppna frågor ur `ai.md`. Alltid.
+  - Status, Nästa och öppna frågor hämtas ur `projektplan.md`. Alltid. `ai.md` bär läget.
 
 ---
 
@@ -73,8 +73,8 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 | Ett steg blir klart | Bocka av `[x]` i checklistan + commit-hash | `projektplan.md` |
 | Ett steg blir klart | Status + Nästa uppdateras | `projektplan.md` |
 | Läget ändras | Vad som gjorts, vad väntar | `ai.md` |
-| En fråga stängs | Ta bort den ur öppna frågor | `projektplan.md` + `ai.md` |
-| En fråga öppnas | Lägg till den i öppna frågor | `projektplan.md` + `ai.md` |
+| En fråga stängs | Ta bort den ur öppna frågor | `projektplan.md` |
+| En fråga öppnas | Lägg till den i öppna frågor | `projektplan.md` |
 | Ett beslut tas i chatten | Skriv in det i rätt fil | Projektet → `projektplan.md`. Arkitekturen → `<slug>.md`. Stegen → `projektplan.md`. VÅ:s tankar → `va.md`. Arbetssättet → `rollkontrakt.md` eller `regelverk.md`. |
 | Arkitekturen ändras | Ny version + ändringsrad | `plapp.md` rad 3 |
 | Ett projekt skapas | Fyra filer enligt mallen | `styrdokument/projektmall.md` |
