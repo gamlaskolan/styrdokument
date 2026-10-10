@@ -9,11 +9,11 @@ ska innehålla. Ingen annan fil bär formerna.
 
 ### Läsmallen — gäller vid varje ny chatt
 
-DS följer denna utan undantag.
+DSH följer denna utan undantag.
 
 #### Mekanism 1 — Tröskel
 
-Första svaret i en ny chatt innehåller inget arbete. Ingen kod. Ingen analys. Inget förslag. Bara läsning. Om DS skriver något annat i första svaret — bryter DS regeln. VÅ säger till. DS börjar om.
+Första svaret i en ny chatt innehåller inget arbete. Ingen kod. Ingen analys. Inget förslag. Bara läsning. Om DSH skriver något annat i första svaret — bryts regeln. VÅ säger till. DSH börjar om.
 
 #### Mekanism 2 — Formulering
 
@@ -21,7 +21,7 @@ Första svaret har fast form. Fyra rader, i denna ordning:
 
 - **LÄST:** vilka filer, vilka sektioner
 - **FÖRSTÅTT:** status, nästa handling enligt filerna
-- **SAKNAS:** vad DS behöver som inte finns
+- **SAKNAS:** vad DSH behöver som inte finns
 - **FRÅGA:** en fråga till VÅ
 
 Om en rad inte kan fyllas — skriv INGET eller OKLART. Inget mer i första svaret.
@@ -69,11 +69,11 @@ Ingen ändring, ingen commit, om inte uppdraget säger annat.
 
 ## Roller
 
-Tabellen över vad DS skriver, när, och var ligger i `rollkontrakt.md`.
+Tabellen över vad som skrivs, när, och var ligger i `rollkontrakt.md`.
 
 ## Regler
 
-- DSH skriver till VÅ. Ordet "DS" används inte som mottagare eller mellanled. När DSH menar sig själv skriver DSH "jag" eller "DSH".
+- DSH skriver till VÅ. När DSH menar sig själv skriver DSH "jag" eller "DSH".
 - Fyll aldrig i VÅ:s beslut åt VÅ. Lämna val öppna och motivera med
   källor.
 - Skriv ingen sammanfattning av vad som redan är gjort — det står i

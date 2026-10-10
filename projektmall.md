@@ -14,12 +14,13 @@ syfte, struktur, arbetsgång, checklista och status.
 
 ## DEL 1 — MAPPEN
 
-**Mappnamn:** `projekt/{{SLUG}}-<NNN>/`
+**Mappnamn:** `projekt/{{SLUG}}/`
 
-- `{{SLUG}}` = projektets namn: gemener, `å ä ö` → `a a o`, mellanslag och skiljetecken → `-`
-- `<NNN>` = tresiffrigt nummer. Namn utan nummer får `-001`. Är numret upptaget ger appen nästa lediga i samma serie.
+- `{{SLUG}}` = **hela mappnamnet, inklusive numret** — `miniraknare-001`. Koden bygger det av projektets namn: gemener, `å ä ö` → `a a o`, mellanslag och skiljetecken → `-`.
+- Namn utan nummer får `-001` pålagt. Är numret upptaget ger appen nästa lediga i samma serie.
 - Datumet står inte i mappnamnet sedan 2026-10-09.
 - Exempel: `projekt/miniraknare-001/`
+- **Skriv aldrig `{{SLUG}}-001`:** `{{SLUG}}` innehåller redan numret, och `{{SLUG}}-001` skulle ge `miniraknare-001-001`.
 
 **Dubblett:** om mappen redan finns läggs suffix till: `-2`, `-3`, och så vidare.
 Appen skriver aldrig över en befintlig mapp.
@@ -366,8 +367,8 @@ avgränsat, inte kärnan.
 # AI — lokalt läge för {{NAMN}}
 
 **Rollkontraktet bor i `styrdokument/rollkontrakt.md`.** Läs det först.
-**Denna fil är projektets läge.** Vad som är öppet, vad som väntar, vad DS ska
-veta just nu.
+**Denna fil är projektets läge.** Vad som är öppet, vad som väntar, vad som
+behöver veta just nu.
 
 ---
 
@@ -378,7 +379,7 @@ veta just nu.
 
 ---
 
-## Vad DS ska veta om detta projekt
+## Vad som behöver veta om detta projekt
 
 - Fyra filer: `projektplan.md`, `{{SLUG}}.md`, `va.md`, `ai.md`.
 - **`projektplan.md` äger Status och Nästa.** Inte `ai.md`.
@@ -394,7 +395,7 @@ veta just nu.
 
 ---
 
-## Vad DS gör härnäst
+## Vad som görs härnäst
 
 1. Läser i den ordning repots `start_har.md` anger.
 2. Svarar enligt svarsformen i `promptform.md`.
