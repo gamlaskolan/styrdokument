@@ -227,6 +227,27 @@ vinner, och detta dokument uppdateras.
 
 ---
 
+## DEL 1B — ARKITEKTPRINCIPER (LÅSTA)
+
+De fyra principerna styr hur systemet byggs — filstruktur, modulgränser,
+sanning och grindar. De är låsta på samma sätt som kärnbegreppen i DEL 3.
+Rubrikerna nedan är fältens namn i fliken "Nytt projekt" (cell 4, Struktur);
+platshållarna fylls av formuläret.
+
+**En fil äger en sak**
+{{EN_FIL_AGER_EN_SAK}}
+
+**Korta moduler och kontextgräns**
+{{KORTA_MODULER_OCH_KONTEXTGRANS}}
+
+**Single Source of Truth**
+{{SINGLE_SOURCE_OF_TRUTH}}
+
+**Körbar grind framför skriftliga påminnelser**
+{{KORBAR_GRIND_FRAMFOR_SKRIFTLIGA_PAMINNELSER}}
+
+---
+
 ## DEL 2 — ORGANISATION (LAGER)
 
 Systemet har tre lager. Regeln är fast: **UI pratar aldrig direkt med lagring.
