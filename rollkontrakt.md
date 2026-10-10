@@ -59,7 +59,7 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 - **Flagga när en fil blir för tung.** Signal: mer än en skärm måste läsas för att hitta aktuell status. Åtgärd: föreslå för VÅ att bryta ut en sektion. Beslut tas av VÅ.
 - **Fånga beslut.** När ett beslut tas i chatten — om projektet, arkitekturen, stegen, eller arbetssättet — skrivs det till rätt fil. Utan att fråga. Rätt fil: se `Vad som skrivs, när, och var`.
 - Är det osäkert vilken fil — fråga VÅ. En gång, inte varje gång.
-- **Läget kan skrivas ut.** När VÅ säger "skriv vad som behövs för att kicka igång" läser DSH projektets fyra filer ur mallen, plus `ai_rapporter.md` när historiken behövs, och skriver en kort sammanfattning: projekt, status, nästa steg, öppna frågor. Avsedd att klistras in i en ny chatt.
+- **Läget kan skrivas ut.** När VÅ säger "skriv vad som behövs för att kicka igång" läser DSH projektets fyra filer och skriver en kort sammanfattning: projekt, status, nästa steg, öppna frågor. Avsedd att klistras in i en ny chatt.
   - DSH läser filerna och skriver ut sammanfattningen. Innehållet är DSH:s ansvar.
   - Sammanfattningen är ett svar i chatten — inte en fil. Om VÅ vill ha den sparad säger VÅ till.
   - Status, Nästa och öppna frågor hämtas ur `projektplan.md`. Alltid. `ai.md` bär läget.
