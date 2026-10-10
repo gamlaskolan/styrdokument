@@ -42,7 +42,8 @@ projekt/{{SLUG}}-001/
 ```
 
 **Undermappar** skapas vid behov, inte i förväg: `produktion/` med `logik/`
-och `ui/`, `bilder/`, `data/`, `dokument/`, `anteckningar/`.
+och `ui/`, `data/`, `dokument/`, `anteckningar/`. `bilder/` ströks
+2026-10-09 — ingen kod skrev dit, och mallen ska bara lista det som används.
 
 ---
 
@@ -154,7 +155,7 @@ Bilder i mappen är inte data.
 | Fas 1 — {{FAS1}} | 🔄 Pågår |
 | Fas 2 | ⏳ Inte öppnad |
 
-> När en fas är klar: flytta stegen till `pp_fasN.md`. Checklistan börjar om
+> När en fas är klar: flytta stegen till `projektplan_fasN.md`. Checklistan börjar om
 > med nästa fas.
 
 ## Fas 1 — {{FAS1}}
@@ -186,7 +187,7 @@ Nummer och titel i checklistan måste stämma med rubrikerna nedan.
 **Anmärkning:** tom `Saker som ska göras` → rubriken blir `Fas 1 — Ej namngiven`
 och checklistan blir tom. Ingen rad hittas på.
 
-**Status och Nästa ägs av denna fil.** Fasfilerna (`pp_fasN.md`) bär de
+**Status och Nästa ägs av denna fil.** Fasfilerna (`projektplan_fasN.md`) bär de
 avslutade stegen; checklistan i denna fil bär de aktuella.
 
 ---
