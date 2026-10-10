@@ -243,7 +243,7 @@ Filer som **lagrar fakta**: register, arkiv, exporter.
 
 ### Projektspecifik struktur
 
-Ett projekt = en mapp under `projekt/`. Mappen innehåller fyra filer, plus arkiverade fasfiler (`projektplan_fasN.md`):
+Ett projekt = en mapp under `projekt/`. Mappen innehåller fyra filer ur mallen, plus `ai_rapporter.md` när projektet har en sådan, och arkiverade fasfiler (`projektplan_fasN.md`):
 
 | Fil | Roll | Kategori |
 |---|---|---|
@@ -251,6 +251,7 @@ Ett projekt = en mapp under `projekt/`. Mappen innehåller fyra filer, plus arki
 | `<projektnamn>.md` | Arkitekturen. Det som är låst. | Styrdokument |
 | `va.md` | VÅ:s fria anteckningar. | Styrdokument |
 | `ai.md` | Lokalt läge. Öppna frågor. | Styrdokument |
+| `ai_rapporter.md` | Rapportfilen. Historiken; `ai.md` pekar hit. | Styrdokument |
 | `projektplan_fasN.md` | Avslutad fas. Fryst. | Styrdokument |
 
 Produktion och data bor i undermappar vid behov (`produktion/`, `bilder/`, `data/`).
