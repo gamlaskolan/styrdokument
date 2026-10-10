@@ -29,38 +29,42 @@ Appen skriver aldrig över en befintlig mapp.
 
 Platshållare har formen {{NAMN}}. Koden ersätter dem med fältets värde.
 
-Fälten nedan är filernas platshållare — tio stycken, i denna ordning. Vilka av
+Fälten nedan är filernas platshållare — fjorton stycken, i denna ordning. Vilka av
 dem appen samlar, och med vilka rubriker, står i `plapp.md` DEL 7. Detta
 dokument äger filinnehållet.
 
 | # | Fält | Typ | Hamnar i |
 |---|---|---|---|
 | 1 | Namn | en rad | `projekt.md` rubrik + `{{SLUG}}.md` rubrik |
-| 2 | Mål | en rad | `projekt.md` → `**Mål:**` |
-| 3 | Syfte | en rad | `projekt.md` → `**Syfte:**` |
-| 4 | Systemets mål (DEL 1) | flerradig | `{{SLUG}}.md` → DEL 1 |
-| 5 | Kärnbegrepp (DEL 3) | flerradig | `{{SLUG}}.md` → DEL 3 |
-| 6 | Invarianter (DEL 5) | flerradig | `{{SLUG}}.md` → DEL 5 |
-| 7 | Datamodell (DEL 6) | flerradig | `{{SLUG}}.md` → DEL 6 |
-| 8 | Saker som ska göras | flerradig → checklista | `pp.md` → checklista |
-| 9 | Öppna frågor | flerradig | `ds.md` Öppna frågor och `pp.md` Öppna frågor. Samma text. |
-| 10 | Första anteckningar | flerradig | `va.md` |
+| 2 | Konkreta leverabler | flerradig | `projekt.md` → `**Konkreta leverabler**` |
+| 3 | Definition of Done (DoD) | flerradig | `projekt.md` → `**Definition of Done (DoD)**` |
+| 4 | Prioriteringsordning vid kravkrock | flerradig | `projekt.md` → `**Prioriteringsordning vid kravkrock**` |
+| 5 | Avgränsning | flerradig | `projekt.md` → `**Avgränsning**` |
+| 6 | Orsaker till regler och förbud | flerradig | `projekt.md` → `**Orsaker till regler och förbud**` |
+| 7 | Riktlinjer vid osäkerhet | flerradig | `projekt.md` → `**Riktlinjer vid osäkerhet**` |
+| 8 | Systemets mål (DEL 1) | flerradig | `{{SLUG}}.md` → DEL 1 |
+| 9 | Kärnbegrepp (DEL 3) | flerradig | `{{SLUG}}.md` → DEL 3 |
+| 10 | Invarianter (DEL 5) | flerradig | `{{SLUG}}.md` → DEL 5 |
+| 11 | Datamodell (DEL 6) | flerradig | `{{SLUG}}.md` → DEL 6 |
+| 12 | Saker som ska göras | flerradig → checklista | `pp.md` → checklista |
+| 13 | Öppna frågor | flerradig | `ds.md` Öppna frågor och `pp.md` Öppna frågor. Samma text. |
+| 14 | Första anteckningar | flerradig | `va.md` |
 
 **Regler:**
-- Alla tio fält kan lämnas tomma. Ett tomt fält ger en tom platshållare i filen —
-  aldrig borttagen rubrik.
-- Fält 2 och 3 är enradiga och korta. Långa beskrivningar hör i DEL 1
-  (`{{SLUG}}.md`).
-- Fält 8: en rad per sak. Raderna numreras `1`, `2`, `3` i den ordning VÅ skrev dem.
+- Alla fjorton fält kan lämnas tomma. Ett tomt fält ger en tom platshållare i
+  filen — aldrig borttagen rubrik.
+- Fält 1 är en rad. Långa beskrivningar hör i fält 2–7 (`projekt.md`) eller i
+  DEL 1 (`{{SLUG}}.md`).
+- Fält 12: en rad per sak. Raderna numreras `1`, `2`, `3` i den ordning VÅ skrev dem.
 - **Färg** väljs i paletten vid Spara — 20 färger, obligatorisk. Färgen hamnar i
   `projekt.md` → `**Färg:**`, och följer projektets knapp och projektets rad.
 
 **Platshållare som koden räknar fram:**
 
-- `{{NASTA}}` — första raden i Saker som ska göras. Om tomt: "Fyll i Mål och Syfte".
+- `{{NASTA}}` — första raden i Saker som ska göras. Om tomt: "Fyll i leverabler och avgränsning".
 - `{{FAS1}}` — första raden i Saker som ska göras. Om tomt: "Ej namngiven".
-- `{{N}}` — radnummer i fält 8. 1, 2, 3 ...
-- `{{SAK}}` — radens text i fält 8.
+- `{{N}}` — radnummer i fält 12. 1, 2, 3 ...
+- `{{SAK}}` — radens text i fält 12.
 
 Värdena räknas fram av koden. Mallen beskriver dem.
 
@@ -72,9 +76,25 @@ Värdena räknas fram av koden. Mallen beskriver dem.
 ```markdown
 # {{NAMN}}
 
-**Mål:** {{MAL}}
-**Syfte:** {{SYFTE}}
 **Färg:** {{FARG}}
+
+**Konkreta leverabler**
+{{KONKRETA_LEVERABLER}}
+
+**Definition of Done (DoD)**
+{{DEFINITION_OF_DONE_DOD}}
+
+**Prioriteringsordning vid kravkrock**
+{{PRIORITERINGSORDNING_VID_KRAVKROCK}}
+
+**Avgränsning**
+{{AVGRANSNING}}
+
+**Orsaker till regler och förbud**
+{{ORSAKER_TILL_REGLER_OCH_FORBUD}}
+
+**Riktlinjer vid osäkerhet**
+{{RIKTLINJER_VID_OSAKERHET}}
 
 **Läget**
 **Status:** Fas 0 — inte påbörjad.
