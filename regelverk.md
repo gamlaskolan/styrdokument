@@ -148,7 +148,7 @@ Kör först. Fråga sedan.
 
 **Projekt:** plapp (verktyget) + AI CHEF (lärandeplattformen)
 
-**Nästa handling:** Se `projekt/plapp/projekt.md` → Nästa.
+**Nästa handling:** Se `projekt/plapp/projektplan.md` → Nästa.
 
 **Regler för iterationen:**
 - Enkelt GUI som visar projektlista + plan
@@ -174,7 +174,7 @@ Om två filer säger samma sak med olika ordalydelse är det ett fel. Det ska r�
 
 Undantag: En kopia är tillåten när den har ett annat syfte och antingen genereras eller kontrolleras av ett körbart test.
 
-Öppna frågor och loggrader får stå i två filer när de har olika syften — `pp.md` som checklista, `ds.md` som faktalista.
+Öppna frågor och loggrader får stå i två filer när de har olika syften — `projektplan.md` som checklista, `ai.md` som faktalista.
 
 ---
 
@@ -202,7 +202,7 @@ Filer som **beskriver arbetet**: vad vi gör, varför, var vi är, vad som är b
 
 **Format:** `.md`, `.docx`, `.yaml`
 
-**Exempel:** `start_har.md`, `rollkontrakt.md`, `regelverk.md`, `projekt.md`, `plapp.md`, `pp.md`, `ds.md`
+**Exempel:** `start_har.md`, `rollkontrakt.md`, `regelverk.md`, `projektplan.md`, `plapp.md`, `ai.md`
 
 **Vem skriver:**
 - DS får skriva via MCP. VÅ skriver när DS ber om det.
@@ -243,16 +243,15 @@ Filer som **lagrar fakta**: register, arkiv, exporter.
 
 ### Projektspecifik struktur
 
-Ett projekt = en mapp under `projekt/`. Mappen innehåller fem filer, plus arkiverade fasfiler (`pp_fasN.md`):
+Ett projekt = en mapp under `projekt/`. Mappen innehåller fyra filer, plus arkiverade fasfiler (`projektplan_fasN.md`):
 
 | Fil | Roll | Kategori |
 |---|---|---|
-| `projekt.md` | Navet. Vad, syfte, status, nästa, pekare. | Styrdokument |
+| `projektplan.md` | Navet. Mål, syfte, status, nästa, arbetsgång och checklista. | Styrdokument |
 | `<projektnamn>.md` | Arkitekturen. Det som är låst. | Styrdokument |
-| `pp.md` | Arbetsgången. Steg, test, commit. | Styrdokument |
-| `ds.md` | Lokalt läge. Öppna frågor. | Styrdokument |
 | `va.md` | VÅ:s fria anteckningar. | Styrdokument |
-| `pp_fasN.md` | Avslutad fas. Fryst. | Styrdokument |
+| `ai.md` | Lokalt läge. Öppna frågor. | Styrdokument |
+| `projektplan_fasN.md` | Avslutad fas. Fryst. | Styrdokument |
 
 Produktion och data bor i undermappar vid behov (`produktion/`, `bilder/`, `data/`).
 

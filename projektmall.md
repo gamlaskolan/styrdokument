@@ -30,8 +30,8 @@ Appen skriver aldrig över en befintlig mapp.
 projekt/{{SLUG}}-001/
 ├── projektplan.md
 ├── {{SLUG}}-001.md
-├── ds.md
 ├── va.md
+├── ai.md
 ├── produktion/
 │   ├── main.py
 │   ├── logik/
@@ -69,7 +69,7 @@ dokument äger filinnehållet.
 | 10 | Invarianter (DEL 5) | flerradig | `{{SLUG}}.md` → DEL 5 |
 | 11 | Datamodell (DEL 6) | flerradig | `{{SLUG}}.md` → DEL 6 |
 | 12 | Saker som ska göras | flerradig → checklista | `projektplan.md` → checklista |
-| 13 | Öppna frågor | flerradig | `ds.md` Öppna frågor och `projektplan.md` Öppna frågor. Samma text. |
+| 13 | Öppna frågor | flerradig | `ai.md` Öppna frågor och `projektplan.md` Öppna frågor. Samma text. |
 | 14 | Första anteckningar | flerradig | `va.md` |
 
 **Regler:**
@@ -95,7 +95,7 @@ Värdena räknas fram av koden. Mallen beskriver dem.
 `{{SYSTEMETS_MAL}}`, `{{KARNBEGREPP}}`, `{{INVARIANTER}}`, `{{DATAMODELL}}`
 och `{{OPPNA_FRAGOR}}` samlar appen inte in — formuläret har inga fält för
 dem. De står kvar i de skapade filerna som en markering av vad VÅ behöver
-fylla i. Frågan om de ska bort är öppen i `projekt/plapp/ds.md`.
+fylla i. Frågan om de ska bort är öppen i `projekt/plapp/ai.md`.
 
 ---
 
@@ -134,7 +134,8 @@ checklistan under. Det som förut låg i två filer ligger här.
 **Filer**
 - Startpunkt: start_har.md
 - Arkitektur: {{SLUG}}.md
-- Lokalt läge: ds.md
+- Arbetsgång: projektplan.md
+- Lokalt läge: ai.md
 - VÅ:s anteckningar: va.md
 
 **AI-läsning**
@@ -194,7 +195,7 @@ avslutade stegen; checklistan i denna fil bär de aktuella.
 
 ## DEL 4 — FIL 2: `{{SLUG}}.md`
 
-Nio delar. DEL 0, 2, 4, 9 ärvs ordagrant från `plapp.md` (med projektets
+Nio delar. DEL 0, 2, 4, 9 ärvs ordagrant från `projekt/plapp/plapp.md` (med projektets
 namn insatt). DEL 1, 3, 5 får VÅ:s text. DEL 6, 7, 8 är tomma platshållare.
 Datamodellen (DEL 6) får ingen generisk text — den fylls i av VÅ.
 
@@ -270,8 +271,8 @@ Logik och lagring är orörda. Koden ligger därefter: `produktion/main.py` är 
 projekt/{{SLUG}}-001/
 ├── projektplan.md
 ├── {{SLUG}}-001.md
-├── ds.md
 ├── va.md
+├── ai.md
 └── produktion/
     ├── main.py
     ├── logik/
@@ -358,7 +359,7 @@ avgränsat, inte kärnan.
 
 ---
 
-## DEL 5 — FIL 3: `ds.md`
+## DEL 5 — FIL 3: `ai.md`
 
 ```markdown
 # DS — lokalt läge för {{NAMN}}
@@ -378,8 +379,8 @@ veta just nu.
 
 ## Vad DS ska veta om detta projekt
 
-- Fyra filer: `projektplan.md`, `{{SLUG}}.md`, `ds.md`, `va.md`.
-- **`projektplan.md` äger Status och Nästa.** Inte `ds.md`.
+- Fyra filer: `projektplan.md`, `{{SLUG}}.md`, `va.md`, `ai.md`.
+- **`projektplan.md` äger Status och Nästa.** Inte `ai.md`.
 - **Markdown är sanningen.** Inget JSON-register.
 - **Arkitekturen bor i `{{SLUG}}.md`.** Det som är låst.
 - **Checklistan i `projektplan.md` äger steg-status.** Rubrikerna är beskrivning.

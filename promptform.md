@@ -77,7 +77,7 @@ Tabellen över vad DS skriver, när, och var ligger i `rollkontrakt.md`.
 - Fyll aldrig i VÅ:s beslut åt VÅ. Lämna val öppna och motivera med
   källor.
 - Skriv ingen sammanfattning av vad som redan är gjort — det står i
-  projekt.md, pp.md och ds.md.
+  projektplan.md och ai.md.
 - Ändra inte i befintliga filer, texter eller beslut. Föreslå bara.
 - Skriv färdig text att klistra in — inte ett förslag.
 - Kontrollera nya sektioner att de inte upprepar något som redan står (`regelverk.md` DEL 7).
@@ -100,4 +100,4 @@ ska kunna klistras in direkt i en ny chatt.
 
 **Format:** se Uppdragsformen ovan.
 
-**Fråga:** Vilken är nästa uppgift enligt projekt.md och pp.md?
+**Fråga:** Vilken är nästa uppgift enligt projektplan.md?
