@@ -70,7 +70,7 @@ dokument äger filinnehållet.
 | 10 | Invarianter (DEL 5) | flerradig | `{{SLUG}}.md` → DEL 5 |
 | 11 | Datamodell (DEL 6) | flerradig | `{{SLUG}}.md` → DEL 6 |
 | 12 | Saker som ska göras | flerradig → checklista | `projektplan.md` → checklista |
-| 13 | Öppna frågor | flerradig | `ai.md` Öppna frågor och `projektplan.md` Öppna frågor. Samma text. |
+| 13 | Öppna frågor | flerradig | `projektplan.md` → Öppna frågor. `ai.md` pekar dit. |
 | 14 | Första anteckningar | flerradig | `va.md` |
 
 **Regler:**
@@ -99,10 +99,16 @@ Värdena räknas fram av koden. Mallen beskriver dem.
 
 **Platshållare som står kvar oskrivna:**
 
-`{{SYSTEMETS_MAL}}`, `{{KARNBEGREPP}}`, `{{INVARIANTER}}`, `{{DATAMODELL}}`
-och `{{OPPNA_FRAGOR}}` samlar appen inte in — formuläret har inga fält för
-dem. De står kvar i de skapade filerna som en markering av vad VÅ behöver
-fylla i. Frågan om de ska bort är öppen i `projekt/plapp/ai.md`.
+`{{SYSTEMETS_MAL}}`, `{{KARNBEGREPP}}`, `{{INVARIANTER}}` och `{{DATAMODELL}}`
+samlar appen inte in — formuläret har inga fält för dem. De står kvar i
+`{{SLUG}}.md` som en markering av vad VÅ behöver fylla i, och VÅ skriver
+texten för hand. **Att ge dem fält i formuläret kräver en ny panel:** cell 4
+är full (fyra fält, filkryss och skrivruta på 278 px). Beslutet är VÅ:s och
+står öppet i `projekt/plapp/ai.md`.
+
+`{{OPPNA_FRAGOR}}` finns **bara** i `projektplan.md`. Den ägs av ett ställe —
+`ai.md` har rubriken kvar men pekar dit, eftersom en fråga inte ska stå i två
+filer.
 
 Samma sak gäller `{{ANTECKNINGAR}}` i `va.md`: fältet Anteckningar togs bort
 2026-10-09, och `spara_nytt_projekt()` sätter en tom sträng så att
@@ -401,7 +407,8 @@ behöver veta just nu.
 
 ## Öppna frågor
 
-{{OPPNA_FRAGOR}}
+Listan står i `projektplan.md` — en fråga ägs av ett ställe och upprepas inte
+här. Skriv bara frågor som hör till just detta projekt.
 
 ---
 
