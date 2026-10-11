@@ -1,7 +1,5 @@
 # {{NAMN}} — arkitekturen
 
-**Version:** 0.1
-**Status:** Låst. Ändras bara vid beslut av VÅ.
 **Dokumenttyp:** Arkitektur och teknisk specifikation
 
 ---
@@ -50,15 +48,9 @@ platshållarna fylls av formuläret.
 ## DEL 2 — ORGANISATION (LAGER)
 
 Systemet har tre lager. Regeln är fast: **UI pratar aldrig direkt med lagring.
-UI pratar med logiken. Logiken pratar med lagring.**
-
-┌─────────────────────────────┐
-│ UI (tkinter idag)           │ ← bytbar
-├─────────────────────────────┤
-│ Logik (regler, data)        │ ← stabil
-├─────────────────────────────┤
-│ Lagring (Markdown)          │ ← AI-gränssnittet
-└─────────────────────────────┘
+UI pratar med logiken. Logiken pratar med lagring.** Lagren är UI (tkinter idag)
+— bytbart, Logik (regler, data) — stabilt, och Lagring (Markdown) —
+AI-gränssnittet.
 
 **Varför:** när VÅ vill byta från tkinter till något modernt byts bara UI-lagret.
 Logik och lagring är orörda. Koden ligger därefter: `produktion/main.py` är UI,
@@ -146,9 +138,6 @@ Testbara påståenden. Varje invariant ska kunna köras mot koden.
 - Inga filuppladdningar
 - Inget JSON-register
 - Ingen proprietär struktur som bara detta projekt förstår
-
-Om ett framtida steg kräver att ett kärnbegrepp ändras — då är steget fel
-avgränsat, inte kärnan.
 
 ---
 
