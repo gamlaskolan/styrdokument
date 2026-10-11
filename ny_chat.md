@@ -26,13 +26,14 @@ Be VÅ om filerna, i tur och ordning — en i taget. Läs varje fil innan DSH be
 1. `styrdokument/ny_chat.md` — denna fil. Ingången.
 2. `styrdokument/rollkontrakt.md` — globalt rollkontrakt. Vem gör vad, och hur DSH beter sig. Alltid samma.
 3. `styrdokument/regelverk.md` — vad som alltid gäller: språk, byggsätt och arkitekturramverket.
-4. `projekt/plapp/projektplan.md` — vad projektet är, status, nästa, arbetsgång och checklista.
-5. `projekt/plapp/plapp.md` — arkitekturen, `<slug>.md` för projektet plapp. Det som är låst.
-6. `projekt/plapp/ai.md` — projektets lokala läge, öppna frågor.
-7. `projekt/plapp/va.md` — VÅ:s fria anteckningar.
-8. `styrdokument/projektmall.md` — vad ett nytt projekt är.
+4. `styrdokument/kategorier.md` — filkategorierna, projektets struktur och arkiveringen.
+5. `projekt/<slug>/projektplan.md` — vad projektet är, status, nästa, arbetsgång och checklista.
+6. `projekt/<slug>/<slug>.md` — arkitekturen. Det som är låst.
+7. `projekt/<slug>/ai.md` — projektets lokala läge, öppna frågor.
+8. `projekt/<slug>/va.md` — VÅ:s fria anteckningar.
+9. `styrdokument/projektmall.md` — vad ett nytt projekt är.
 
-Vid behov: `projekt/plapp/ai_historik.md` — historiken.
+Vid behov: `projekt/<slug>/ai_historik.md` — historiken.
 
 ---
 
@@ -85,7 +86,7 @@ Byggsättet står i `styrdokument/regelverk.md` DEL 3. Arbetsreglerna — vem so
 
 ## Fler projekt senare
 
-När fler projekt finns: lägg till dem i listan under "Vad DSH bygger mot". Just nu bara plapp. Ett projekt är en committad mapp under `projekt/`.
+När fler projekt finns: lägg till dem i listan under "Vad DSH bygger mot". Ett projekt är en committad mapp under `projekt/`.
 
 ---
 
