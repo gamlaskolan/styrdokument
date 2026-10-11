@@ -5,13 +5,13 @@
 **Gäller:** Alla projekt under `projekt/`.
 
 Denna fil är kontraktet för vad ett nytt projekt är. Fliken "Nytt projekt" i
-en app bygger mot den. Läsordningen i en ny chatt står i `styrdokument/ny_chat.md`.
+en app bygger mot den. Läsordningen i en ny chatt står i `AGENTS.md` → Start av en chatt.
 
 **Filerna i sig ligger i `styrdokument/mallfiler/`** — en fil per fil:
 `projektplan.md`, `arkitektur.md` (mallen; projektfilen heter `<slug>.md`),
 `ai.md`, `va.md`. `skapa_projekt()` läser dem därifrån. Denna fil beskriver;
 den innehåller inte. Filuppsättningen i ett färdigt projekt — fyra filer plus
-arkiverade fasfiler — står i `styrdokument/kategorier.md`.
+arkiverade fasfiler — står i `AGENTS.md` → Projektets filer.
 
 `projekt/<slug>/projektplan.md` samlar sedan 2026-10-09 det som förut låg i två
 filer: mål, syfte, struktur, arbetsgång, checklista och status.

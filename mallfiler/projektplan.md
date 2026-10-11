@@ -25,7 +25,7 @@
 **Nästa:** {{NASTA}}
 
 **Filer**
-- Startpunkt: ny_chat.md
+- Startpunkt: AGENTS.md
 - Arkitektur: {{SLUG}}.md
 - Arbetsgång: projektplan.md
 - Lokalt läge: ai.md
@@ -33,7 +33,7 @@
 
 **AI-läsning**
 En extern AI som får denna mapp börjar med `projektplan.md` och följer sedan
-filordningen i repots `styrdokument/ny_chat.md`. Appen behövs inte — allt VÅ skriver
+filordningen i repots `AGENTS.md` → Start av en chatt. Appen behövs inte — allt VÅ skriver
 står i Markdown, och invarianterna i `{{SLUG}}.md` är garantin för det.
 Bilder i mappen är inte data.
 

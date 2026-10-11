@@ -9,8 +9,8 @@
 Detta är arkitekturen för {{NAMN}}.
 
 Det beskriver **vad systemet är** och **vad som är låst**. Inte stegen för att
-bygga det. Stegen och läget bor i `projektplan.md`. Rollkontraktet bor i
-`styrdokument/rollkontrakt.md`.
+bygga det. Stegen och läget bor i `projektplan.md`. Rollerna står i
+`AGENTS.md` → Roller.
 
 Om detta dokument och `projektplan.md` säger olika om arkitekturen — detta
 dokument vinner. Om detta dokument och verkligheten säger olika — verkligheten

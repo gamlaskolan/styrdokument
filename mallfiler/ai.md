@@ -1,6 +1,6 @@
 # AI — lokalt läge för {{NAMN}}
 
-**Rollkontraktet bor i `styrdokument/rollkontrakt.md`.** Läs det först.
+**Rollerna och reglerna bor i `AGENTS.md` i repots rot → Roller.** Läs den först.
 **Denna fil är projektets läge.** Vad som är öppet, vad som väntar, vad som
 behöver veta just nu.
 
@@ -30,8 +30,8 @@ Listan står i `projektplan.md`. Skriv bara frågor som hör till just detta pro
 
 ## Vad som görs härnäst
 
-1. Läser i den ordning repots `styrdokument/ny_chat.md` anger.
-2. Svarar enligt svarsformen i `ny_chat.md`.
+1. Läser i den ordning repots `AGENTS.md` → Start av en chatt anger.
+2. Svarar enligt `AGENTS.md` → Språk och svar.
 3. Väntar på VÅ:s svar innan arbete börjar.
 
 ---
