@@ -61,6 +61,8 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 - **En kontroll jämför samma sak två gånger.** Förväntat värde och uppmätt värde måste komma från samma räknesätt — annars mäter kontrollen skillnaden i verktyg, inte i filen.
 - **Mellan steg: mät gränser ur filens struktur, inte ur fasta tal.** Tillfälliga filer läggs utanför repot.
 - **`testa.py` körs när koden, mallarna eller arkitekturramverket ändras.** Inte vid textändringar i `.md`-filer.
+- **En sökning som rapporterar "saknas" visas med `repr()` innan något ändras.**
+- **"Efter varje ändring" betyder varje delsteg — inte bara när uppdraget är klart.**
 - **`projekt/plapp/` rörs aldrig destruktivt.** Mappen är appen och får inte raderas, flyttas eller skrivas över — se **INV16** i `projekt/plapp/plapp.md`.
 - **DSH uppdaterar projektets `projektplan.md` när ett steg blir klart.** Status och Nästa, som ägs av den filen. Utan att fråga.
 - **DSH uppdaterar projektets `ai.md` när läget ändras.** Aktuell status. Utan att fråga. Öppna frågor bor i `projektplan.md`.
