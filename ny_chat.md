@@ -44,7 +44,7 @@ När VÅ svarat: arbeta enligt `projektplan.md`. Ett steg i taget. DSH skriver f
 
 ## Regler
 
-- Byggsättet står i `regelverk.md` DEL 2.
+- Byggsättet står i `regelverk.md` DEL 3.
 - DSH skriver all kod. VÅ skriver inte kod manuellt.
 - DSH committar och pushar efter varje avslutat steg, med meddelandet i uppdraget.
 - VÅ granskar diffen i terminalen efter commit och säger OK eller begär ändring.

@@ -6,7 +6,7 @@ Rollerna — vem som gör vad — står i `rollkontrakt.md`.
 
 ---
 
-## DEL 1 — SPRÅK OCH TON
+## DEL 2 — SPRÅK OCH TON
 
 **1. Alltid svenska i chatten.**
 Om DSH skriver på annat språk — säg till. Det är ett fel.
@@ -43,7 +43,7 @@ Istället för mängder med löpande text. VÅ och DSH frågar vid förtydligand
 
 ---
 
-## DEL 2 — HUR VI BYGGER
+## DEL 3 — HUR VI BYGGER
 
 **1. En artefakt i taget.**
 Varje steg ska ha ett körbart resultat och ett test som avgör om det är klart.
@@ -72,9 +72,15 @@ Om koden är för komplex — säg till. DSH förenklar, kommenterar, eller dela
 **9. Backup sker via Git.**
 GitHub är backupsystemet. Ingen separat gallring behövs.
 
+**10. Markdown är sanningen.**
+Inget JSON-register.
+
+**11. Inga framtida funktioner.**
+Ingen Git-integration i appen. Om vi inte behöver det nu, byggs det inte nu.
+
 ---
 
-## DEL 3 — VAD DSH ALDRIG GÖR
+## DEL 4 — VAD DSH ALDRIG GÖR
 
 **1. DSH fyller inte i luckor åt VÅ.**
 Om något är oklart frågar DSH. DSH gissar inte. Med undantag av punkt 7 i Del 2.
@@ -92,11 +98,11 @@ Datamodellen måste byggas innan verifieringen. Verifieringen innan chefen. Chef
 Om VÅ frågar något DSH inte kan svara på — då säger DSH det. Och sedan tar vi reda på svaret tillsammans.
 
 **6. DSH bygger inte framtida funktioner i förtid.**
-Om vi inte behöver det nu, bygger vi det inte nu.
+Regeln står i DEL 3 punkt 11.
 
 ---
 
-## DEL 4 — VAD DU ALDRIG GÖR
+## DEL 5 — VAD DU ALDRIG GÖR
 
 **1. Du klistrar inte in kod du inte har läst.**
 Förstår VÅ inte — fråga. Annars lär VÅ dig inget.
@@ -115,7 +121,7 @@ Kör först. Fråga sedan.
 
 ---
 
-## DEL 5 — HUR VI UTVECKLAR REGELVERKET
+## DEL 7 — HUR VI UTVECKLAR REGELVERKET
 
 Detta regelverk är inte hugget i sten. När vi upptäcker att något saknas eller inte fungerar, uppdaterar vi det.
 
@@ -140,7 +146,7 @@ Undantag: En kopia är tillåten när den har ett annat syfte och antingen gener
 
 ---
 
-## DEL 6 — DET STÖRRE MÅLET
+## DEL 8 — DET STÖRRE MÅLET
 
 Om 1–2 år ska VÅ ha:
 
@@ -163,7 +169,7 @@ och under tiden byggs en rad mindre appar i utbildning/träningssyfte.
 
 ---
 
-## DEL 7 — KATEGORIER: STYRDOKUMENT, PRODUKTION, DATA
+## DEL 9 — KATEGORIER: STYRDOKUMENT, PRODUKTION, DATA
 
 Alla filer i alla projekt tillhör exakt en av tre kategorier.
 
