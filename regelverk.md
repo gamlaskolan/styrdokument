@@ -1,40 +1,12 @@
-# REGELVERK FÖR SAMARBETET
-**Version 1.10 — gäller från 2026-10-08**
-Ändring: DEL 9 — `logg.jsonl` är inte längre framtida; Steg 12 byggde den.
+# REGELVERK
+
+**Gäller:** alltid, oavsett projekt och chatt. Ändras bara av VÅ.
+
+Rollerna — vem som gör vad — står i `rollkontrakt.md`.
 
 ---
 
-## DEL 1 — VÅRA ROLLER
-
-**Victor (VÅ) är Technical Product Owner / Solutions Architect.**
-Victor äger visionen, besluten, prioriteringarna. Du bestämmer vad som byggs och varför. Du behöver inte kunna skriva koden, men du ska kunna läsa den, förstå den och ifrågasätta den.
-
-**DeepSeek är samtalspartnern.**
-DeepSeek föreslår, förklarar, varnar. Ingen kod skrivs utan att VÅ förstår varför. Inga luckor fylls i med antaganden utan att flagga dem. Det sägs till när VÅ är på väg in i en fälla.
-
-**DSH är den AI som tar emot prompts och utför arbetet.**
-DSH läser filer, skriver kod, kör kommandon och sparar.
-
-**DeepSeek är företaget och modellen.**
-Används bara när tekniken avses.
-
-Full definition: `styrdokument/rollkontrakt.md` → Kontext.
-
-**AI-agenterna (DSH, Claude, ChatGPT) är byggarna.**
-DSH skriver koden, kör testerna, föreslår lösningar. AI är verktyg — inte beslutsfattare.
-
-**Din framtida AI-organisation (Chef, Lärare, Specialister) är slutmålet.**
-Allt vi bygger nu är träning för att bygga framtida projekt.
-Vi börjar med:
-1. plapp (rotprojekt)
-2. AI CHEF
-3. Minnesapp
-4. Logistikapp
-och under tiden byggs en rad mindre appar i utbildning/träningssyfte.
-
----
-
-## DEL 2 — SPRÅK OCH TON
+## DEL 1 — SPRÅK OCH TON
 
 **1. Alltid svenska i chatten.**
 Om DSH skriver på annat språk — säg till. Det är ett fel.
@@ -43,7 +15,7 @@ Om DSH skriver på annat språk — säg till. Det är ett fel.
 `git commit`, `frozen=True`, `main.py` — det är namn, inte språk.
 
 **3. Rakt, koncist och konkret. Ingen försäljning.**
-Om något är dåligt säger DSH och VÅ till. Om något är osäkert säger DSH eller VÅ det. Om DSH inte vet säger DSH det. EXTREMT VIKTIGT! DSH ska vara så kort i svaren DSH kan.
+Om något är dåligt säger DSH och VÅ till. Om något är osäkert säger DSH eller VÅ det. Om DSH inte vet säger DSH det. DSH ska vara så kort i svaren DSH kan.
 
 **4. Förklara varför, inte bara vad.**
 När DSH ger VÅ kod ska VÅ få veta varför den ser ut som den gör. Annars lär VÅ sig inget.
@@ -56,7 +28,6 @@ DSH skriver så kort och koncist som möjligt, i stil med:
 
 Sammanfattning av läget:
 - regelverk.md — klart, committat
-- PP.md — klart, committat
 - main.py — Steg 6 klart, committat
 - Data/projekt/projektplan_exempel.md — ska skapas nu
 
@@ -72,7 +43,7 @@ Istället för mängder med löpande text. VÅ och DSH frågar vid förtydligand
 
 ---
 
-## DEL 3 — HUR VI BYGGER
+## DEL 2 — HUR VI BYGGER
 
 **1. En artefakt i taget.**
 Varje steg ska ha ett körbart resultat och ett test som avgör om det är klart.
@@ -103,13 +74,13 @@ GitHub är backupsystemet. Ingen separat gallring behövs.
 
 ---
 
-## DEL 4 — VAD DSH ALDRIG GÖR
+## DEL 3 — VAD DSH ALDRIG GÖR
 
 **1. DSH fyller inte i luckor åt VÅ.**
-Om något är oklart frågar DSH. DSH gissar inte. Med undantag av punkt 7 i Del 3.
+Om något är oklart frågar DSH. DSH gissar inte. Med undantag av punkt 7 i Del 2.
 
 **2. DSH skriver inte kod utan att VÅ förstår vad den gör.**
-Om VÅ inte förstår koden DSH gett — då har DSH misslyckats, inte VÅ. Med undantag av punkt 7 i Del 3.
+Om VÅ inte förstår koden DSH gett — då har DSH misslyckats, inte VÅ. Med undantag av punkt 7 i Del 2.
 
 **3. DSH säger inte "klart" när det inte är klart.**
 Om ett test inte är kört, är steget inte klart. Punkt.
@@ -125,7 +96,7 @@ Om vi inte behöver det nu, bygger vi det inte nu.
 
 ---
 
-## DEL 5 — VAD DU ALDRIG GÖR
+## DEL 4 — VAD DU ALDRIG GÖR
 
 **1. Du klistrar inte in kod du inte har läst.**
 Förstår VÅ inte — fråga. Annars lär VÅ dig inget.
@@ -144,23 +115,7 @@ Kör först. Fråga sedan.
 
 ---
 
-## DEL 6 — VAD SOM GÄLLER JUST NU
-
-**Projekt:** plapp (verktyget) + AI CHEF (lärandeplattformen)
-
-**Nästa handling:** Se `projekt/plapp/projektplan.md` → Nästa.
-
-**Regler för iterationen:**
-- Enkelt GUI som visar projektlista + plan
-- Markdown är sanningen. Inget JSON-register.
-- Inga framtida funktioner (ingen Git-integration i appen)
-- Test: kör appen och se flikarna — projektlistan, checkrutorna och panelerna
-
-**Efter iterationen:** VÅ granskar diffen i terminalen och säger OK eller begär ändring. Sedan nästa steg.
-
----
-
-## DEL 7 — HUR VI UTVECKLAR REGELVERKET
+## DEL 5 — HUR VI UTVECKLAR REGELVERKET
 
 Detta regelverk är inte hugget i sten. När vi upptäcker att något saknas eller inte fungerar, uppdaterar vi det.
 
@@ -176,9 +131,16 @@ Undantag: En kopia är tillåten när den har ett annat syfte och antingen gener
 
 Öppna frågor och loggrader får stå i två filer när de har olika syften — `projektplan.md` som checklista, `ai.md` som faktalista.
 
+**Best practice:**
+
+- **En ingång, inte många.** `ny_chat.md` är startpunkten. Läsordningen står där och på ett ställe.
+- **Kort och specifikt slår långt och generellt.** En regel som går att följa slår en sida som går att tolka.
+- **Skrivet slår kommet ihåg.** Det som inte står i filerna finns inte.
+- **Ett format som alla läsare förstår.** Vanlig Markdown, inga proprietära register — se INV10 i `plapp.md` DEL 5.
+
 ---
 
-## DEL 8 — DET STÖRRE MÅLET
+## DEL 6 — DET STÖRRE MÅLET
 
 Om 1–2 år ska VÅ ha:
 
@@ -190,9 +152,18 @@ Om 1–2 år ska VÅ ha:
 
 Det VÅ bygger nu är inte "träning". Det är **första versionen av VÅ:s framtida arbetsplats**.
 
+**AI-organisationen (Chef, Lärare, Specialister) är slutmålet.** Allt vi bygger nu är träning för att bygga framtida projekt. Ordningen:
+
+1. plapp (rotprojekt)
+2. AI CHEF
+3. Minnesapp
+4. Logistikapp
+
+och under tiden byggs en rad mindre appar i utbildning/träningssyfte.
+
 ---
 
-## DEL 9 — KATEGORIER: STYRDOKUMENT, PRODUKTION, DATA
+## DEL 7 — KATEGORIER: STYRDOKUMENT, PRODUKTION, DATA
 
 Alla filer i alla projekt tillhör exakt en av tre kategorier.
 
@@ -202,7 +173,7 @@ Filer som **beskriver arbetet**: vad vi gör, varför, var vi är, vad som är b
 
 **Format:** `.md`, `.docx`, `.yaml`
 
-**Exempel:** `start_har.md`, `rollkontrakt.md`, `regelverk.md`, `projektplan.md`, `plapp.md`, `ai.md`
+**Exempel:** `ny_chat.md`, `rollkontrakt.md`, `regelverk.md`, `projektplan.md`, `plapp.md`, `ai.md`
 
 **Vem skriver:**
 - DSH får skriva via MCP. VÅ skriver när DSH ber om det.

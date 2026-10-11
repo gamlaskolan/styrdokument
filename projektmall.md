@@ -150,7 +150,7 @@ checklistan under. Det som förut låg i två filer ligger här.
 **Nästa:** {{NASTA}}
 
 **Filer**
-- Startpunkt: start_har.md
+- Startpunkt: ny_chat.md
 - Arkitektur: {{SLUG}}.md
 - Arbetsgång: projektplan.md
 - Lokalt läge: ai.md
@@ -158,7 +158,7 @@ checklistan under. Det som förut låg i två filer ligger här.
 
 **AI-läsning**
 En extern AI som får denna mapp börjar med `projektplan.md` och följer sedan
-filordningen i repots `start_har.md`. Appen behövs inte — allt VÅ skriver
+filordningen i repots `styrdokument/ny_chat.md`. Appen behövs inte — allt VÅ skriver
 står i Markdown, och invarianterna i `{{SLUG}}.md` är garantin för det.
 Bilder i mappen är inte data.
 
@@ -197,6 +197,14 @@ Nummer och titel i checklistan måste stämma med rubrikerna nedan.
 **Test:**
 **Commit:**
 <!-- /per sak -->
+
+**JEV-status.** `projektplan.md` använder `[JA]`/`[NEJ]`/`[VET EJ]` på
+testrader. Övriga filer gör det inte. Markören betyder "uppfyllt" och hör till
+påståenden som kan vara icke-uppfyllda.
+
+- `[JA]` — uppfyllt
+- `[NEJ]` — inte uppfyllt
+- `[VET EJ]` — behöver utredas
 
 ## Öppna frågor
 
@@ -414,8 +422,8 @@ här. Skriv bara frågor som hör till just detta projekt.
 
 ## Vad som görs härnäst
 
-1. Läser i den ordning repots `start_har.md` anger.
-2. Svarar enligt svarsformen i `promptform.md`.
+1. Läser i den ordning repots `styrdokument/ny_chat.md` anger.
+2. Svarar enligt svarsformen i `ny_chat.md`.
 3. Väntar på VÅ:s svar innan arbete börjar.
 
 ---
