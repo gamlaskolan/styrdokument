@@ -146,14 +146,14 @@ Detta regelverk är inte hugget i sten. När vi upptäcker att något saknas ell
 
 Undantag: En kopia är tillåten när den har ett annat syfte och antingen genereras eller kontrolleras av ett körbart test.
 
-Öppna frågor och loggrader får stå i två filer när de har olika syften — `projektplan.md` som checklista, `ai.md` som faktalista.
+Öppna frågor och loggrader får stå i två filer när de har olika syften — `projekt/<slug>/projektplan.md` som checklista, `projekt/<slug>/ai.md` som faktalista.
 
 Ett undantag som hör till en regel står intill regeln — se Undantag i DEL 3B.
 
 **Best practice:**
 
-- **En ingång, inte många.** `ny_chat.md` är startpunkten. Läsordningen står där och på ett ställe.
-- **Ett format som alla läsare förstår.** Vanlig Markdown, inga proprietära register — se INV10 i `plapp.md` DEL 5.
+- **En ingång, inte många.** `styrdokument/ny_chat.md` är startpunkten. Läsordningen står där och på ett ställe.
+- **Ett format som alla läsare förstår.** Vanlig Markdown, inga proprietära register — se INV10 i projektets arkitekturfil, `projekt/<slug>/<slug>.md` DEL 5.
 
 ---
 
