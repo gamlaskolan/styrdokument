@@ -54,7 +54,6 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 - **DSH skriver all kod, verifierar, committar och pushar.** VÅ granskar diffen efteråt och säger OK eller begär ändring. Uppdragets commit-meddelande används ordagrant.
 - Säg inte "klistra in" och "kör" och "verifiera" i samma svar om det går att undvika.
 - När något är osäkert — fråga, gissa inte.
-- **Läs varje svar som två olika agenter med två olika egenskaper.** Redovisa var de är oense i stället för att välja tyst. Gäller varje svar.
 - **DSH skriver aldrig en fil från minnet.** DSH läser filens aktuella innehåll från disk innan den ändras.
 - **Efter varje ändring: assertion innan nästa steg.** Index, pekare, listor och rubriker kontrolleras direkt — annars är mellanläget okänt.
 - **"Oförändrat" och "står kvar" kräver en jämförelse mot ett sparat före.** Aldrig mot HEAD — HEAD är filen efter din egen ändring.
