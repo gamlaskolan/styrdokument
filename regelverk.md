@@ -194,6 +194,11 @@ Filer som **utför arbetet**: kod, tester, konfiguration, byggda artefakter.
 
 **Exempel:** `main.py`, `filer.py`
 
+`styrdokument/mallfiler/` räknas hit: **mallarna för de fyra projektfilerna**,
+en fil per fil. De läses av `skapa_projekt()`. Produktion och inte styrdokument
+därför att de **utför något när koden läser dem** — de är materialet koden
+bygger projektet av, inte en beskrivning av arbetet.
+
 **Vem skriver:**
 - DSH skriver, verifierar, committar och pushar.
 - VÅ granskar diffen efteråt och säger OK eller begär ändring.
