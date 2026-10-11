@@ -261,6 +261,21 @@ Produktion och data bor i undermappar vid behov (`produktion/`, `bilder/`, `data
 
 **plapp är appen** — se **INV16** i `projekt/plapp/plapp.md`. Tas den bort dör appen.
 
+### Arkivering och delning
+
+En arkiverad fas är fryst, avslutad och läses vid behov — inte vid uppstart.
+Den ligger i projektets rot som `projektplan_fasN.md`, och det aktiva navet
+pekar dit.
+
+En fil som passerar 200 rader delas efter en axel per filtyp. `.md` delas efter
+ämne eller fas. `.py` delas efter funktion. Ingen universell axel finns.
+
+En fas som passerar 200 rader delas efter steg: `projektplan_fas2_steg13-16.md`
+och så vidare. Steget är den naturliga delningen inuti en fas.
+
+En arkiverad sektion får stå kvar i sin fil om den är märkt **ARKIVERAD — KLAR**
+och inte läses vid uppstart.
+
 ### Undantag
 
 - `arkiv/all-information.md` är `.md` men räknas som data/arkiv, inte styrdokument.
