@@ -80,6 +80,45 @@ Ingen Git-integration i appen. Om vi inte behöver det nu, byggs det inte nu.
 
 ---
 
+## DEL 3B — ARKITEKTURRAMVERK
+
+**Gäller alla filer i alla projekt, utan undantag.** Även lagböcker och
+referensverk lyder under gränserna. Ingen undantagsklausul finns.
+
+### Tre statusnivåer
+
+- 🟢 **Green:** Optimalt. Ingen åtgärd. Fortsätt.
+- 🟡 **Yellow:** Varning. Ändring krävs; omedelbar refaktorering för att återgå till Green.
+- 🔴 **Red:** Kritiskt. Oacceptabla gränser överskridna; omedelbar omstrukturering obligatorisk.
+
+### Markdown-filer (`.md`)
+
+En fil äger en sak. Modularisera när ämnen överlappar. Korta, operativa
+instruktioner.
+
+- 🟢 **< 150 rader:** Idealt.
+- 🟡 **150–200 rader:** Varning. Granska och trimma eller dela.
+- 🔴 **> 200 rader:** Kritiskt. Dela i mindre, fokuserade `.md`-filer.
+
+### Python (`.py`)
+
+Separera affärslogik, routing, datahantering och tunga beräkningar från
+ingångspunkter och API-routrar. Dedikerade moduler eller serviceklasser.
+
+- `main.py`: 🟢 **< 150 rader**.
+- Standardmoduler (`.py`): 🟢 **< 500 rader**.
+- Funktioner och klasser korta, fokuserade, testbara.
+
+### UI-komponenter
+
+Separera logik och presentation. Beräkningar, validering och API-anrop i hooks
+eller utility-moduler, inte i komponenten. Bryt ned komplexa vyer i
+subkomponenter, monterade av en ren förälder.
+
+- Alla UI-moduler: 🟢 **< 100 rader**.
+
+---
+
 ## DEL 4 — VAD DSH ALDRIG GÖR
 
 **1. DSH fyller inte i luckor åt VÅ.**
