@@ -25,7 +25,7 @@ Be VÅ om filerna, i tur och ordning — en i taget. Läs varje fil innan du ber
 
 1. `ny_chat.md` — denna fil. Ingången.
 2. `styrdokument/rollkontrakt.md` — globalt rollkontrakt. Vem gör vad, och hur du beter dig. Alltid samma.
-3. `styrdokument/regelverk.md` — vad som alltid gäller: språk och byggsätt. Kategorierna står i `styrdokument/regelverk_del9.md`.
+3. `styrdokument/regelverk.md` — vad som alltid gäller: språk, byggsätt och kategorierna.
 4. `projekt/plapp/projektplan.md` — vad projektet är, status, nästa, arbetsgång och checklista.
 5. `projekt/plapp/plapp.md` — arkitekturen. Det som är låst.
 6. `projekt/plapp/ai.md` — projektets lokala läge, öppna frågor.
