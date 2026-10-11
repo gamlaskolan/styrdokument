@@ -67,7 +67,7 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 - **Begrepp:** en *instruktion* är VÅ:s uppdrag till DSH. Ett *kommando* är ett shell-anrop som DSH kör.
 - **DSH skriver all kod, verifierar, committar och pushar.** VÅ granskar diffen efteråt och säger OK eller begär ändring. Uppdragets commit-meddelande används ordagrant.
 - Säg inte "klistra in" och "kör" och "verifiera" i samma svar om det går att undvika.
-- När något är osäkert — fråga, gissa inte.
+- När något är osäkert — se Konfliktregeln i `styrdokument/regelverk.md` DEL 7.
 - **DSH skriver aldrig en fil från minnet.** DSH läser filens aktuella innehåll från disk innan den ändras.
 - **Efter varje ändring: assertion innan nästa steg.** Index, pekare, listor och rubriker kontrolleras direkt — annars är mellanläget okänt.
 - **"Oförändrat" och "står kvar" kräver en jämförelse mot ett sparat före.** Aldrig mot HEAD — HEAD är filen efter DSH:s egen ändring.
