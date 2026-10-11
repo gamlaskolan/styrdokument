@@ -7,7 +7,7 @@
 Denna fil är kontraktet för vad ett nytt projekt är. Fliken "Nytt projekt" i
 en app bygger mot den. Läsordningen i en ny chatt står i `AGENTS.md` → Start av en chatt.
 
-**Filerna i sig ligger i `styrdokument/mallfiler/`** — en fil per fil:
+**Filerna i sig ligger i `projekt/plapp/produktion/mallar/`** — en fil per fil:
 `projektplan.md`, `arkitektur.md` (mallen; projektfilen heter `<slug>.md`),
 `ai.md`, `va.md`. `skapa_projekt()` läser dem därifrån. Denna fil beskriver;
 den innehåller inte. Filuppsättningen i ett färdigt projekt — fyra filer plus
@@ -70,7 +70,7 @@ DEL 7. Detta dokument äger filinnehållet.
 - Fält 1 är en rad. Långa beskrivningar hör i fält 2–7 (`projektplan.md`) eller i DEL 1 (`<slug>.md`).
 - Fält 12: en rad per sak. Raderna numreras `1`, `2`, `3` i den ordning VÅ skrev dem.
 - **Färg** väljs i paletten vid Spara — 20 färger, obligatorisk. Färgen hamnar i `projektplan.md` → `**Färg:**`, och följer projektets knapp och projektets rad.
-- `va.md` har frontmatter överst: `id`, `uppdaterad` och `typ` — se `styrdokument/mallfiler/va.md`.
+- `va.md` har frontmatter överst: `id`, `uppdaterad` och `typ` — se `projekt/plapp/produktion/mallar/va.md`.
 
 **Platshållare som koden räknar fram:** `{{NASTA}}` (första raden i **Konkreta
 leverabler**), `{{N}}` och `{{SAK}}` (raden i fält 12), samt `{{DATUM}}`
