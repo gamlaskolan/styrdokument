@@ -44,6 +44,29 @@ Vid behov: `projekt/plapp/ai.md` → Historik.
 
 ---
 
+## Vad vi bygger mot
+
+Om 1–2 år ska VÅ ha:
+
+- **AI CHEF** — ett fungerande AI-organisationssystem
+- **plapp** — VÅ:s Control Tower
+- **Logistikappen** — VÅ:s första riktiga produkt
+- **Minnesappen** — VÅ:s andra riktiga produkt
+- **Kunskapen** — att läsa kod, förstå arkitektur, kommunicera med utvecklare och AI
+
+Det VÅ bygger nu är inte "träning". Det är **första versionen av VÅ:s framtida arbetsplats**.
+
+**AI-organisationen (Chef, Lärare, Specialister) är slutmålet.** Allt vi bygger nu är träning för att bygga framtida projekt. Ordningen:
+
+1. plapp (rotprojekt)
+2. AI CHEF
+3. Minnesapp
+4. Logistikapp
+
+och under tiden byggs en rad mindre appar i utbildning/träningssyfte.
+
+---
+
 ## Efter du läst
 
 När VÅ svarat: arbeta enligt `projektplan.md`. Ett steg i taget. DSH skriver filerna, verifierar, committar och pushar. VÅ granskar diffen efteråt och säger OK eller begär ändring.

@@ -146,26 +146,7 @@ Undantag: En kopia är tillåten när den har ett annat syfte och antingen gener
 
 ---
 
-## DEL 8 — DET STÖRRE MÅLET
-
-Om 1–2 år ska VÅ ha:
-
-- **AI CHEF** — ett fungerande AI-organisationssystem
-- **plapp** — VÅ:s Control Tower
-- **Logistikappen** — VÅ:s första riktiga produkt
-- **Minnesappen** — VÅ:s andra riktiga produkt
-- **Kunskapen** — att läsa kod, förstå arkitektur, kommunicera med utvecklare och AI
-
-Det VÅ bygger nu är inte "träning". Det är **första versionen av VÅ:s framtida arbetsplats**.
-
-**AI-organisationen (Chef, Lärare, Specialister) är slutmålet.** Allt vi bygger nu är träning för att bygga framtida projekt. Ordningen:
-
-1. plapp (rotprojekt)
-2. AI CHEF
-3. Minnesapp
-4. Logistikapp
-
-och under tiden byggs en rad mindre appar i utbildning/träningssyfte.
+<!-- DEL 8 — DET STÖRRE MÅLET flyttad till `styrdokument/ny_chat.md` 2026-10-11. Numret står kvar som ledig adress. -->
 
 ---
 
