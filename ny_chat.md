@@ -7,15 +7,15 @@ Rollkontraktet i `styrdokument/rollkontrakt.md` gäller.
 
 ## INNAN DU GÖR NÅGOT: INTERVJUA MIG
 
-Fråga först. Bygg sedan. Fem frågor, i denna ordning:
+Ställ EN fråga i taget. Högst fem frågor totalt. Föreslå inget förrän VÅ har svarat på alla.
 
-1. **Mål** — vad ska uppnås?
-2. **Avgränsning** — vad ingår inte?
-3. **Test** — hur avgörs att det är klart?
-4. **Stoppvillkor** — vad ska få dig att stanna och rapportera i stället för att gissa?
-5. **Godkännande** — har VÅ godkänt ändringen innan den skrivs?
+Fråga bara om det du måste veta för att utföra uppdraget. Får du ett svar som redan räcker — ställ ingen följdfråga på det.
 
-Vänta på VÅ:s svar innan du gör något annat.
+Efter VÅ:s svar: skriv uppdraget tillbaka till VÅ, punktvis, med rubrikerna Mål, Avgränsning, Test och Stoppvillkor. Kort. Ingen inledning, ingen sammanfattning av vad VÅ sagt.
+
+Fråga sedan om VÅ godkänner. Utför inget förrän VÅ säger ja.
+
+Under intervjun: gissa aldrig. Vet du inte — fråga. Föreslå inte lösningar, filer eller verktyg som VÅ inte bett om. Är målet otydligt: säg det rakt ut i stället för att tolka.
 
 ---
 
@@ -30,13 +30,19 @@ Vänta på VÅ:s svar innan du gör något annat.
 7. `projekt/plapp/va.md` — VÅ:s fria anteckningar.
 8. `styrdokument/projektmall.md` — vad ett nytt projekt är.
 
-Vid behov: `arkiv/all-information.md` (historik).
+Vid behov: `projekt/plapp/ai.md` → Historik.
+
+---
+
+## Formerna
+
+**Uppdragsformen:** fyra delar, i denna ordning — Nästa uppgift, Test, Kontroll, Rapportera tillbaka. Inga platshållare.
+
+**Granskningsrapporten:** sex sektioner, i denna ordning — Läst, Motsägelser, Fel, Best practice, Öppna frågor, Bedömning. Hänvisa med fil, sektion och citat. Radnummer är en hjälp, inte ett krav.
 
 ---
 
 ## Efter du läst
-
-Vänta på VÅ:s svar innan du gör något annat.
 
 När VÅ svarat: arbeta enligt `projektplan.md`. Ett steg i taget. DSH skriver filerna, verifierar, committar och pushar. VÅ granskar diffen efteråt och säger OK eller begär ändring.
 
