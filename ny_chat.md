@@ -52,15 +52,11 @@ När VÅ svarat: arbeta enligt `projektplan.md`. Ett steg i taget. DSH skriver f
 
 ## Regler
 
-- Byggsättet står i `regelverk.md` DEL 3.
-- DSH skriver all kod. VÅ skriver inte kod manuellt.
-- DSH committar och pushar efter varje avslutat steg, med meddelandet i uppdraget.
-- VÅ granskar diffen i terminalen efter commit och säger OK eller begär ändring.
+Byggsättet står i `regelverk.md` DEL 3. Arbetsreglerna — vem som skriver, committar och granskar — står i `rollkontrakt.md`.
+
 - Om en fil är fel skriven — säg det. Strukturen är fel, inte du.
-- `projekt/plapp/` är appen och får aldrig raderas — se INV16 i `projekt/plapp/plapp.md`.
 - Om något saknas — säg till VÅ.
 - Om chatten blir för lång — säg till. VÅ öppnar ny chatt och klistrar in denna prompt igen.
-- DSH minns inget mellan chattar. Filerna gör det. Därför måste allt skrivas ner.
 
 ---
 
