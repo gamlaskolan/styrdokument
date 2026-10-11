@@ -3,7 +3,7 @@
 **Globalt dokument.** Gäller alla projekt, alla chattar, alla dagar.
 **Ändras sällan.** När det ändras — beslut av VÅ.
 
-Vad som alltid gäller, oavsett projekt och chatt, står i `regelverk.md`.
+Vad som alltid gäller, oavsett projekt och chatt, står i `styrdokument/regelverk.md`.
 
 ---
 
@@ -29,14 +29,14 @@ DSH minns inget mellan chattar. Filerna gör det. Därför måste allt skrivas n
 
 ## Regelägare
 
-Varje regel finns i en fil — se Kontrollregeln i `regelverk.md` DEL 7. **Ägaren** är den fil som bär regelns fulla text, inklusive dess undantag. Andra filer pekar hit; de citerar inte och upprepar inte.
+Varje regel finns i en fil — se Kontrollregeln i `styrdokument/regelverk.md` DEL 7. **Ägaren** är den fil som bär regelns fulla text, inklusive dess undantag. Andra filer pekar hit; de citerar inte och upprepar inte.
 
 | Regelområde | Ägarfil |
 |---|---|
-| Roller, arbetsregler, commit, granskning, svarsform | `rollkontrakt.md` |
-| Språk, byggsätt, filkategorier, längdgränser, delning, historikfiler, konfliktregel | `regelverk.md` |
-| Läsordning, intervjun, uppdragsformen, granskningsrapportens form, startpunkten | `ny_chat.md` |
-| Projektmappens innehåll och fält, mallarnas filnamn | `projektmall.md` |
+| Roller, arbetsregler, commit, granskning, svarsform | `styrdokument/rollkontrakt.md` |
+| Språk, byggsätt, filkategorier, längdgränser, delning, historikfiler, konfliktregel | `styrdokument/regelverk.md` och `styrdokument/kategorier.md` |
+| Läsordning, intervjun, uppdragsformen, granskningsrapportens form, startpunkten | `styrdokument/ny_chat.md` |
+| Projektmappens innehåll och fält, mallarnas filnamn | `styrdokument/projektmall.md` |
 
 ---
 
@@ -44,7 +44,7 @@ Varje regel finns i en fil — se Kontrollregeln i `regelverk.md` DEL 7. **Ägar
 
 ### Mekanism 1 — Referensplikt
 
-Varje påstående om arbetet ska kunna spåras till en fil. Om något sägs vara "nästa steg" ska det stå i projektets `projektplan.md`. Om det inte står där — är det påhittat. VÅ frågar: "var står det?" Svaret måste kunna peka på en rad.
+Varje påstående om arbetet ska kunna spåras till en fil. Om något sägs vara "nästa steg" ska det stå i projektets `projekt/<slug>/projektplan.md`. Om det inte står där — är det påhittat. VÅ frågar: "var står det?" Svaret måste kunna peka på en rad.
 
 ### Mekanism 2 — Fyra svarsnivåer
 
@@ -78,14 +78,14 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 - **"Efter varje ändring" betyder varje delsteg — inte bara när uppdraget är klart.**
 - **En skrivare per fil, alltid.** Innan en fil rörs: kontrollera att inget jobb kör mot den.
 - **`projekt/plapp/` rörs aldrig destruktivt.** Mappen är appen och får inte raderas, flyttas eller skrivas över — att läsa den är tillåtet. Se **INV16** i `projekt/plapp/plapp.md`.
-- **Under uppdraget:** DSH uppdaterar projektets `projektplan.md` när ett steg blir klart, och projektets `ai.md` när läget ändras. Utan att fråga. Vad som skrivs och var: se "Vad som skrivs, när, och var" nedan. Öppna frågor bor i `projektplan.md`.
+- **Under uppdraget:** DSH uppdaterar projektets `projekt/<slug>/projektplan.md` när ett steg blir klart, och projektets `projekt/<slug>/ai.md` när läget ändras. Utan att fråga. Vad som skrivs och var: se "Vad som skrivs, när, och var" nedan. Öppna frågor bor i `projekt/<slug>/projektplan.md`.
 - **Flagga när en fil blir för tung.** Signal: mer än en skärm måste läsas för att hitta aktuell status. Åtgärd: föreslå för VÅ att bryta ut en sektion. Beslut tas av VÅ.
-- **Fånga beslut.** När ett beslut tas i chatten — om projektet, arkitekturen, stegen, eller arbetssättet — skrivs det till rätt fil. Utan att fråga. Rätt fil: se `Vad som skrivs, när, och var`.
+- **Fånga beslut.** När ett beslut tas i chatten — om projektet, arkitekturen, stegen, eller arbetssättet — skrivs det till rätt fil. Utan att fråga. Rätt fil: se `## Vad som skrivs, när, och var` nedan.
 - Är det osäkert vilken fil — fråga VÅ. En gång, inte varje gång.
 - **Läget kan skrivas ut.** När VÅ säger "skriv vad som behövs för att kicka igång" läser DSH projektets fyra filer och skriver en kort sammanfattning: projekt, status, nästa steg, öppna frågor. Avsedd att klistras in i en ny chatt.
   - DSH läser filerna och skriver ut sammanfattningen. Innehållet är DSH:s ansvar.
   - Sammanfattningen är ett svar i chatten — inte en fil. Om VÅ vill ha den sparad säger VÅ till.
-  - Status, Nästa och öppna frågor hämtas ur `projektplan.md`. Alltid. `ai.md` bär läget.
+  - Status, Nästa och öppna frågor hämtas ur `projekt/<slug>/projektplan.md`. Alltid. `projekt/<slug>/ai.md` bär läget.
 
 ---
 
@@ -93,18 +93,18 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 
 | När | Vad | Var |
 |---|---|---|
-| Ett steg blir klart | Bocka av `[x]` i checklistan + commit-hash | `projektplan.md` |
-| Ett steg blir klart | Status + Nästa uppdateras | `projektplan.md` |
-| Läget ändras | Vad som gjorts, vad väntar | `ai.md` |
-| En fråga stängs | Ta bort den ur öppna frågor | `projektplan.md` |
-| En fråga öppnas | Lägg till den i öppna frågor | `projektplan.md` |
-| Ett beslut tas i chatten | Skriv in det i rätt fil | Projektet → `projektplan.md`. Arkitekturen → `<slug>.md`. Stegen → `projektplan.md`. VÅ:s tankar → `va.md`. Arbetssättet → `rollkontrakt.md` eller `regelverk.md`. |
-| Arkitekturen ändras | Ny version + ändringsrad | `<slug>.md` rad 3 |
+| Ett steg blir klart | Bocka av `[x]` i checklistan | `projekt/<slug>/projektplan.md` |
+| Ett steg blir klart | Status + Nästa uppdateras + commit-hash | `projekt/<slug>/projektplan.md` |
+| Läget ändras | Vad som gjorts, vad väntar | `projekt/<slug>/ai.md` |
+| En fråga stängs | Ta bort den ur öppna frågor | `projekt/<slug>/projektplan.md` |
+| En fråga öppnas | Lägg till den i öppna frågor | `projekt/<slug>/projektplan.md` |
+| Ett beslut tas i chatten | Skriv in det i rätt fil — se raden "Fånga beslut" i Arbetsregler | Projektet → `projekt/<slug>/projektplan.md`. Arkitekturen → `projekt/<slug>/<slug>.md`. Stegen → `projekt/<slug>/projektplan.md`. VÅ:s tankar → `projekt/<slug>/va.md`. Arbetssättet → `styrdokument/rollkontrakt.md` eller `styrdokument/regelverk.md`. |
+| Arkitekturen ändras | Ny version + ändringsrad | `projekt/<slug>/<slug>.md` rad 3 |
 | Ett projekt skapas | Fyra filer enligt mallen | `styrdokument/projektmall.md` |
 
 Skriv utan att fråga. Fråga bara om DSH är osäker på vilken fil.
 
-**Hash-regel (SKA):** Ett avbockat steg skrivs utan hash. Hashen fylls i vid nästa statusuppdatering av `projektplan.md`. Gäller från 2026-10-08, inte retroaktivt.
+**Hash-regel (SKA):** Ett avbockat steg skrivs utan hash. Hashen fylls i vid nästa statusuppdatering av `projekt/<slug>/projektplan.md`. Gäller från 2026-10-08, inte retroaktivt.
 
 **Provkatalog-regel (SKA):** Test mot provkatalog körs i ett enda anrop. `/tmp` är privat per anrop.
 
@@ -114,13 +114,13 @@ Skriv utan att fråga. Fråga bara om DSH är osäker på vilken fil.
 
 Svaren är korta och i punktform. Löptext undviks. Skäl: bevara chattarnas längd. Varje svar ska vara så kort att det kan läsas på en skärm. Om ett svar kräver mer — dela upp i flera svar.
 
-Undantag: Korthetsregeln gäller byggrapporter. En granskning täcker hela repot och får vara längre. Formen på granskningsrapporten står i `ny_chat.md` — den har sex sektioner, kortast möjliga per sektion.
+Undantag: Korthetsregeln gäller byggrapporter. En granskning täcker hela repot och får vara längre. Formen på granskningsrapporten står i `styrdokument/ny_chat.md` — den har sex sektioner, kortast möjliga per sektion.
 
 ---
 
 ## Språk och roller
 
-- Språket och tonen står i `regelverk.md` DEL 2.
+- Språket och tonen står i `styrdokument/regelverk.md` DEL 2.
 - Rollnamn alltid: **VÅ**, **DeepSeek**, **DSH**. Aldrig "jag", "du", "vi" om rollerna.
 - Undantag: ord som "här", "nu", "sedan" när de handlar om plats eller tid — inte om roller.
 - **Skälet:** DSH minns inget mellan chattar. Filerna gör det. Språket ska spegla det. "Jag" antyder ett minne som inte finns.
