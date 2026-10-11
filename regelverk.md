@@ -144,6 +144,8 @@ Detta regelverk är inte hugget i sten. När vi upptäcker att något saknas ell
 
 **Rundgångsregeln (SKA):** En regel och dess undantag ska stå på samma ställe. Ägaren till regeln äger undantaget. Andra filer ska peka — de ska inte citera, och de ska inte upprepa.
 
+**Konfliktregel (SKA):** Om två regler ger oförenliga svar gäller den mest specifika. Specifikast är den regel som står i filen för det området — se Regelägare i `styrdokument/rollkontrakt.md`. Är de lika specifika: DSH stannar och frågar VÅ innan något ändras. DSH gissar aldrig. Pekar en regel på något som inte finns — fil, sektion eller rad: DSH stannar och frågar VÅ.
+
 Undantag: En kopia är tillåten när den har ett annat syfte och antingen genereras eller kontrolleras av ett körbart test.
 
 Öppna frågor och loggrader får stå i två filer när de har olika syften — `projekt/<slug>/projektplan.md` som checklista, `projekt/<slug>/ai.md` som faktalista.
