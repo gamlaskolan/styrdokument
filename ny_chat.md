@@ -21,6 +21,8 @@ Under intervjun: gissa aldrig. Vet du inte — fråga. Föreslå inte lösningar
 
 ## Läs i denna ordning
 
+Be VÅ om filerna, i tur och ordning — en i taget. Läs varje fil innan du ber om nästa.
+
 1. `ny_chat.md` — denna fil. Ingången.
 2. `styrdokument/rollkontrakt.md` — globalt rollkontrakt. Vem gör vad, och hur du beter dig. Alltid samma.
 3. `styrdokument/regelverk.md` — vad som alltid gäller: språk, byggsätt, kategorier.
