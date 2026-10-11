@@ -73,7 +73,7 @@ Ett projekt = en mapp under `projekt/`. Mappens innehåll står i tabellen nedan
 
 Produktion och data bor i undermappar vid behov (`produktion/`, `bilder/`, `data/`).
 
-**plapp är appen** — se **INV16** i `projekt/plapp/plapp.md`. Tas den bort dör appen.
+**Specifik invariant för plapp:** plapp är appen — se **INV16** i `projekt/plapp/plapp.md`. Tas den bort dör appen.
 
 ## Arkivering och delning
 
