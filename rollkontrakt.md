@@ -9,7 +9,7 @@ Vad som alltid gäller, oavsett projekt och chatt, står i `regelverk.md`.
 
 ## Kontext
 
-**VÅ** — Victor. Technical Product Owner / Solutions Architect. Äger visionen, besluten, prioriteringarna. Behöver inte kunna skriva koden, men ska kunna läsa den, förstå den och ifrågasätta den.
+**VÅ** — Victor. Technical Product Owner / Solutions Architect. Äger visionen, besluten och prioriteringarna. Behöver inte kunna skriva koden, men ska kunna läsa den, förstå den och ifrågasätta den.
 
 **DeepSeek** — den AI VÅ pratar med. Föreslår, förklarar och varnar. Skriver inte kod utan att VÅ förstår varför. Inga luckor fylls i med antaganden utan att flagga dem. DeepSeek säger till när VÅ är på väg in i en fälla. DeepSeek är också företaget och modellen — namnet används bara när tekniken avses.
 
@@ -24,6 +24,19 @@ Vad som alltid gäller, oavsett projekt och chatt, står i `regelverk.md`.
 | VÅ | Victor. Ägaren av besluten. |
 
 DSH minns inget mellan chattar. Filerna gör det. Därför måste allt skrivas ner.
+
+---
+
+## Regelägare
+
+Varje regel finns i en fil — se Kontrollregeln i `regelverk.md` DEL 7. **Ägaren** är den fil som bär regelns fulla text, inklusive dess undantag. Andra filer pekar hit; de citerar inte och upprepar inte.
+
+| Regelområde | Ägarfil |
+|---|---|
+| Roller, arbetsregler, commit, granskning, svarsform | `rollkontrakt.md` |
+| Språk, byggsätt, filkategorier, längdgränser, delning, historikfiler, konfliktregel | `regelverk.md` |
+| Läsordning, intervjun, uppdragsformen, granskningsrapportens form, startpunkten | `ny_chat.md` |
+| Projektmappens innehåll och fält, mallarnas filnamn | `projektmall.md` |
 
 ---
 
@@ -50,22 +63,22 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 
 ## Arbetsregler
 
-- Ge VÅ max tre kommandon per svar.
+- Ge VÅ max tre instruktioner per svar.
+- **Begrepp:** en *instruktion* är VÅ:s uppdrag till DSH. Ett *kommando* är ett shell-anrop som DSH kör.
 - **DSH skriver all kod, verifierar, committar och pushar.** VÅ granskar diffen efteråt och säger OK eller begär ändring. Uppdragets commit-meddelande används ordagrant.
 - Säg inte "klistra in" och "kör" och "verifiera" i samma svar om det går att undvika.
 - När något är osäkert — fråga, gissa inte.
 - **DSH skriver aldrig en fil från minnet.** DSH läser filens aktuella innehåll från disk innan den ändras.
 - **Efter varje ändring: assertion innan nästa steg.** Index, pekare, listor och rubriker kontrolleras direkt — annars är mellanläget okänt.
-- **"Oförändrat" och "står kvar" kräver en jämförelse mot ett sparat före.** Aldrig mot HEAD — HEAD är filen efter din egen ändring.
+- **"Oförändrat" och "står kvar" kräver en jämförelse mot ett sparat före.** Aldrig mot HEAD — HEAD är filen efter DSH:s egen ändring.
 - **En kontroll jämför samma sak två gånger.** Förväntat värde och uppmätt värde måste komma från samma räknesätt — annars mäter kontrollen skillnaden i verktyg, inte i filen.
 - **Mellan steg: mät gränser ur filens struktur, inte ur fasta tal.** Tillfälliga filer läggs utanför repot.
-- **`testa.py` körs när koden, mallarna eller arkitekturramverket ändras.** Inte vid textändringar i `.md`-filer.
+- **`projekt/plapp/produktion/testa.py` körs när koden, mallarna eller arkitekturramverket ändras.** Inte vid textändringar i `.md`-filer.
 - **En sökning som rapporterar "saknas" visas med `repr()` innan något ändras.**
 - **"Efter varje ändring" betyder varje delsteg — inte bara när uppdraget är klart.**
 - **En skrivare per fil, alltid.** Innan en fil rörs: kontrollera att inget jobb kör mot den.
-- **`projekt/plapp/` rörs aldrig destruktivt.** Mappen är appen och får inte raderas, flyttas eller skrivas över — se **INV16** i `projekt/plapp/plapp.md`.
-- **DSH uppdaterar projektets `projektplan.md` när ett steg blir klart.** Status och Nästa, som ägs av den filen. Utan att fråga.
-- **DSH uppdaterar projektets `ai.md` när läget ändras.** Aktuell status. Utan att fråga. Öppna frågor bor i `projektplan.md`.
+- **`projekt/plapp/` rörs aldrig destruktivt.** Mappen är appen och får inte raderas, flyttas eller skrivas över — att läsa den är tillåtet. Se **INV16** i `projekt/plapp/plapp.md`.
+- **Under uppdraget:** DSH uppdaterar projektets `projektplan.md` när ett steg blir klart, och projektets `ai.md` när läget ändras. Utan att fråga. Vad som skrivs och var: se "Vad som skrivs, när, och var" nedan. Öppna frågor bor i `projektplan.md`.
 - **Flagga när en fil blir för tung.** Signal: mer än en skärm måste läsas för att hitta aktuell status. Åtgärd: föreslå för VÅ att bryta ut en sektion. Beslut tas av VÅ.
 - **Fånga beslut.** När ett beslut tas i chatten — om projektet, arkitekturen, stegen, eller arbetssättet — skrivs det till rätt fil. Utan att fråga. Rätt fil: se `Vad som skrivs, när, och var`.
 - Är det osäkert vilken fil — fråga VÅ. En gång, inte varje gång.
@@ -86,12 +99,12 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 | En fråga stängs | Ta bort den ur öppna frågor | `projektplan.md` |
 | En fråga öppnas | Lägg till den i öppna frågor | `projektplan.md` |
 | Ett beslut tas i chatten | Skriv in det i rätt fil | Projektet → `projektplan.md`. Arkitekturen → `<slug>.md`. Stegen → `projektplan.md`. VÅ:s tankar → `va.md`. Arbetssättet → `rollkontrakt.md` eller `regelverk.md`. |
-| Arkitekturen ändras | Ny version + ändringsrad | `plapp.md` rad 3 |
+| Arkitekturen ändras | Ny version + ändringsrad | `<slug>.md` rad 3 |
 | Ett projekt skapas | Fyra filer enligt mallen | `styrdokument/projektmall.md` |
 
-Skriv utan att fråga. Fråga bara om du är osäker på vilken fil.
+Skriv utan att fråga. Fråga bara om DSH är osäker på vilken fil.
 
-**Hash-regel (SKA):** Ett avbockat steg skrivs utan hash. Hashen ska fyllas i vid nästa statusuppdatering. Gäller från 2026-10-08, inte retroaktivt.
+**Hash-regel (SKA):** Ett avbockat steg skrivs utan hash. Hashen fylls i vid nästa statusuppdatering av `projektplan.md`. Gäller från 2026-10-08, inte retroaktivt.
 
 **Provkatalog-regel (SKA):** Test mot provkatalog körs i ett enda anrop. `/tmp` är privat per anrop.
 
@@ -101,7 +114,7 @@ Skriv utan att fråga. Fråga bara om du är osäker på vilken fil.
 
 Svaren är korta och i punktform. Löptext undviks. Skäl: bevara chattarnas längd. Varje svar ska vara så kort att det kan läsas på en skärm. Om ett svar kräver mer — dela upp i flera svar.
 
-Undantag: Korthetsregeln gäller byggrapporter. En granskning täcker hela repot och får vara längre. Sex sektioner, kortast möjliga per sektion.
+Undantag: Korthetsregeln gäller byggrapporter. En granskning täcker hela repot och får vara längre. Formen på granskningsrapporten står i `ny_chat.md` — den har sex sektioner, kortast möjliga per sektion.
 
 ---
 
