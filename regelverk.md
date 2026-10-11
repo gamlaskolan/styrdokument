@@ -243,5 +243,15 @@ och inte läses vid uppstart.
 
 - `arkiv/all-information.md` är `.md` men räknas som data/arkiv, inte styrdokument.
 
+### Historikfiler
+
+**Historikfiler** — `ai_historik*.md` och `projektplan_fas*.md` — är historikfiler:
+de läses vid behov, inte vid uppstart. De mäts inte mot 200-gränsen.
+
+En historikfil är ett arkiv, inte en instruktion: att dela den i filer om 200 rader
+gör den svårare att läsa, inte lättare.
+
+Detta gäller även `projektplan_fas*.md`, som annars träffas av delningsregeln i raden ovan.
+
 
 **Slut på regelverket.**
