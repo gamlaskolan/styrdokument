@@ -56,7 +56,7 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 - När något är osäkert — fråga, gissa inte.
 - **DSH skriver aldrig en fil från minnet.** DSH läser filens aktuella innehåll från disk innan den ändras.
 - **`projekt/plapp/` rörs aldrig destruktivt.** Mappen är appen och får inte raderas, flyttas eller skrivas över — se **INV16** i `projekt/plapp/plapp.md`.
-- **DSH uppdaterar projektets `projektplan.md` när ett steg blir klart.** Status och Nästa. Utan att fråga.
+- **DSH uppdaterar projektets `projektplan.md` när ett steg blir klart.** Status och Nästa, som ägs av den filen. Utan att fråga.
 - **DSH uppdaterar projektets `ai.md` när läget ändras.** Aktuell status. Utan att fråga. Öppna frågor bor i `projektplan.md`.
 - **Flagga när en fil blir för tung.** Signal: mer än en skärm måste läsas för att hitta aktuell status. Åtgärd: föreslå för VÅ att bryta ut en sektion. Beslut tas av VÅ.
 - **Fånga beslut.** När ett beslut tas i chatten — om projektet, arkitekturen, stegen, eller arbetssättet — skrivs det till rätt fil. Utan att fråga. Rätt fil: se `Vad som skrivs, när, och var`.
@@ -99,7 +99,7 @@ Undantag: Korthetsregeln gäller byggrapporter. En granskning täcker hela repot
 
 ## Språk och roller
 
-- Alltid svenska i chatten. Kod och tekniska termer får vara engelska.
+- Språket och tonen står i `regelverk.md` DEL 2.
 - Rollnamn alltid: **VÅ**, **DeepSeek**, **DSH**. Aldrig "jag", "du", "vi" om rollerna.
 - Undantag: ord som "här", "nu", "sedan" när de handlar om plats eller tid — inte om roller.
 - **Skälet:** DSH minns inget mellan chattar. Filerna gör det. Språket ska spegla det. "Jag" antyder ett minne som inte finns.

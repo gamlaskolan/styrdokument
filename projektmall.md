@@ -214,7 +214,7 @@ påståenden som kan vara icke-uppfyllda.
 **Anmärkning:** tom `Saker som ska göras` → checklistan blir tom. Fasen heter
 `Fas 1` tills VÅ namnger den.
 
-**Status och Nästa ägs av denna fil.** Fasfilerna (`projektplan_fasN.md`) bär de
+**Status och Nästa ägs av `projektplan.md`** — mallen skriver dit dem. Fasfilerna (`projektplan_fasN.md`) bär de
 avslutade stegen; checklistan i denna fil bär de aktuella.
 
 ---
@@ -406,7 +406,6 @@ behöver veta just nu.
 ## Vad som behöver veta om detta projekt
 
 - Fyra filer: `projektplan.md`, `{{SLUG}}.md`, `va.md`, `ai.md`.
-- **`projektplan.md` äger Status och Nästa.** Inte `ai.md`.
 - **Markdown är sanningen.** Inget JSON-register.
 - **Arkitekturen bor i `{{SLUG}}.md`.** Det som är låst.
 - **Checklistan i `projektplan.md` äger steg-status.** Rubrikerna är beskrivning.
@@ -415,8 +414,7 @@ behöver veta just nu.
 
 ## Öppna frågor
 
-Listan står i `projektplan.md` — en fråga ägs av ett ställe och upprepas inte
-här. Skriv bara frågor som hör till just detta projekt.
+Listan står i `projektplan.md`. Skriv bara frågor som hör till just detta projekt.
 
 ---
 
