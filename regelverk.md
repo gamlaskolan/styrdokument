@@ -78,6 +78,8 @@ Inget JSON-register.
 **11. Inga framtida funktioner.**
 Ingen Git-integration i appen. Om vi inte behöver det nu, byggs det inte nu.
 
+**12. Korta moduler och kontextgräns — se DEL 3B.**
+
 ---
 
 ## DEL 3B — ARKITEKTURRAMVERK
