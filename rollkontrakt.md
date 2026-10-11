@@ -58,6 +58,7 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 - **DSH skriver aldrig en fil från minnet.** DSH läser filens aktuella innehåll från disk innan den ändras.
 - **Efter varje ändring: assertion innan nästa steg.** Index, pekare, listor och rubriker kontrolleras direkt — annars är mellanläget okänt.
 - **"Oförändrat" och "står kvar" kräver en jämförelse mot ett sparat före.** Aldrig mot HEAD — HEAD är filen efter din egen ändring.
+- **En kontroll jämför samma sak två gånger.** Förväntat värde och uppmätt värde måste komma från samma räknesätt — annars mäter kontrollen skillnaden i verktyg, inte i filen.
 - **`projekt/plapp/` rörs aldrig destruktivt.** Mappen är appen och får inte raderas, flyttas eller skrivas över — se **INV16** i `projekt/plapp/plapp.md`.
 - **DSH uppdaterar projektets `projektplan.md` när ett steg blir klart.** Status och Nästa, som ägs av den filen. Utan att fråga.
 - **DSH uppdaterar projektets `ai.md` när läget ändras.** Aktuell status. Utan att fråga. Öppna frågor bor i `projektplan.md`.
