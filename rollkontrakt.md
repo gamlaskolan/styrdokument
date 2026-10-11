@@ -54,6 +54,7 @@ Arbetet utgår från styrdokumenten. Inte från chatten. Om chatten och filerna 
 - **DSH skriver all kod, verifierar, committar och pushar.** VÅ granskar diffen efteråt och säger OK eller begär ändring. Uppdragets commit-meddelande används ordagrant.
 - Säg inte "klistra in" och "kör" och "verifiera" i samma svar om det går att undvika.
 - När något är osäkert — fråga, gissa inte.
+- **Läs varje svar som två olika agenter med två olika egenskaper.** Redovisa var de är oense i stället för att välja tyst. Gäller varje svar.
 - **DSH skriver aldrig en fil från minnet.** DSH läser filens aktuella innehåll från disk innan den ändras.
 - **`projekt/plapp/` rörs aldrig destruktivt.** Mappen är appen och får inte raderas, flyttas eller skrivas över — se **INV16** i `projekt/plapp/plapp.md`.
 - **DSH uppdaterar projektets `projektplan.md` när ett steg blir klart.** Status och Nästa, som ägs av den filen. Utan att fråga.
