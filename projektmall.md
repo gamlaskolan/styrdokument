@@ -5,16 +5,16 @@
 **Gäller:** Alla projekt under `projekt/`.
 
 Denna fil är kontraktet för vad ett nytt projekt är. Fliken "Nytt projekt" i
-plapp bygger mot den. Läsordningen i en ny chatt står i `styrdokument/ny_chat.md`.
+en app bygger mot den. Läsordningen i en ny chatt står i `styrdokument/ny_chat.md`.
 
 **Filerna i sig ligger i `styrdokument/mallfiler/`** — en fil per fil:
-`projektplan.md`, `arkitektur.md` (mallen; projektfilen heter `<slug>.md`), `ai.md`, `va.md`. `skapa_projekt()` läser
-dem därifrån. Denna fil beskriver; den innehåller inte. Filuppsättningen i ett
-färdigt projekt — fyra filer plus arkiverade fasfiler — står i
-`styrdokument/kategorier.md`.
+`projektplan.md`, `arkitektur.md` (mallen; projektfilen heter `<slug>.md`),
+`ai.md`, `va.md`. `skapa_projekt()` läser dem därifrån. Denna fil beskriver;
+den innehåller inte. Filuppsättningen i ett färdigt projekt — fyra filer plus
+arkiverade fasfiler — står i `styrdokument/kategorier.md`.
 
-`projektplan.md` samlar sedan 2026-10-09 det som förut låg i två filer: mål,
-syfte, struktur, arbetsgång, checklista och status.
+`projekt/<slug>/projektplan.md` samlar sedan 2026-10-09 det som förut låg i två
+filer: mål, syfte, struktur, arbetsgång, checklista och status.
 
 ---
 
@@ -44,8 +44,8 @@ projektet skapas — inte vid behov. Fler mappar finns inte.
 Platshållare har formen `{{NAMN}}`. Koden ersätter dem med fältets värde.
 
 Fälten nedan är filernas platshållare — fjorton stycken, i denna ordning. Vilka
-av dem appen samlar, och med vilka rubriker, läses i `plapp.md` DEL 7. Detta
-dokument äger filinnehållet.
+av dem appen samlar, och med vilka rubriker, läses i `projekt/<slug>/<slug>.md`
+DEL 7. Detta dokument äger filinnehållet.
 
 | # | Fält | Typ | Hamnar i |
 |---|---|---|---|
@@ -70,7 +70,7 @@ dokument äger filinnehållet.
 - Fält 1 är en rad. Långa beskrivningar hör i fält 2–7 (`projektplan.md`) eller i DEL 1 (`<slug>.md`).
 - Fält 12: en rad per sak. Raderna numreras `1`, `2`, `3` i den ordning VÅ skrev dem.
 - **Färg** väljs i paletten vid Spara — 20 färger, obligatorisk. Färgen hamnar i `projektplan.md` → `**Färg:**`, och följer projektets knapp och projektets rad.
-- `va.md` har frontmatter överst: `id`, `uppdaterad` och `typ`.
+- `va.md` har frontmatter överst: `id`, `uppdaterad` och `typ` — se `styrdokument/mallfiler/va.md`.
 
 **Platshållare som koden räknar fram:** `{{NASTA}}` (första raden i **Konkreta
 leverabler**), `{{N}}` och `{{SAK}}` (raden i fält 12), samt `{{DATUM}}`
