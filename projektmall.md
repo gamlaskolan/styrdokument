@@ -28,7 +28,8 @@ arkiverade fasfiler — står i `AGENTS.md` → Projektets filer.
 Appen skriver aldrig över en befintlig mapp.
 
 **Mappstruktur:** `data/` och `produktion/` med `logik/` och `ui/` skapas när
-projektet skapas — inte vid behov. Fler mappar finns inte.
+projektet skapas. Två mappar skapas senare, av appen: `dokument/` när en fil
+läggs in, och `anteckningar/` när den första momentanteckningen skrivs.
 
 **Fyra filer skrivs alltid**, och ingen av dem får bli tom. Saknas någon kastar
 `skapa_projekt()` ett fel och projektmappen blir aldrig liggande halvfärdig.
@@ -61,7 +62,8 @@ Detta dokument äger var värdena hamnar.
 Fält 2–11 visas och ändras sedan i projektsidans panel Projekt.
 
 **Skrivs för hand — formuläret samlar dem inte:** Systemets mål (`<slug>.md`
-DEL 1), Kärnbegrepp (DEL 3), Invarianter (DEL 5) och Datamodell (DEL 6).
+DEL 1), Kärnbegrepp (DEL 3), Invarianter (DEL 5), Datamodell (DEL 6), Appens
+utseende (DEL 7) och Arkitektoniska testfall (DEL 8). DEL 7 och 8 börjar tomma.
 Platshållarna `{{SYSTEMETS_MAL}}`, `{{KARNBEGREPP}}`, `{{INVARIANTER}}` och
 `{{DATAMODELL}}` står kvar i filen tills VÅ skriver dem.
 
