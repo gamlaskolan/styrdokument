@@ -13,9 +13,6 @@ en app bygger mot den. Läsordningen i en ny chatt står i `AGENTS.md` → Start
 den innehåller inte. Filuppsättningen i ett färdigt projekt — fyra filer plus
 arkiverade fasfiler — står i `AGENTS.md` → Projektets filer.
 
-`projekt/<slug>/projektplan.md` samlar sedan 2026-10-09 det som förut låg i två
-filer: mål, syfte, struktur, arbetsgång, checklista och status.
-
 ---
 
 ## DEL 1 — MAPPEN
@@ -28,7 +25,6 @@ filer: mål, syfte, struktur, arbetsgång, checklista och status.
 - Exempel: `projekt/miniraknare-001/`
 - **Skriv aldrig `{{SLUG}}-001`:** `{{SLUG}}` innehåller redan numret, och `{{SLUG}}-001` skulle ge `miniraknare-001-001`.
 
-**Dubblett:** om mappen redan finns läggs suffix till: `-2`, `-3`, och så vidare.
 Appen skriver aldrig över en befintlig mapp.
 
 **Mappstruktur:** `data/` och `produktion/` med `logik/` och `ui/` skapas när
@@ -42,10 +38,11 @@ projektet skapas — inte vid behov. Fler mappar finns inte.
 ## DEL 2 — FÄLTEN
 
 Platshållare har formen `{{NAMN}}`. Koden ersätter dem med fältets värde.
+Vilka fält formuläret har, och i vilken ordning, äger koden: `falt_nytt` i
+`projekt/plapp/produktion/ui/nytt_projekt.py` och `PROJEKTFALT` i `filer.py`.
+Detta dokument äger var värdena hamnar.
 
-Fälten nedan är filernas platshållare — fjorton stycken, i denna ordning. Vilka
-av dem appen samlar, och med vilka rubriker, läses i `projekt/<slug>/<slug>.md`
-DEL 7. Detta dokument äger filinnehållet.
+**Formuläret samlar elva fält:**
 
 | # | Fält | Typ | Hamnar i |
 |---|---|---|---|
@@ -56,30 +53,34 @@ DEL 7. Detta dokument äger filinnehållet.
 | 5 | Avgränsning | flerradig | `projektplan.md` → `**Avgränsning**` |
 | 6 | Orsaker till regler och förbud | flerradig | `projektplan.md` → `**Orsaker till regler och förbud**` |
 | 7 | Riktlinjer vid osäkerhet | flerradig | `projektplan.md` → `**Riktlinjer vid osäkerhet**` |
-| 8 | Systemets mål (DEL 1) | flerradig | `<slug>.md` → DEL 1 |
-| 9 | Kärnbegrepp (DEL 3) | flerradig | `<slug>.md` → DEL 3 |
-| 10 | Invarianter (DEL 5) | flerradig | `<slug>.md` → DEL 5 |
-| 11 | Datamodell (DEL 6) | flerradig | `<slug>.md` → DEL 6 |
-| 12 | Saker som ska göras | flerradig → checklista | `projektplan.md` → checklista |
-| 13 | Öppna frågor | flerradig | `projektplan.md` → Öppna frågor |
-| 14 | Första anteckningar | flerradig | `va.md` |
+| 8 | En fil äger en sak | flerradig | `<slug>.md` → DEL 1B |
+| 9 | Korta moduler och kontextgräns | flerradig | `<slug>.md` → DEL 1B |
+| 10 | Single Source of Truth | flerradig | `<slug>.md` → DEL 1B |
+| 11 | Körbar grind framför skriftliga påminnelser | flerradig | `<slug>.md` → DEL 1B |
+
+Fält 2–11 visas och ändras sedan i projektsidans panel Projekt.
+
+**Skrivs för hand — formuläret samlar dem inte:** Systemets mål (`<slug>.md`
+DEL 1), Kärnbegrepp (DEL 3), Invarianter (DEL 5) och Datamodell (DEL 6).
+Platshållarna `{{SYSTEMETS_MAL}}`, `{{KARNBEGREPP}}`, `{{INVARIANTER}}` och
+`{{DATAMODELL}}` står kvar i filen tills VÅ skriver dem.
 
 **Regler:**
 
-- Alla fjorton fält kan lämnas tomma. Ett tomt fält ger en tom platshållare i filen — aldrig borttagen rubrik.
+- Alla fält kan lämnas tomma. Ett tomt fält ger en tom rad under rubriken — aldrig borttagen rubrik.
 - Fält 1 är en rad. Långa beskrivningar hör i fält 2–7 (`projektplan.md`) eller i DEL 1 (`<slug>.md`).
-- Fält 12: en rad per sak. Raderna numreras `1`, `2`, `3` i den ordning VÅ skrev dem.
 - **Färg** väljs i paletten vid Spara — 20 färger, obligatorisk. Färgen hamnar i `projektplan.md` → `**Färg:**`, och följer projektets knapp och projektets rad.
 - `va.md` har frontmatter överst: `id`, `uppdaterad` och `typ` — se `projekt/plapp/produktion/mallar/va.md`.
 
 **Platshållare som koden räknar fram:** `{{NASTA}}` (första raden i **Konkreta
-leverabler**), `{{N}}` och `{{SAK}}` (raden i fält 12), samt `{{DATUM}}`
-(`YYYY-MM-DD`), `{{DATUM_KORT}}` (`YYYYMMDD`), `{{SLUG}}` och `{{TOMT}}`.
+leverabler**, annars "Ej angivet"; skrivs fältet senare på projektsidan byts
+"Ej angivet" mot första raden), `{{DATUM}}` (`YYYY-MM-DD`), `{{DATUM_KORT}}`
+(`YYYYMMDD`), `{{SLUG}}`, `{{FARG}}` och `{{TOMT}}`. `{{N}}` och `{{SAK}}`
+fyller checklistan bara om värdet `Saker` skickas — formuläret gör det inte
+sedan 2026-10-09, så checklistan i ett nytt projekt är tom.
 
-**Platshållare som står kvar oskrivna:** `{{SYSTEMETS_MAL}}`, `{{KARNBEGREPP}}`,
-`{{INVARIANTER}}` och `{{DATAMODELL}}` samlar appen inte in — VÅ skriver dem för
-hand i `<slug>.md`. `{{OPPNA_FRAGOR}}` finns **bara** i `projektplan.md`, och
-`{{ANTECKNINGAR}}` i `va.md` sätts till en tom sträng.
+**Platshållare som blir tomma:** `{{OPPNA_FRAGOR}}` i `projektplan.md` och
+`{{ANTECKNINGAR}}` i `va.md`.
 
 ---
 
