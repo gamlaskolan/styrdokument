@@ -40,6 +40,21 @@ startfil = "AGENTS.md"
 startfil_lankar = 7                 # en rubrik och en numrerad lista med exakt sju länkar
 regelfiler = ["styrdokument/ARK.md", "styrdokument/DOK.md", "styrdokument/PRO.md"]
 storlek_undantag = ["styrdokument/kallor/**", "styrdokument/mallar/**", "arkiv/**"]
+projekt_mappar = ["projektdokument", "projektdokument/adr", "referens", "handledning", "instruktion", "forklaring", "produktion", "data", "dokument", "anteckningar"]
+projekt_rotfiler = ["va.md"]        # tillåtna filer direkt i projekt/<slug>/
+
+[grind.import_riktning]
+lager = {}                          # lagernamn → mapp relativt projekt/<slug>/; anges i projektets strukturplan
+
+[grind.rena_inre_lager]
+forbjudna = ["tkinter", "customtkinter", "tkinterdnd2", "sqlite3", "sqlalchemy", "flask", "django", "requests", "socket"]
+
+[grind.enhetstester]
+mapp = "produktion/tester/enhet"    # relativt projekt/<slug>/; körs med unittest, nätverk och open() blockerade
+
+[grind.stil]
+linter = ["ruff", "check"]
+formatterare = ["ruff", "format", "--check"]
 
 [grind.doda_referenser]
 platshallare = ["<slug>", "{{*}}"]   # mönster som inte räknas som döda referenser
