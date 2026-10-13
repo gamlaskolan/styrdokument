@@ -1,89 +1,102 @@
-# PROJEKTMALL — de fyra filerna
+> **Äger:** vad ett projekt består av: projektmappen, projektets filer och hur projektet skapas
+> **Typ:** Referens
+> **Hänvisas från:** styrdokument/strukturplan.md, styrdokument/PRO.md
 
-**Dokumenttyp:** Styrdokument. Mall.
-**Status:** Låst. Ändras bara vid beslut av VÅ.
-**Gäller:** Alla projekt under `projekt/`.
+# Projektmall
 
-Denna fil är kontraktet för vad ett nytt projekt är. Fliken "Nytt projekt" i
-en app bygger mot den. Läsordningen i en ny chatt står i `AGENTS.md` → Start av en chatt.
+Gäller alla projekt under `projekt/`. Mallarna för projektets filer ligger i `styrdokument/mallar/`. Den här filen beskriver projektet men innehåller inga mallar. Repots delade struktur står i [strukturplan.md](strukturplan.md).
 
-**Filerna i sig ligger i `projekt/plapp/produktion/mallar/`** — en fil per fil:
-`projektplan.md`, `arkitektur.md` (mallen; projektfilen heter `<slug>.md`),
-`ai.md`, `va.md`. `skapa_projekt()` läser dem därifrån. Denna fil beskriver;
-den innehåller inte. Filuppsättningen i ett färdigt projekt — fyra filer plus
-arkiverade fasfiler — står i `AGENTS.md` → Projektets filer.
+## Delat och per projekt
 
----
+| Del av ramverket | Plats | Antal |
+| --- | --- | --- |
+| Startfil | `AGENTS.md` | en i repot |
+| Regelfiler, begreppslista, projektmall | `styrdokument/` | en uppsättning i repot |
+| Källdokument | `styrdokument/kallor/` | en uppsättning i repot |
+| `testa.py` | `verktyg/testa.py` | en i repot, körs per projekt |
+| Delad strukturplan och delat filregister | `styrdokument/strukturplan.md`, `styrdokument/filregister.md` | en av varje i repot |
+| Statusfil | `projekt/<slug>/projektdokument/status.md` | en per projekt |
+| Strukturplan | `projekt/<slug>/referens/strukturplan.md` | en per projekt |
+| Filregister | `projekt/<slug>/referens/filregister.md` | en per projekt |
+| Fasernas projektdokument och ADR | `projekt/<slug>/projektdokument/` | per projekt |
 
-## DEL 1 — MAPPEN
+## Projektmappen
 
-**Mappnamn:** `projekt/{{SLUG}}/`
+**Mappnamn:** `projekt/<slug>/`
 
-- `{{SLUG}}` = **hela mappnamnet, inklusive numret** — `miniraknare-001`. Koden bygger det av projektets namn: gemener, `å ä ö` → `a a o`, mellanslag och skiljetecken → `-`.
-- Namn utan nummer får `-001` pålagt. Är numret upptaget ger appen nästa lediga i samma serie.
-- Datumet står inte i mappnamnet sedan 2026-10-09.
-- Exempel: `projekt/miniraknare-001/`
-- **Skriv aldrig `{{SLUG}}-001`:** `{{SLUG}}` innehåller redan numret, och `{{SLUG}}-001` skulle ge `miniraknare-001-001`.
+- `<slug>` är hela mappnamnet inklusive nummer, till exempel `miniraknare-001`.
+- Slug bildas av projektets namn: gemener, `å ä ö` → `a a o`, mellanslag och skiljetecken → `-`.
+- Ett namn utan nummer får `-001`. Är numret upptaget används nästa lediga nummer i samma serie.
+- `<slug>` innehåller redan numret. Skriv därför aldrig `<slug>-001`, eftersom det skulle ge till exempel `miniraknare-001-001`.
+- En befintlig projektmapp skrivs aldrig över.
 
-Appen skriver aldrig över en befintlig mapp.
+**Mappar i projektet:**
 
-**Mappstruktur:** `data/` och `produktion/` med `logik/` och `ui/` skapas när
-projektet skapas. Två mappar skapas senare, av appen: `dokument/` när en fil
-läggs in, och `anteckningar/` när den första momentanteckningen skrivs.
+| Mapp | Innehåll | Skapas |
+| --- | --- | --- |
+| `projektdokument/` | statusfilen, fasernas leverabler och anpassningsplanen | när projektet skapas |
+| `projektdokument/adr/` | ett arkitekturbeslut per fil, `ADR-NNN-<namn>.md` | vid första ADR:en |
+| `referens/` | strukturplan, filregister och projektets övriga referensfiler | när projektet skapas |
+| `handledning/`, `instruktion/`, `forklaring/` | projektets dokumentation per Diátaxis-typ | vid första filen av typen |
+| `produktion/` | kod och tester, med en mapp per lager enligt projektets strukturplan | i fas 0; lagren fastställs i fas 4 |
+| `data/` | projektets data | när projektet skapas |
 
-**Fyra filer skrivs alltid**, och ingen av dem får bli tom. Saknas någon kastar
-`skapa_projekt()` ett fel och projektmappen blir aldrig liggande halvfärdig.
+**Valfritt underlag**, som AI:n bara läser när utvecklaren hänvisar dit:
 
----
+| Plats | Innehåll |
+| --- | --- |
+| `va.md` | utvecklarens fria anteckningar (typ Projektdokument) |
+| `dokument/` | inlagda filer, till exempel pdf:er |
+| `anteckningar/` | anteckningar från arbetsmoment |
 
-## DEL 2 — FÄLTEN
+## Skapa ett projekt
 
-Platshållare har formen `{{NAMN}}`. Koden ersätter dem med fältets värde.
-Vilka fält formuläret har, och i vilken ordning, äger koden: `falt_nytt` i
-`projekt/plapp/produktion/ui/nytt_projekt.py` och `PROJEKTFALT` i `filer.py`.
-Detta dokument äger var värdena hamnar.
+Ett projekt skapas i fas 0 (Processdokumentet, Del 1, fas 0). Den som skapar projektet, AI:n eller ett verktyg, gör följande:
 
-**Formuläret samlar elva fält:**
+1. Bildar `<slug>` enligt reglerna ovan.
+2. Skapar mapparna `projektdokument/`, `referens/`, `produktion/` och `data/`.
+3. Skriver tre filer ur mallarna och ersätter platshållarna:
 
-| # | Fält | Typ | Hamnar i |
-|---|---|---|---|
-| 1 | Namn | en rad | `projektplan.md` rubrik + `<slug>.md` rubrik |
-| 2 | Konkreta leverabler | flerradig | `projektplan.md` → `**Konkreta leverabler**` |
-| 3 | Definition of Done (DoD) | flerradig | `projektplan.md` → `**Definition of Done (DoD)**` |
-| 4 | Prioriteringsordning vid kravkrock | flerradig | `projektplan.md` → `**Prioriteringsordning vid kravkrock**` |
-| 5 | Avgränsning | flerradig | `projektplan.md` → `**Avgränsning**` |
-| 6 | Orsaker till regler och förbud | flerradig | `projektplan.md` → `**Orsaker till regler och förbud**` |
-| 7 | Riktlinjer vid osäkerhet | flerradig | `projektplan.md` → `**Riktlinjer vid osäkerhet**` |
-| 8 | En fil äger en sak | flerradig | `<slug>.md` → DEL 1B |
-| 9 | Korta moduler och kontextgräns | flerradig | `<slug>.md` → DEL 1B |
-| 10 | Single Source of Truth | flerradig | `<slug>.md` → DEL 1B |
-| 11 | Körbar grind framför skriftliga påminnelser | flerradig | `<slug>.md` → DEL 1B |
+   | Mall | Projektfil |
+   | --- | --- |
+   | `mallar/status.md` | `projektdokument/status.md` |
+   | `mallar/strukturplan.md` | `referens/strukturplan.md` |
+   | `mallar/filregister.md` | `referens/filregister.md` |
 
-Fält 2–11 visas och ändras sedan i projektsidans panel Projekt.
+4. Lägger till projektets sökväg under Projekt i `styrdokument/filregister.md`.
 
-**Skrivs för hand — formuläret samlar dem inte:** Systemets mål (`<slug>.md`
-DEL 1), Kärnbegrepp (DEL 3), Invarianter (DEL 5), Datamodell (DEL 6), Appens
-utseende (DEL 7) och Arkitektoniska testfall (DEL 8). DEL 7 och 8 börjar tomma.
-Platshållarna `{{SYSTEMETS_MAL}}`, `{{KARNBEGREPP}}`, `{{INVARIANTER}}` och
-`{{DATAMODELL}}` står kvar i filen tills VÅ skriver dem.
+Ingen av de tre filerna får vara tom. Misslyckas ett moment tas mappen bort, så att ingen halvfärdig projektmapp blir kvar. Därefter fortsätter fas 0 med aktiviteterna i processdokumentet: grindparametrar, `testa.py` och, i ett befintligt projekt, en nulägesinventering.
 
-**Regler:**
+**Ett projekt utan `projektdokument/status.md` har inte passerat fas 0.** Ett tomt projekt räknas som ett nytt projekt. Ett projekt som redan har kod eller dokumentation räknas som ett befintligt projekt och får en nulägesinventering.
 
-- Alla fält kan lämnas tomma. Ett tomt fält ger en tom rad under rubriken — aldrig borttagen rubrik.
-- Fält 1 är en rad. Långa beskrivningar hör i fält 2–7 (`projektplan.md`) eller i DEL 1 (`<slug>.md`).
-- **Färg** väljs i paletten vid Spara — 20 färger, obligatorisk. Färgen hamnar i `projektplan.md` → `**Färg:**`, och följer projektets knapp och projektets rad.
-- `va.md` har frontmatter överst: `id`, `uppdaterad` och `typ` — se `projekt/plapp/produktion/mallar/va.md`.
+## Fasdokument
 
-**Platshållare som koden räknar fram:** `{{NASTA}}` (första raden i **Konkreta
-leverabler**, annars "Ej angivet"; skrivs fältet senare på projektsidan byts
-"Ej angivet" mot första raden), `{{DATUM}}` (`YYYY-MM-DD`), `{{DATUM_KORT}}`
-(`YYYYMMDD`), `{{SLUG}}`, `{{FARG}}` och `{{TOMT}}`. `{{N}}` och `{{SAK}}`
-fyller checklistan bara om värdet `Saker` skickas — formuläret gör det inte
-sedan 2026-10-09, så checklistan i ett nytt projekt är tom.
+Fasernas projektdokument skapas ur sina mallar när fasen påbörjas. Gate-kriterierna står i processdokumentet, Del 1, och upprepas inte i mallarna.
 
-**Platshållare som blir tomma:** `{{OPPNA_FRAGOR}}` i `projektplan.md` och
-`{{ANTECKNINGAR}}` i `va.md`.
+| Fas | Projektfil | Mall |
+| --- | --- | --- |
+| 0, befintligt projekt | `projektdokument/anpassningsplan.md` | `mallar/anpassningsplan.md` |
+| 1 | `projektdokument/vision.md` | `mallar/vision.md` |
+| 2 | `projektdokument/krav.md` | `mallar/krav.md` |
+| 3 | `projektdokument/icke_funktionella_krav.md` | `mallar/icke_funktionella_krav.md` |
+| 4 | `projektdokument/arkitektur.md` och `projektdokument/adr/ADR-NNN-<namn>.md` | `mallar/arkitektur.md`, `mallar/adr/ADR-NNN.md` |
+| 6 | `projektdokument/teststrategi.md` | `mallar/teststrategi.md` |
+| 7 | `projektdokument/drift.md` | `mallar/drift.md` |
 
----
+Fas 5 har inget eget projektdokument.
 
-**Slut på projektmallen.**
+## Platshållare i mallarna
+
+| Platshållare | Värde |
+| --- | --- |
+| `{{NAMN}}` | projektets namn, en rad |
+| `{{SLUG}}` | projektmappens namn inklusive nummer |
+| `{{DATUM}}` | dagens datum, `YYYY-MM-DD` |
+| `{{NNN}}` | ADR:ens löpnummer, tre siffror |
+| `{{TITEL}}` | ADR:ens rubrik |
+
+Platshållare som saknar värde ersätts med "Ej angivet". Ingen rubrik tas bort.
+
+## Sessionsstart
+
+Se PRO-17: sessionen startar med raden `Läs AGENTS.md och följ den. Projekt: <slug>.` ([PRO.md](PRO.md)). `<slug>` i startfilens länkar är det projekt som startraden anger.
