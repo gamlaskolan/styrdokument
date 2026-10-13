@@ -1,6 +1,6 @@
 > **Äger:** sökvägen till varje versionshanterad fil i projektet {{NAMN}}
 > **Typ:** Referens
-> **Hänvisas från:** AGENTS.md, styrdokument/filregister.md
+> **Hänvisas från:** AGENTS.md, filregister.md
 
 # Filregister – {{NAMN}}
 

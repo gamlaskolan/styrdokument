@@ -8,7 +8,9 @@ AI:n leder arbetet och utvecklaren (VÅ) fattar besluten. Varje ändring börjar
 
 ## Regler med körbar kontroll
 
-Inga. Samtliga regler i området PRO är omdömesregler.
+| ID | Regel | Motivering | Kontroll | Källa | Vid osäkerhet |
+| --- | --- | --- | --- | --- | --- |
+| PRO-38 | FÅR INTE: AI:n ändrar, lägger till eller tar bort `AGENTS.md` eller något i `styrdokument/`, där regelfilerna, begreppslistan, den delade strukturplanen, projektmallen, mallarna och källdokumenten ligger. `styrdokument/` är ett eget repo som AI:n bara läser, och VÅ gör ändringarna där. `testa.py` ger fel om `styrdokument/` har lokala ändringar eller inte pekar på den inlagda versionen, och om `AGENTS.md` inte stämmer med kontrollsumman i den delade strukturplanen. | Ett ja i chatten räcker inte som skydd för filerna som styr varje session. | testa.py: struktur | Processdokumentet, Del 2, arbetsregel 22 | Stoppa och fråga |
 
 ## Omdömesregler
 
@@ -51,5 +53,5 @@ Inga. Samtliga regler i området PRO är omdömesregler.
 | PRO-35 | MÅSTE: svaren är raka, konkreta och korta, i punktform som ryms på en skärm, med högst tre instruktioner till VÅ per svar. En granskning får vara längre och har rubrikerna Läst, Motsägelser, Fel, Best practice, Öppna frågor och Bedömning. | Korta svar går att läsa och följa direkt. | omdöme | Processdokumentet, Del 2, arbetsregel 19 | Korta ner |
 | PRO-36 | MÅSTE: en ny regel bygger på ett fel som faktiskt har inträffat. AI:n föreslår ändringen med motivering och väntar på VÅ:s beslut. | Fler regler ger inte mer styrning. | omdöme | Processdokumentet, Del 2, arbetsregel 20 | Stoppa och fråga |
 | PRO-37 | MÅSTE: när två regler, två filer eller en regel och ett källdokument säger emot varandra, eller när en pekare leder till något som inte finns, stannar AI:n, redovisar motsägelsen med fil och rad och frågar VÅ. Fram till beslutet gäller källdokumentens ordning: processdokumentet för faser och arbetsflöde, System design för struktur och regler. | En motsägelse som löses i tysthet blir ett dolt beslut. | omdöme | Processdokumentet, Del 2, arbetsregel 21 | Stoppa och fråga |
-| PRO-38 | FÅR INTE: `AGENTS.md`, filerna i `styrdokument/` eller källdokumenten ändras utan att planen namnger filen och VÅ uttryckligen har godkänt just den ändringen. Övriga filer ändras enligt en godkänd plan (PRO-03). | Styrfilerna styr varje session och får bara ändras genom VÅ:s beslut. | omdöme | Processdokumentet, Del 2, arbetsregel 22 | Stoppa och fråga |
 | PRO-39 | MÅSTE: innan något pushas till `master` körs projektets egen testsvit. Hela utskriften sparas i en loggfil i `.arbete/`, och de sista raderna visas ordagrant i svaret. Ett testresultat som inte syns i en logg påstås aldrig. | Ett testresultat ska gå att se, inte bara återberättas. | omdöme | Processdokumentet, Del 2, arbetsregel 23 | Kör testsviten |
+| PRO-40 | FÅR INTE: ett projekts strukturplan ändras utan att planen namnger filen och VÅ uttryckligen har godkänt just den ändringen. Övriga filer ändras enligt en godkänd plan (PRO-03). | Strukturplanen styr grindarna för projektet. | omdöme | Processdokumentet, Del 2, arbetsregel 22 | Stoppa och fråga |

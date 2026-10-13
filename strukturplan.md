@@ -12,7 +12,8 @@ Projektets egen struktur står i `projekt/<slug>/referens/strukturplan.md`. Vad 
 | --- | --- | --- |
 | `AGENTS.md` | startfilen | undantagen från ägarblock |
 | `CLAUDE.md` | valfri; innehåller endast en länk till `AGENTS.md` | undantagen från ägarblock |
-| `styrdokument/` | `ARK.md`, `DOK.md`, `PRO.md`, `begrepp.md`, `projektmall.md`, `strukturplan.md`, `filregister.md` | Referens |
+| `filregister.md` | det delade filregistret och förteckningen över projekten | Referens |
+| `styrdokument/` | `ARK.md`, `DOK.md`, `PRO.md`, `begrepp.md`, `projektmall.md`, `strukturplan.md`; ett eget repo, inkopplat som submodul, som AI:n bara läser (PRO-38) | Referens |
 | `styrdokument/kallor/` | källdokumenten System design och processdokumentet, oförändrade | källdokument |
 | `styrdokument/mallar/` | mallar för projektets filer | mall |
 | `verktyg/` | `testa.py` och dess moduler | kod |
@@ -38,6 +39,8 @@ rader_py = 500
 [grind.struktur]
 startfil = "AGENTS.md"
 startfil_lankar = 7                 # en rubrik och en numrerad lista med exakt sju länkar
+startfil_sha256 = "b1989d0f5650069fe8f740e35312ab70078d2ebf627f68f116125e6c6b54b769"   # PRO-38: startfilen ändras bara av VÅ, som byter summan här
+filregister = "filregister.md"      # det delade filregistret i repots rot
 regelfiler = ["styrdokument/ARK.md", "styrdokument/DOK.md", "styrdokument/PRO.md"]
 storlek_undantag = ["styrdokument/kallor/**", "styrdokument/mallar/**", "arkiv/**"]
 

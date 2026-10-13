@@ -11,10 +11,11 @@ Gäller alla projekt under `projekt/`. Mallarna för projektets filer ligger i `
 | Del av ramverket | Plats | Antal |
 | --- | --- | --- |
 | Startfil | `AGENTS.md` | en i repot |
-| Regelfiler, begreppslista, projektmall | `styrdokument/` | en uppsättning i repot |
+| Regelfiler, begreppslista, projektmall | `styrdokument/`, ett eget repo som AI:n bara läser | en uppsättning i repot |
 | Källdokument | `styrdokument/kallor/` | en uppsättning i repot |
 | `testa.py` | `verktyg/testa.py` | en i repot, körs per projekt |
-| Delad strukturplan och delat filregister | `styrdokument/strukturplan.md`, `styrdokument/filregister.md` | en av varje i repot |
+| Delad strukturplan | `styrdokument/strukturplan.md` | en i repot |
+| Delat filregister | `filregister.md` i repots rot | en i repot |
 | Statusfil | `projekt/<slug>/projektdokument/status.md` | en per projekt |
 | Strukturplan | `projekt/<slug>/referens/strukturplan.md` | en per projekt |
 | Filregister | `projekt/<slug>/referens/filregister.md` | en per projekt |
@@ -63,7 +64,7 @@ Ett projekt skapas i fas 0 (Processdokumentet, Del 1, fas 0). Den som skapar pro
    | `mallar/strukturplan.md` | `referens/strukturplan.md` |
    | `mallar/filregister.md` | `referens/filregister.md` |
 
-4. Lägger till projektets sökväg under Projekt i `styrdokument/filregister.md`.
+4. Lägger till projektets sökväg under Projekt i `filregister.md` i repots rot.
 
 Ingen av de tre filerna får vara tom. Misslyckas ett moment tas mappen bort, så att ingen halvfärdig projektmapp blir kvar. Därefter fortsätter fas 0 med aktiviteterna i processdokumentet: grindparametrar, `testa.py` och, i ett befintligt projekt, en nulägesinventering.
 
