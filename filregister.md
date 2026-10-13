@@ -63,4 +63,5 @@ Varje projekts filer står i `projekt/<slug>/referens/filregister.md`.
 
 ## Projekt
 
+- projekt/miniraknare-001/
 - projekt/plapp/
