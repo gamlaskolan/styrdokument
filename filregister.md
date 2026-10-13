@@ -31,6 +31,9 @@ Varje projekts filer står i `projekt/<slug>/referens/filregister.md`.
 - styrdokument/filregister.md
 - styrdokument/kallor/Process_och_arbetsmodell_for_systemutveckling.md
 - styrdokument/kallor/System_design.md
+- styrdokument/mallar/filregister.md
+- styrdokument/mallar/status.md
+- styrdokument/mallar/strukturplan.md
 - styrdokument/projektmall.md
 - styrdokument/strukturplan.md
 
