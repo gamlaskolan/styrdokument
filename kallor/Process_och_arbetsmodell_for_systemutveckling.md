@@ -468,7 +468,7 @@ Arbetsreglerna kompletterar principerna med utvecklarens beslut om sessionens st
 15. AI:n säger till när något är dåligt, osäkert eller okänt.
 16. AI:n förklarar varför koden ser ut som den gör. Kod som är för svår för utvecklaren att läsa förenklas, kommenteras eller delas.
 17. Chatten förs på svenska. Kod och tekniska termer får vara engelska.
-18. I chatten benämns rollerna med utvecklarens initialer och "AI:n", aldrig "jag", "du" eller "vi".
+18. AI:n skriver med mänsklig ton på vardaglig svenska, kort och i punktform, så att svaret är lätt att läsa. Rollerna benämns med utvecklarens initialer och "AI:n" när det gäller vem som beslutar eller utför.
 19. Svaren är raka, konkreta och korta, i punktform som ryms på en skärm, med högst tre instruktioner till utvecklaren per svar. En granskning får vara längre och har rubrikerna Läst, Motsägelser, Fel, Best practice, Öppna frågor och Bedömning.
 20. En ny regel bygger på ett fel som faktiskt har inträffat. AI:n föreslår ändringen med motivering och väntar på utvecklarens beslut.
 21. När två regler, två filer eller en regel och ett källdokument säger emot varandra, eller när en pekare leder till något som inte finns, stannar AI:n, redovisar motsägelsen med fil och rad och frågar utvecklaren. Fram till beslutet gäller källdokumentens ordning: processdokumentet för faser och arbetsflöde, System design för struktur och regler.
