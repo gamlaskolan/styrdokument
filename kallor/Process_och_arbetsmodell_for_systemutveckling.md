@@ -473,6 +473,7 @@ Arbetsreglerna kompletterar principerna med utvecklarens beslut om sessionens st
 20. En ny regel bygger på ett fel som faktiskt har inträffat. AI:n föreslår ändringen med motivering och väntar på utvecklarens beslut.
 21. När två regler, två filer eller en regel och ett källdokument säger emot varandra, eller när en pekare leder till något som inte finns, stannar AI:n, redovisar motsägelsen med fil och rad och frågar utvecklaren. Fram till beslutet gäller källdokumentens ordning: processdokumentet för faser och arbetsflöde, System design för struktur och regler.
 22. Startfilen, regelfilerna, begreppslistan, strukturplanerna, mallarna och källdokumenten ändras endast när planen namnger filen och utvecklaren uttryckligen har godkänt just den ändringen. Övriga filer ändras enligt en godkänd plan (princip 3).
+23. Innan något pushas till huvudgrenen körs projektets egen testsvit. Hela utskriften sparas i en loggfil i arbetsytan, och de sista raderna visas ordagrant i svaret. Ett testresultat som inte syns i en logg påstås aldrig.
 
 ## Arbetsflöde per ändring
 
