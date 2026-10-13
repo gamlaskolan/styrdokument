@@ -41,6 +41,7 @@ startfil = "AGENTS.md"
 startfil_lankar = 7                 # en rubrik och en numrerad lista med exakt sju länkar
 startfil_sha256 = "b1989d0f5650069fe8f740e35312ab70078d2ebf627f68f116125e6c6b54b769"   # PRO-38: startfilen ändras bara av VÅ, som byter summan här
 filregister = "filregister.md"      # det delade filregistret i repots rot
+styrdokument_submodul = true      # PRO-38: styrdokument/ är en orörd submodul
 regelfiler = ["styrdokument/ARK.md", "styrdokument/DOK.md", "styrdokument/PRO.md"]
 storlek_undantag = ["styrdokument/kallor/**", "styrdokument/mallar/**", "arkiv/**"]
 
