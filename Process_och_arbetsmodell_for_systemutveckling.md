@@ -451,7 +451,7 @@ Statusfilen skrivs vid avstämning och vid godkännande, aldrig i förskott. Upp
 
 Arbetsreglerna kompletterar principerna med utvecklarens beslut om sessionens start och slut, filhantering, kontroll, gränser och språk. Arbetsreglerna är omdömesregler (kontroll: omdöme) och granskas vid varje fasbyte; i fas 0 förs de in i regelfilerna med ID i området PRO.
 
-1. Sessionen startar med raden `Läs AGENTS.md och följ den. Projekt: <slug>.`, och `<slug>` i startfilens länkar är det angivna projektet. Saknas projektet frågar AI:n efter det innan något annat läses.
+1. Sessionen startar med raden `Läs AGENTS.md och följ den. Projekt: <slug>.`, och `<slug>` i startfilens länkar är det angivna projektet. Anger startraden inget projekt gäller projektet i `AGENTS.local.md` i repots rot (git-ignorerad, en per dator). Saknas båda frågar AI:n efter projektet innan något annat läses.
 2. Efter läsningen skriver AI:n ett startkvitto med projekt, aktuell fas, pågående ändring, nästa ändrings mål och öppna varningar, var och en med fil som källa. Det som saknas skrivs "saknas".
 3. Innan sessionen lämnas, eller när den blir för lång, uppdaterar AI:n statusfilen, committar och pushar och skriver startraden för nästa session. Kan AI:n inte committa lämnas ändringarna till utvecklaren.
 4. AI:n läser en fil från disk innan filen ändras och bygger ändringen på det lästa innehållet, aldrig på minnet.
