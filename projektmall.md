@@ -55,6 +55,12 @@ De skapas ur sin mall när fasen börjar:
 
 Kriterierna för varje fas står i processdokumentet och upprepas inte i mallarna.
 
+## Beroenden och bygge
+
+Ett projekt med beroenden utanför standardbiblioteket har en **låst beroendefil** i `produktion/`, spårad i git. En klon ska gå att sätta upp utan att någon behöver minnas vilka paket som behövdes.
+
+Det som måste byggas — en frontend, en paketering — har ett **byggkommando** i projektets strukturplan under rubriken `## Bygge`. Projektets CI-jobb kör det före testerna, så att ett trasigt bygge upptäcks i tid.
+
 ## Platshållare
 
 `{{NAMN}}` projektets namn, `{{SLUG}}` mappnamnet, `{{DATUM}}` dagens datum, `{{NNN}}` arkitekturbeslutets nummer, `{{TITEL}}` dess rubrik. Saknar en platshållare värde skrivs "Ej angivet", och ingen rubrik tas bort.

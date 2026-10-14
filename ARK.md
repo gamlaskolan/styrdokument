@@ -28,5 +28,8 @@ Här står reglerna som bara går att bedöma. De granskas vid varje fasbyte.
 | ARK-09 | MÅSTE: domänen och användningsfallen byggs och testas först. | omdöme | ARK-21 |
 | ARK-10 | MÅSTE: teknik väljs när ett verkligt behov finns och skrivs ned som ett arkitekturbeslut. Ett byte av teknik ska bara röra det yttre lagret. | omdöme | ARK-22, ARK-24 |
 | ARK-11 | MÅSTE: varje regel som går att kontrollera får sin kontroll innan den gäller. Kontrollen skriver nivå, namn, fil, rad, regel och vad som ska göras. | omdöme | ARK-25, ARK-26, ARK-27 |
+| ARK-12 | MÅSTE: när formen på sparad data ändras skrivs ändringen som en migrering — en egen ändring som kan köras på data som redan finns. En tabell ändras inte genom att ändra sitt skapande. | omdöme | ny |
+| ARK-13 | MÅSTE: fel som kommer utifrån — trasig fil, trasigt anrop, felaktig inmatning — tas emot där gränsen är och blir ett svar. Aldrig en krasch, och aldrig en tystnad. Den inre koden känner inte till hur felet presenteras. | omdöme | ny |
+| ARK-14 | FÅR INTE: lösenord, nycklar och tokens står i kod eller i filer som versionshanteras. De läses ur miljön eller ur en fil som är git-ignorerad, och en hemlighet som hamnat i historiken byts ut. | omdöme | ny |
 
 Reglerna handlar om **ansvar och riktning**, inte om hur många rader en fil har. En fil bedöms efter vad den gör.
