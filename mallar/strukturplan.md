@@ -57,6 +57,10 @@ forbjudna = ["tkinter", "customtkinter", "tkinterdnd2", "sqlite3", "sqlalchemy",
 
 [grind.enhetstester]
 mapp = "produktion/tester/enhet"
+# Om projektet har tester som rör filer eller nätverk (till exempel mot en riktig
+# server eller databas) anger du deras mapp här. De körs utan spärrarna, eftersom
+# de just ska röra filsystem och nätverk. Utan nyckeln körs de inte alls.
+integration = "produktion/tester/integration"
 
 [grind.stil]
 linter = ["ruff", "check"]
