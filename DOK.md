@@ -1,28 +1,25 @@
-> **Äger:** reglerna för dokumentations- och instruktionsfiler (område DOK)
+> **Äger:** reglerna för dokumentation och instruktioner
 > **Typ:** Referens
 > **Hänvisas från:** AGENTS.md
 
-# DOK – dokumentation
+# DOK – så skrivs dokumentationen
 
-Varje uppgift ägs av en enda fil, och varje dokumentationsfil har ett ägarblock och en Diátaxis-typ. Instruktionsfilerna är korta och entydiga. Kontrollen anger en grind i `verktyg/testa.py` eller omdöme. Källan anger avsnittet i källdokumenten i `styrdokument/kallor/`.
+Varje uppgift ägs av en fil. Varje dokumentationsfil börjar med ett block som säger vad den är, och innehållet hålls kort. Kolumnen Källa visar vilka regler i det gamla regelverket som den här regeln kommer från.
 
-## Regler med körbar kontroll
+Här står reglerna som en grind i `testa.py` prövar åt oss.
 
-| ID | Regel | Motivering | Kontroll | Källa | Vid osäkerhet |
-| --- | --- | --- | --- | --- | --- |
-| DOK-03 | MÅSTE: varje dokumentations- och instruktionsfil inleds med ett ägarblock som anger vad filen äger, vilken typ filen har (Handledning, Instruktion, Referens, Förklaring eller Projektdokument) och vilka filer som hänvisar hit. | Ägaren till en uppgift ska gå att hitta direkt. | testa.py: ansvar | System design, princip 7, regel 1 | Stoppa och fråga |
-| DOK-04 | MÅSTE: en regel formuleras på ett enda ställe, och övriga filer länkar dit. | Kopior glider isär och ger två olika svar. | testa.py: dubbletter | System design, princip 7, regel 2 | Stoppa och fråga |
-| DOK-06 | MÅSTE: filregistret förtecknar sökvägen till varje versionshanterad fil, inget mer, och uppdateras i samma ändring som en fil skapas, flyttas eller tas bort. Filens ansvar och typ står i filens huvud och upprepas inte i registret. | Registret ska alltid stämma med repot. | testa.py: struktur | System design, princip 7, regel 4 | Stoppa och fråga |
-| DOK-07 | MÅSTE: startfilen innehåller endast läsordning och länkar till statusfilen, filregistret, begreppslistan, regelfilerna per område och processdokumentet. Startfilen innehåller inga regler och inga beteendekrav. | Startfilen ska vara en karta, inte en regelsamling. | testa.py: struktur | System design, princip 8, regel 1 | Stoppa och fråga |
-| DOK-08 | MÅSTE: varje regelfil täcker ett område (arkitektur, process eller dokumentation) och hålls så kort att den läses i sin helhet. En storlek över varningsnivån utlöser granskning. | En regelfil som inte läses i sin helhet följs inte. | testa.py: struktur | System design, princip 8, regel 2 | Stoppa och fråga |
-| DOK-09 | MÅSTE: nivåorden MÅSTE, FÅR INTE och BÖR används konsekvent och endast med den betydelsen. | Entydiga nivåord gör varje regel kontrollerbar. | testa.py: regelregister | System design, princip 8, regel 3 | Stoppa och fråga |
-| DOK-10 | MÅSTE: omdömesregler (kontroll: omdöme) listas i en egen sektion i varje regelfil och granskas vid varje fasbyte. | Regler utan körbar kontroll behöver en återkommande granskning. | testa.py: regelregister | System design, princip 8, regel 6 | Stoppa och fråga |
+| ID | Regel | Kontroll | Källa |
+| --- | --- | --- | --- |
+| DOK-01 | MÅSTE: varje dokumentationsfil börjar med ett block som säger vad filen äger, vilken slags fil det är (handledning, instruktion, referens, förklaring eller projektdokument) och vilka filer som hänvisar hit. | testa.py: ansvar | DOK-03 |
+| DOK-02 | MÅSTE: samma sak skrivs på ett enda ställe. Andra filer länkar dit i stället för att upprepa. | testa.py: dubbletter | DOK-04 |
+| DOK-03 | MÅSTE: filregistret räknar upp sökvägen till varje fil som versionshanteras, inget mer. Det uppdateras i samma ändring som en fil skapas, flyttas eller tas bort. | testa.py: struktur | DOK-06 |
+| DOK-04 | MÅSTE: instruktioner är korta och entydiga. Överst står en mening om vad filen är till för. Startfilen är bara en karta. Varje regelfil tar ett område och ska kunna läsas i sin helhet. Nivåorden MÅSTE, FÅR INTE och BÖR betyder alltid samma sak. Regler som bara går att bedöma står i en egen tabell. Ett förbud säger också vad som är tillåtet i stället. | testa.py: struktur, regelregister | DOK-01, DOK-07, DOK-08, DOK-09, DOK-10, DOK-11 |
 
-## Omdömesregler
+Här står reglerna som bara går att bedöma. De granskas vid varje fasbyte.
 
-| ID | Regel | Motivering | Kontroll | Källa | Vid osäkerhet |
-| --- | --- | --- | --- | --- | --- |
-| DOK-01 | MÅSTE: en instruktionsfil har en kort sammanfattning överst och detaljerna under. | Läsaren ska sällan behöva mer än toppen. | omdöme | System design, princip 2, regel 4 | Stoppa och fråga |
-| DOK-02 | MÅSTE: varje dokumentationsfil har ett ansvar, på samma sätt som varje `.py`-fil. | En fil med flera ansvar ändras av flera orelaterade skäl. | omdöme | System design, princip 3, regel 4 | Stoppa och fråga |
-| DOK-05 | MÅSTE: referensfiler innehåller fakta utan resonemang, och bakgrund och resonemang ligger i förklaringsfiler. Motiveringen på en mening i en regelfil räknas som en del av regeln. | Läsaren som slår upp fakta ska inte behöva läsa resonemang. | omdöme | System design, princip 7, regel 3 | Stoppa och fråga |
-| DOK-11 | MÅSTE: varje FÅR INTE-regel kompletteras med det tillåtna alternativet. | Ett förbud utan alternativ lämnar det tillåtna öppet för tolkning. | omdöme | System design, princip 10, Negationer | Stoppa och fråga |
+## Regler som bara går att bedöma
+
+| ID | Regel | Kontroll | Källa |
+| --- | --- | --- | --- |
+| DOK-05 | MÅSTE: varje dokumentationsfil har ett ansvar, som varje kodfil. | omdöme | DOK-02 |
+| DOK-06 | FÅR INTE: en referensfil innehåller resonemang eller bakgrund. Det hör i en förklaring. En mening som motiverar en regel räknas som en del av regeln. | omdöme | DOK-05 |
