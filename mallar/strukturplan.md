@@ -47,6 +47,14 @@ undantag = []
 # "produktion/domain". Ändra när projektet får en egen uppdelning.
 lager = { doman = "produktion/domain", anvandningsfall = "produktion/usecases", adaptrar = "produktion/adapters", ramverk = "produktion/framework" }
 
+[grind.rena_inre_lager]
+# Vilka bibliotek de inre lagren (domain/ och usecases/) inte får importera.
+# Listan är bibliotek för lagring, webb och UI: de inre lagren ska nå dem via
+# ett gränssnitt i ett yttre lager, inte importera dem själva. Standardlistan
+# står i styrdokument/strukturplan.md. Ersätt eller utöka den med de bibliotek
+# projektet använder; en tom lista gör att grinden inte kontrollerar något.
+forbjudna = ["tkinter", "customtkinter", "tkinterdnd2", "sqlite3", "sqlalchemy", "flask", "django", "requests", "socket"]
+
 [grind.enhetstester]
 mapp = "produktion/tester/enhet"
 

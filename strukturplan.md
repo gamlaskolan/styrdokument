@@ -65,6 +65,9 @@ undantag = ["AGENTS.md", "CLAUDE.md", "styrdokument/kallor/**", "styrdokument/ma
 [grind.dubbletter]
 undantag = ["styrdokument/kallor/**", "styrdokument/mallar/**", "arkiv/**", "projekt/*/dokument/**"]   # importerat underlag, inte författad dokumentation
 
+[grind.rena_inre_lager]
+forbjudna = ["tkinter", "customtkinter", "tkinterdnd2", "sqlite3", "sqlalchemy", "flask", "django", "requests", "socket"]   # standardlistan: bibliotek för lagring, webb och UI som de inre lagren når via ett gränssnitt
+
 [grind.regelregister]
 nivaord = ["MÅSTE", "FÅR INTE", "BÖR"]
 sektion_omdome = "## Regler som bara går att bedöma"
