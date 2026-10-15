@@ -55,6 +55,22 @@ De skapas ur sin mall när fasen börjar:
 
 Kriterierna för varje fas står i processdokumentet och upprepas inte i mallarna.
 
+## Meta-fällan
+
+Ett verktyg får inte hantera sig självt vid sidan om. Allt som hör till
+verktyget — dess kod, moduler, data och konfiguration — ska lösas **på samma
+sätt som allt annat i projektet**. Ingen egen filväg, ingen egen rutt, ingen
+parallell lagringsplats, och aldrig en andra sanning.
+
+**Skälet:** det som ligger vid sidan om granskas inte, och det som inte
+granskas glider ifrån. Ett verktyg med en bakväg in i sig själv har två
+sanningar om sig själv — och då vet ingen vilken som gäller.
+
+**Så prövas regeln:** för varje fil, väg och rutt som bara verktyget använder —
+fråga om den skulle finnas där om det gällde ett annat projekt. Svaret ska vara
+ja. Verktygets eget projekt är ett projekt som alla andra, märkt i listan och
+lika granskat som resten.
+
 ## Beroenden och bygge
 
 Ett projekt med beroenden utanför standardbiblioteket har en **låst beroendefil** i `produktion/`, spårad i git. En klon ska gå att sätta upp utan att någon behöver minnas vilka paket som behövdes.
