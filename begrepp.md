@@ -52,3 +52,24 @@ Orden betyder samma sak i hela repot. Ändras ett ord ändras det här först.
 - **VÅ:** utvecklaren — Victor Åström. Leder projektet och äger besluten.
 - **AI:** leder samtalet och arbetet enligt reglerna. Besluten fattas av VÅ.
 - **va.md:** utvecklarens egna anteckningar i projektets rot. Läses bara när VÅ hänvisar till den.
+
+**Appens egna ord**
+
+- **Yta:** en ritad yta i whiteboarden — rutan VÅ ritar på och fyller med objekt.
+  En yta har ett namn och en storlek.
+- **Objekt:** det som ligger på en yta: en ruta, en lapp eller en text. Har
+  position, storlek och form.
+- **Position:** var på ytan ett objekt ligger, räknat i ytans egna mått.
+- **Storlek:** ett objekts bredd och höjd, i ytans egna mått.
+- **Formtyp:** vilken form ett objekt har.
+- **Moment** (kodens ord: **nod**): en rad i arbetsmomentsträdet, med nummer,
+  titel, status, grind och godkännande.
+- **Anteckning:** texten som hänger på en rad, med sin informationssymbol —
+  VÅ:s och AI:s gemensamma ruta.
+- **Historikpost** (kodens ord: **andring**): en post i projektets historik, med
+  tiden, vad som ändrades och läget **före**. Ordet *ändring* betyder i det här
+  repot den minsta arbetsenheten — inte en post i historiken.
+- **Kontrollens grind** och **radens grindmärke:** *grinden* är prövningen i
+  `verktyg/testa.py`; en rad i trädet bär ett **grindmärke** — flaggan *grind*
+  tillsammans med *godkänd av VÅ*. Ordet *grind* betyder kontrollen när inget
+  annat sägs.
