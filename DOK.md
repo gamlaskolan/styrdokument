@@ -23,4 +23,4 @@ Här står reglerna som bara går att bedöma. De granskas när VÅ ber om det.
 | --- | --- | --- | --- |
 | DOK-06 | FÅR INTE: en referensfil innehåller resonemang eller bakgrund. Det hör i en förklaring. En mening som motiverar en regel räknas som en del av regeln. | omdöme | DOK-05 |
 | DOK-07 | MÅSTE: varje krav med ID har en rad i kravdokumentets spårbarhetstabell som pekar på det moment och det prov som uppfyller det. Ett krav som ännu inte går att mäta står som uppskjutet med sitt skäl. | omdöme | SY-11, RB-11 |
-| DOK-08 | MÅSTE: statusfilens del Senaste ändringen rymmer bara den senaste posten. Äldre poster står i referens/andringslogg.md. | omdöme | AR-9 |
+| DOK-08 | MÅSTE: statusfilen bär nuläget och de senaste posterna, nyast först. Äldre poster flyttas till projektets statusarkivfil, och en post som flyttats skrivs inte om. | omdöme | AR-9 |
