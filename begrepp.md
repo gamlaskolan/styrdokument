@@ -34,7 +34,7 @@ Orden betyder samma sak i hela repot. Ändras ett ord ändras det här först.
 - **Startfil:** `AGENTS.md` i repots rot. Den innehåller bara läsordningen.
 - **Källdokument:** System design och processdokumentet. De ligger oförändrade i `styrdokument/kallor/`.
 - **Ramverk:** startfilen, regelfilerna, ordlistan, strukturplanen, filregistret, statusfilen, kontrollen och källdokumenten.
-- **Statusfil:** projektets nuläge. Den har sex delar som alltid finns med.
+- **Statusfil:** projektets nuläge. Ett nytt projekt börjar med de delar som mallen i `mallar/status.md` anger; projektets fil bär sedan nuläget och de senaste posterna, nyast först, med äldre poster i statusarkivfilen.
 - **Arkitekturbeslut (ADR):** ett viktigt val, nedskrivet med sammanhang, beslut, bortvalda alternativ och följder.
 - **Mall:** en fil i `styrdokument/mallar/` som ett projekt utgår ifrån. Mallens typ är `Mall`.
 - **Diátaxis:** det sätt att dela dokumentation i fyra slag som typerna i DOK-01 kommer från.
