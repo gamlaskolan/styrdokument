@@ -4,7 +4,7 @@
 
 # ARK – så formas koden
 
-Koden delas i lager, och varje fil har ett ansvar. En del regler kan kontrollen `verktyg/testa.py` pröva själv; resten bedöms med omdöme. Kolumnen Källa visar vilka regler i det gamla regelverket som den här regeln kommer från.
+Koden delas i lager, och varje fil har ett ansvar. En del regler kan kontrollen `verktyg/testa.py` pröva själv; resten bedöms med omdöme.
 
 Här står reglerna som en grind i `testa.py` prövar åt oss.
 
@@ -18,7 +18,7 @@ Här står reglerna som en grind i `testa.py` prövar åt oss.
 | ARK-06 | FÅR INTE: domänen och användningsfallen importerar teknik för lagring, webb eller gränssnitt. Sådan teknik nås genom ett gränssnitt i det inre lagret, enligt ARK-05. | testa.py: rena_inre_lager | ARK-15, ARK-23 |
 | ARK-07 | MÅSTE: varje fil går att testa för sig, utan databas, filsystem, nätverk och gränssnitt. Tester av användningsfall använder enkla låtsasversioner i stället för den riktiga tekniken. | testa.py: enhetstester | ARK-12, ARK-20 |
 
-Här står reglerna som bara går att bedöma. De granskas vid varje fasbyte.
+Här står reglerna som bara går att bedöma. De granskas när VÅ ber om det.
 
 ## Regler som bara går att bedöma
 
