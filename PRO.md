@@ -4,7 +4,7 @@
 
 # PRO – så går arbetet till
 
-AI leder arbetet och VÅ fattar besluten. En ändring börjar med att du berättar vad som ska göras och slutar med att kontrollen ger pass. Osäkerhet löses med en fråga, aldrig med en gissning. Kolumnen Källa visar vilka regler i det gamla regelverket som den här regeln kommer från.
+AI leder arbetet och VÅ fattar besluten. En ändring börjar med att du berättar vad som ska göras. Osäkerhet löses med en fråga, aldrig med en gissning. Kolumnen Källa visar vilka regler i det gamla regelverket som den här regeln kommer från.
 
 Alla regler i den här filen bedöms med omdöme. De granskas vid varje fasbyte, eller när VÅ ber om det.
 
