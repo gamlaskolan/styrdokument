@@ -6,7 +6,7 @@
 
 AI leder arbetet och VÅ fattar besluten. En ändring börjar med att du berättar vad som ska göras. Osäkerhet löses med en fråga, aldrig med en gissning.
 
-Alla regler i den här filen bedöms med omdöme. De granskas vid varje fasbyte, eller när VÅ ber om det.
+Alla regler i den här filen bedöms med omdöme. De granskas när VÅ ber om det.
 
 ## Regler som bara går att bedöma
 
