@@ -28,6 +28,7 @@ Orden betyder samma sak i hela repot. Ändras ett ord ändras det här först.
 - **Krav:** vad appen ska göra, eller hur väl den ska fungera.
 - **MVP:** den minsta version av appen som ger värde, alltså alla måsten.
 - **Regel:** en bindande instruktion med ett ID, ett nivåord, en motivering, en kontroll och en källa.
+- **Källa:** regelfilernas sista kolumn — regeln i det gamla regelverket som den här regeln kommer från.
 - **Nivåord:** **MÅSTE** betyder att regeln alltid gäller. **FÅR INTE** betyder att något är förbjudet, och då står det tillåtna alternativet med i regeln. **BÖR** betyder att regeln följs om inget talar emot, och att en avvikelse motiveras.
 - **Regelfil:** en fil med regler för ett område. Det finns tre: `ARK.md`, `DOK.md` och `PRO.md`.
 - **Startfil:** `AGENTS.md` i repots rot. Den innehåller bara läsordningen.
