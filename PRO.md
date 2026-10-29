@@ -6,7 +6,14 @@
 
 AI leder arbetet och VÅ fattar besluten. En ändring börjar med att du berättar vad som ska göras. Osäkerhet löses med en fråga, aldrig med en gissning.
 
-Alla regler i den här filen bedöms med omdöme. De granskas när VÅ ber om det.
+Här står reglerna som en grind i `testa.py` prövar åt oss.
+
+| ID | Regel | Kontroll | Källa |
+| --- | --- | --- | --- |
+| PRO-18 | MÅSTE: en ändring skriver den del som ändrats, aldrig hela filen för att en liten sak tillkommit. Ett tillägg skrivs sist i filen, en rättelse skriver den raden, och en ny fil skrivs en gång. **Kriteriet är att allt utanför ändringen är byte för byte oförändrat:** vid ett tillägg är hela den gamla filens hash lika med hashen av de första N byten i den nya, där N är den gamla filens storlek; vid en rättelse är hashen av allt före och allt efter den rättade raden oförändrad. Det gäller för text som för binärt. En komprimerad eller krypterad fil kan inte läggas till i, och omfattas därför inte av kriteriet — den committas bara när den själv är ändringen. `git diff --numstat` är den snabba blicken: en tilläggning i en textfil ger noll borttagna rader, och ett `-` betyder att bara hash-kriteriet kan svara. | testa.py: enhetstester | ny |
+| PRO-19 | MÅSTE: efter varje uppskick städar den som skickade upp repot: `git gc --auto`, som packar när git själv anser att det behövs. Sedan mäts det, och mätningen skrivs i statusposten: `git prune --dry-run --expire=2.weeks.ago` ska vara **tom**, och `git fsck --full` får inte rapportera `missing`. `--prune=now` används bara när VÅ säger att de oåtkomliga posterna får släppas. Städningen är säker när den nåbara mängden är oförändrad: antalet rader i `git rev-list --objects --all` är detsamma före och efter. | testa.py: repot | ny |
+
+Här står reglerna som bara går att bedöma. De granskas när VÅ ber om det.
 
 ## Regler som bara går att bedöma
 
